@@ -1,0 +1,11 @@
+duckdb
+geopandas
+shapely
+pyproj
+networkx
+scipy
+pandas
+pyarrow
+pulp==2.9.0
+folium
+matplotlib

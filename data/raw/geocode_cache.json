@@ -1,0 +1,3502 @@
+{
+ "華山分隊": [
+  {
+   "place_id": 230555225,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 16868691,
+   "lat": "25.0465486",
+   "lon": "121.5315702",
+   "category": "landuse",
+   "type": "garages",
+   "place_rank": 24,
+   "importance": 0.08007457007705802,
+   "addresstype": "garages",
+   "name": "中山分局警備隊專用停車場",
+   "display_name": "中山分局警備隊專用停車場, 正守里, 中山區, 華山, 臺北市, 臺灣",
+   "address": {
+    "garages": "中山分局警備隊專用停車場",
+    "neighbourhood": "正守里",
+    "suburb": "中山區",
+    "village": "華山",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0463490",
+    "25.0467433",
+    "121.5313172",
+    "121.5318212"
+   ]
+  },
+  {
+   "place_id": 230568872,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 437331547,
+   "lat": "25.0476633",
+   "lon": "121.5341255",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "松江分隊",
+   "display_name": "松江分隊, 9, 松江路25巷, 朱園里, 中山區, 朱厝崙, 臺北市, 104, 臺灣",
+   "address": {
+    "office": "松江分隊",
+    "house_number": "9",
+    "road": "松江路25巷",
+    "neighbourhood": "朱園里",
+    "suburb": "中山區",
+    "village": "朱厝崙",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "104",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0475014",
+    "25.0478311",
+    "121.5339695",
+    "121.5343531"
+   ]
+  },
+  {
+   "place_id": 230386746,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 315892006,
+   "lat": "25.0326555",
+   "lon": "121.5278590",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "金華分隊",
+   "display_name": "金華分隊, 愛國東路79巷, 永康里, 大安區, 古亭, 臺北市, 106302, 臺灣",
+   "address": {
+    "amenity": "金華分隊",
+    "road": "愛國東路79巷",
+    "neighbourhood": "永康里",
+    "suburb": "大安區",
+    "village": "古亭",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "106302",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0324519",
+    "25.0328207",
+    "121.5276974",
+    "121.5280170"
+   ]
+  },
+  {
+   "place_id": 230207511,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 387517864,
+   "lat": "25.0453685",
+   "lon": "121.5240825",
+   "category": "building",
+   "type": "yes",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "building",
+   "name": "中正區清潔隊仁愛分隊",
+   "display_name": "中正區清潔隊仁愛分隊, 7, 林森北路5巷, 光華商場, 梅花里, 中正區, 華山, 臺北市, 100, 臺灣",
+   "address": {
+    "building": "中正區清潔隊仁愛分隊",
+    "house_number": "7",
+    "road": "林森北路5巷",
+    "quarter": "光華商場",
+    "neighbourhood": "梅花里",
+    "suburb": "中正區",
+    "village": "華山",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "100",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0453135",
+    "25.0454235",
+    "121.5240312",
+    "121.5241338"
+   ]
+  },
+  {
+   "place_id": 230570195,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 12458943605,
+   "lat": "25.0472288",
+   "lon": "121.5208460",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "中正中隊華山分隊",
+   "display_name": "中正中隊華山分隊, 1, 北平東路, 光華商場, 梅花里, 中正區, 華山, 臺北市, 100, 臺灣",
+   "address": {
+    "amenity": "中正中隊華山分隊",
+    "house_number": "1",
+    "road": "北平東路",
+    "quarter": "光華商場",
+    "neighbourhood": "梅花里",
+    "suburb": "中正區",
+    "village": "華山",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "100",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0471788",
+    "25.0472788",
+    "121.5207960",
+    "121.5208960"
+   ]
+  }
+ ],
+ "消防局華山分隊": [],
+ "臺北市中正區北平東路1號": [],
+ "泉州分隊": [
+  {
+   "place_id": 230705111,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 258699152,
+   "lat": "25.0685960",
+   "lon": "121.5297909",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "圓山分隊",
+   "display_name": "圓山分隊, 臨41, 民族東路, 新庄里, 中山區, 下埤頭, 臺北市, 104, 臺灣",
+   "address": {
+    "amenity": "圓山分隊",
+    "house_number": "臨41",
+    "road": "民族東路",
+    "neighbourhood": "新庄里",
+    "suburb": "中山區",
+    "village": "下埤頭",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "104",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0685043",
+    "25.0686932",
+    "121.5295677",
+    "121.5300141"
+   ]
+  },
+  {
+   "place_id": 231045458,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 343713286,
+   "lat": "25.0503449",
+   "lon": "121.5113790",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "延平分隊",
+   "display_name": "延平分隊, 109, 鄭州路, 玉泉里, 大同區, 後車頭, 臺北市, 103012, 臺灣",
+   "address": {
+    "office": "延平分隊",
+    "house_number": "109",
+    "road": "鄭州路",
+    "neighbourhood": "玉泉里",
+    "suburb": "大同區",
+    "village": "後車頭",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "103012",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0502423",
+    "25.0504475",
+    "121.5112670",
+    "121.5114910"
+   ]
+  },
+  {
+   "place_id": 231578538,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5110489319,
+   "lat": "25.0597259",
+   "lon": "121.5276049",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "義消圓山分隊",
+   "display_name": "義消圓山分隊, 新生高架道路, 中庄里, 中山區, 南西商圈, 臺北市, 10469, 臺灣",
+   "address": {
+    "amenity": "義消圓山分隊",
+    "road": "新生高架道路",
+    "neighbourhood": "中庄里",
+    "suburb": "中山區",
+    "village": "南西商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10469",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0596759",
+    "25.0597759",
+    "121.5275549",
+    "121.5276549"
+   ]
+  },
+  {
+   "place_id": 231271558,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 16868691,
+   "lat": "25.0465486",
+   "lon": "121.5315702",
+   "category": "landuse",
+   "type": "garages",
+   "place_rank": 24,
+   "importance": 0.08007457007705802,
+   "addresstype": "garages",
+   "name": "中山分局警備隊專用停車場",
+   "display_name": "中山分局警備隊專用停車場, 正守里, 中山區, 華山, 臺北市, 臺灣",
+   "address": {
+    "garages": "中山分局警備隊專用停車場",
+    "neighbourhood": "正守里",
+    "suburb": "中山區",
+    "village": "華山",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0463490",
+    "25.0467433",
+    "121.5313172",
+    "121.5318212"
+   ]
+  },
+  {
+   "place_id": 231302204,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 673327074,
+   "lat": "25.0399833",
+   "lon": "121.5377289",
+   "category": "building",
+   "type": "yes",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "building",
+   "name": "大安區清潔隊新生分隊",
+   "display_name": "大安區清潔隊新生分隊, 建國快速道路, 民輝里, 大安區, 東區商圈, 臺北市, 10655, 臺灣",
+   "address": {
+    "building": "大安區清潔隊新生分隊",
+    "road": "建國快速道路",
+    "neighbourhood": "民輝里",
+    "suburb": "大安區",
+    "village": "東區商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10655",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0398806",
+    "25.0400702",
+    "121.5375643",
+    "121.5378901"
+   ]
+  }
+ ],
+ "消防局泉州分隊": [],
+ "臺北市中正區泉州街40號": [],
+ "城中分隊": [
+  {
+   "place_id": 230585054,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 238534463,
+   "lat": "25.0468931",
+   "lon": "121.5134863",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "城中分隊",
+   "display_name": "城中分隊, 86, 忠孝西路一段, 黎明里, 中正區, 台北站前商圈, 臺北市, 10044, 臺灣",
+   "address": {
+    "amenity": "城中分隊",
+    "house_number": "86",
+    "road": "忠孝西路一段",
+    "neighbourhood": "黎明里",
+    "suburb": "中正區",
+    "village": "台北站前商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10044",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0468432",
+    "25.0469914",
+    "121.5133569",
+    "121.5136156"
+   ]
+  }
+ ],
+ "消防局城中分隊": [],
+ "臺北市中正區忠孝西路1段86號": [],
+ "忠孝分隊": [
+  {
+   "place_id": 230585054,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 238534463,
+   "lat": "25.0468931",
+   "lon": "121.5134863",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "城中分隊",
+   "display_name": "城中分隊, 86, 忠孝西路一段, 黎明里, 中正區, 台北站前商圈, 臺北市, 10044, 臺灣",
+   "address": {
+    "amenity": "城中分隊",
+    "house_number": "86",
+    "road": "忠孝西路一段",
+    "neighbourhood": "黎明里",
+    "suburb": "中正區",
+    "village": "台北站前商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10044",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0468432",
+    "25.0469914",
+    "121.5133569",
+    "121.5136156"
+   ]
+  },
+  {
+   "place_id": 230007843,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 3506736114,
+   "lat": "25.0478630",
+   "lon": "121.5868250",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "成德分隊",
+   "display_name": "成德分隊, 忠孝東路六段188巷, 聯成里, 南港區, 潭美, 臺北市, 11556, 臺灣",
+   "address": {
+    "amenity": "成德分隊",
+    "road": "忠孝東路六段188巷",
+    "neighbourhood": "聯成里",
+    "suburb": "南港區",
+    "village": "潭美",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11556",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0478130",
+    "25.0479130",
+    "121.5867750",
+    "121.5868750"
+   ]
+  },
+  {
+   "place_id": 232186195,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1213003506,
+   "lat": "25.0603325",
+   "lon": "121.4991844",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 6.715571831841028e-05,
+   "addresstype": "amenity",
+   "name": "光興分隊",
+   "display_name": "光興分隊, 光興街, 光輝里, 三重區, 新北市, 241, 臺灣",
+   "address": {
+    "amenity": "光興分隊",
+    "road": "光興街",
+    "neighbourhood": "光輝里",
+    "suburb": "三重區",
+    "city": "新北市",
+    "ISO3166-2-lvl4": "TW-NWT",
+    "postcode": "241",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0602623",
+    "25.0604103",
+    "121.4991174",
+    "121.4992476"
+   ]
+  },
+  {
+   "place_id": 229696171,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2778765725,
+   "lat": "25.0641109",
+   "lon": "121.6570154",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 6.715571831841028e-05,
+   "addresstype": "amenity",
+   "name": "秀峰分隊",
+   "display_name": "秀峰分隊, 1-1, 忠孝東路, 復興里, 汐止區, 新北市, 221, 臺灣",
+   "address": {
+    "amenity": "秀峰分隊",
+    "house_number": "1-1",
+    "road": "忠孝東路",
+    "neighbourhood": "復興里",
+    "suburb": "汐止區",
+    "city": "新北市",
+    "ISO3166-2-lvl4": "TW-NWT",
+    "postcode": "221",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0640609",
+    "25.0641609",
+    "121.6569654",
+    "121.6570654"
+   ]
+  },
+  {
+   "place_id": 231100579,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 404545683,
+   "lat": "25.0802270",
+   "lon": "121.5568297",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "臺北市政府消防局第三大隊大直分隊",
+   "display_name": "臺北市政府消防局第三大隊大直分隊, 消防車通道, 金泰里, 中山區, 下塔悠, 臺北市, 104252, 臺灣",
+   "address": {
+    "amenity": "臺北市政府消防局第三大隊大直分隊",
+    "road": "消防車通道",
+    "neighbourhood": "金泰里",
+    "suburb": "中山區",
+    "village": "下塔悠",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "104252",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0801288",
+    "25.0803252",
+    "121.5565926",
+    "121.5570668"
+   ]
+  }
+ ],
+ "消防局忠孝分隊": [],
+ "臺北市中正區忠孝東路2段8號": [],
+ "古亭分隊": [
+  {
+   "place_id": 230974830,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 436654099,
+   "lat": "25.0116356",
+   "lon": "121.5376961",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "古亭分隊",
+   "display_name": "古亭分隊, 基隆路四段, 學府里, 大安區, 公館, 臺北市, 107, 臺灣",
+   "address": {
+    "office": "古亭分隊",
+    "road": "基隆路四段",
+    "neighbourhood": "學府里",
+    "suburb": "大安區",
+    "village": "公館",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "107",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0115285",
+    "25.0117427",
+    "121.5375748",
+    "121.5378174"
+   ]
+  }
+ ],
+ "消防局古亭分隊": [],
+ "臺北市大安區基隆路4段156號": [],
+ "雙園分隊": [
+  {
+   "place_id": 232240773,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 602345836,
+   "lat": "25.0284270",
+   "lon": "121.4958562",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "雙園分隊",
+   "display_name": "雙園分隊, 213-1, 西藏路, 日善里, 萬華區, 西園, 臺北市, 108, 臺灣",
+   "address": {
+    "office": "雙園分隊",
+    "house_number": "213-1",
+    "road": "西藏路",
+    "neighbourhood": "日善里",
+    "suburb": "萬華區",
+    "village": "西園",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "108",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0283525",
+    "25.0284901",
+    "121.4957038",
+    "121.4960086"
+   ]
+  }
+ ],
+ "消防局雙園分隊": [],
+ "臺北市萬華區西藏路213之1號": [],
+ "龍山分隊": [
+  {
+   "place_id": 229934869,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 9030568078,
+   "lat": "25.0386280",
+   "lon": "121.4993568",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "龍山分隊",
+   "display_name": "龍山分隊, 137, 桂林路, 青山里, 萬華區, 艋舺, 臺北市, 108014, 臺灣",
+   "address": {
+    "amenity": "龍山分隊",
+    "house_number": "137",
+    "road": "桂林路",
+    "neighbourhood": "青山里",
+    "suburb": "萬華區",
+    "village": "艋舺",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "108014",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0385780",
+    "25.0386780",
+    "121.4993068",
+    "121.4994068"
+   ]
+  }
+ ],
+ "消防局龍山分隊": [],
+ "臺北市萬華區桂林路137號": [],
+ "萬芳分隊": [
+  {
+   "place_id": 229971677,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 3627318131,
+   "lat": "25.0021399",
+   "lon": "121.5665963",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "萬芳分隊",
+   "display_name": "萬芳分隊, 52, 萬美街一段, 萬美里, 文山區, 臺北市, 116, 臺灣",
+   "address": {
+    "amenity": "萬芳分隊",
+    "house_number": "52",
+    "road": "萬美街一段",
+    "neighbourhood": "萬美里",
+    "suburb": "文山區",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "116",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0020899",
+    "25.0021899",
+    "121.5665463",
+    "121.5666463"
+   ]
+  }
+ ],
+ "消防局萬芳分隊": [],
+ "臺北市文山區萬美街1段52號": [],
+ "木柵分隊": [
+  {
+   "place_id": 229541981,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 515405609,
+   "lat": "24.9988412",
+   "lon": "121.5962127",
+   "category": "amenity",
+   "type": "police",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "木柵分隊",
+   "display_name": "木柵分隊, 96, 新光路二段, 萬興里, 文山區, 臺北市, 116016, 臺灣",
+   "address": {
+    "amenity": "木柵分隊",
+    "house_number": "96",
+    "road": "新光路二段",
+    "neighbourhood": "萬興里",
+    "suburb": "文山區",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "116016",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "24.9981780",
+    "24.9994764",
+    "121.5956332",
+    "121.5967236"
+   ]
+  }
+ ],
+ "消防局木柵分隊": [],
+ "臺北市文山區木柵路2段200號": [],
+ "景美分隊": [
+  {
+   "place_id": 229301252,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 238449741,
+   "lat": "24.9923952",
+   "lon": "121.5411665",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "景美分隊",
+   "display_name": "景美分隊, 30, 景文街, 景行里, 文山區, 萬隆, 臺北市, 11670, 臺灣",
+   "address": {
+    "office": "景美分隊",
+    "house_number": "30",
+    "road": "景文街",
+    "neighbourhood": "景行里",
+    "suburb": "文山區",
+    "village": "萬隆",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11670",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "24.9922528",
+    "24.9924499",
+    "121.5410438",
+    "121.5412210"
+   ]
+  }
+ ],
+ "消防局景美分隊": [],
+ "臺北市文山區景文街30號": [],
+ "寶橋分隊": [],
+ "消防局寶橋分隊": [],
+ "臺北市文山區樟新街2號": [],
+ "金華分隊": [
+  {
+   "place_id": 230386746,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 315892006,
+   "lat": "25.0326555",
+   "lon": "121.5278590",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "金華分隊",
+   "display_name": "金華分隊, 愛國東路79巷, 永康里, 大安區, 古亭, 臺北市, 106302, 臺灣",
+   "address": {
+    "amenity": "金華分隊",
+    "road": "愛國東路79巷",
+    "neighbourhood": "永康里",
+    "suburb": "大安區",
+    "village": "古亭",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "106302",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0324519",
+    "25.0328207",
+    "121.5276974",
+    "121.5280170"
+   ]
+  }
+ ],
+ "消防局金華分隊": [],
+ "臺北市大安區愛國東路79巷13號": [],
+ "安和分隊": [
+  {
+   "place_id": 229543814,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 603753999,
+   "lat": "24.9797726",
+   "lon": "121.5170735",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 6.715571831841028e-05,
+   "addresstype": "amenity",
+   "name": "安和分隊",
+   "display_name": "安和分隊, 3, 安和路三段, 永平里, 新店區, 潭漧, 新北市, 231057, 臺灣",
+   "address": {
+    "amenity": "安和分隊",
+    "house_number": "3",
+    "road": "安和路三段",
+    "neighbourhood": "永平里",
+    "suburb": "新店區",
+    "village": "潭漧",
+    "city": "新北市",
+    "ISO3166-2-lvl4": "TW-NWT",
+    "postcode": "231057",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "24.9796731",
+    "24.9798721",
+    "121.5170060",
+    "121.5171410"
+   ]
+  }
+ ],
+ "消防局安和分隊": [],
+ "臺北市大安區安和路2段2號": [],
+ "復興分隊": [
+  {
+   "place_id": 231847613,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 447734845,
+   "lat": "25.0300327",
+   "lon": "121.5432298",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "復興分隊",
+   "display_name": "復興分隊, 92, 復興南路二段, 龍圖里, 大安區, 東區商圈, 臺北市, 106, 臺灣",
+   "address": {
+    "amenity": "復興分隊",
+    "house_number": "92",
+    "road": "復興南路二段",
+    "neighbourhood": "龍圖里",
+    "suburb": "大安區",
+    "village": "東區商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "106",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0299392",
+    "25.0301898",
+    "121.5431674",
+    "121.5432944"
+   ]
+  }
+ ],
+ "消防局復興分隊": [],
+ "臺北市大安區復興南路2段92號": [],
+ "南港分隊": [
+  {
+   "place_id": 230825932,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 156426260,
+   "lat": "25.0450037",
+   "lon": "121.6151600",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "舊莊消防分隊",
+   "display_name": "舊莊消防分隊, 研究院路二段84巷, 中研里, 南港區, 舊莊, 臺北市, 11564, 臺灣",
+   "address": {
+    "amenity": "舊莊消防分隊",
+    "road": "研究院路二段84巷",
+    "neighbourhood": "中研里",
+    "suburb": "南港區",
+    "village": "舊莊",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11564",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0448840",
+    "25.0451234",
+    "121.6149923",
+    "121.6153277"
+   ]
+  },
+  {
+   "place_id": 230805329,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 3506736114,
+   "lat": "25.0478630",
+   "lon": "121.5868250",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "成德分隊",
+   "display_name": "成德分隊, 忠孝東路六段188巷, 聯成里, 南港區, 潭美, 臺北市, 115006, 臺灣",
+   "address": {
+    "amenity": "成德分隊",
+    "road": "忠孝東路六段188巷",
+    "neighbourhood": "聯成里",
+    "suburb": "南港區",
+    "village": "潭美",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "115006",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0478130",
+    "25.0479130",
+    "121.5867750",
+    "121.5868750"
+   ]
+  },
+  {
+   "place_id": 230851965,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 13607291765,
+   "lat": "25.0608800",
+   "lon": "121.6108500",
+   "category": "amenity",
+   "type": "bicycle_rental",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "環保局南港區清潔南港分隊",
+   "display_name": "環保局南港區清潔南港分隊, 環東大道, 三重里, 南港區, 三重埔, 臺北市, 11484, 臺灣",
+   "address": {
+    "amenity": "環保局南港區清潔南港分隊",
+    "road": "環東大道",
+    "neighbourhood": "三重里",
+    "suburb": "南港區",
+    "village": "三重埔",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11484",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0608300",
+    "25.0609300",
+    "121.6108000",
+    "121.6109000"
+   ]
+  }
+ ],
+ "消防局南港分隊": [],
+ "臺北市南港區興中路6號": [],
+ "舊莊分隊": [
+  {
+   "place_id": 229973513,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 156426260,
+   "lat": "25.0450037",
+   "lon": "121.6151600",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "舊莊消防分隊",
+   "display_name": "舊莊消防分隊, 研究院路二段84巷, 中研里, 南港區, 舊莊, 臺北市, 11564, 臺灣",
+   "address": {
+    "amenity": "舊莊消防分隊",
+    "road": "研究院路二段84巷",
+    "neighbourhood": "中研里",
+    "suburb": "南港區",
+    "village": "舊莊",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11564",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0448840",
+    "25.0451234",
+    "121.6149923",
+    "121.6153277"
+   ]
+  }
+ ],
+ "消防局舊莊分隊": [],
+ "臺北市南港區研究院路2段86號": [],
+ "成德分隊": [
+  {
+   "place_id": 230252851,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 3506736114,
+   "lat": "25.0478630",
+   "lon": "121.5868250",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "成德分隊",
+   "display_name": "成德分隊, 忠孝東路六段188巷, 聯成里, 南港區, 潭美, 臺北市, 115006, 臺灣",
+   "address": {
+    "amenity": "成德分隊",
+    "road": "忠孝東路六段188巷",
+    "neighbourhood": "聯成里",
+    "suburb": "南港區",
+    "village": "潭美",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "115006",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0478130",
+    "25.0479130",
+    "121.5867750",
+    "121.5868750"
+   ]
+  }
+ ],
+ "消防局成德分隊": [],
+ "臺北市南港區東新街63巷11號": [],
+ "信義分隊": [
+  {
+   "place_id": 230173304,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4489128331,
+   "lat": "25.0407723",
+   "lon": "121.5690319",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "信義分隊",
+   "display_name": "信義分隊, 1, 松仁路, 興雅里, 信義區, 興雅, 臺北市, 11073, 臺灣",
+   "address": {
+    "amenity": "信義分隊",
+    "house_number": "1",
+    "road": "松仁路",
+    "neighbourhood": "興雅里",
+    "suburb": "信義區",
+    "village": "興雅",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11073",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0407223",
+    "25.0408223",
+    "121.5689819",
+    "121.5690819"
+   ]
+  }
+ ],
+ "消防局信義分隊": [],
+ "臺北市信義區松仁路1號": [],
+ "永吉分隊": [
+  {
+   "place_id": 229916534,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 403458821,
+   "lat": "25.0454682",
+   "lon": "121.5692902",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "永吉分隊",
+   "display_name": "永吉分隊, 永吉路, 敦厚里, 信義區, 興雅, 臺北市, 110068, 臺灣",
+   "address": {
+    "amenity": "永吉分隊",
+    "road": "永吉路",
+    "neighbourhood": "敦厚里",
+    "suburb": "信義區",
+    "village": "興雅",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "110068",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0454038",
+    "25.0455431",
+    "121.5692077",
+    "121.5693729"
+   ]
+  }
+ ],
+ "消防局永吉分隊": [],
+ "臺北市信義區永吉路48號": [],
+ "莊敬分隊": [
+  {
+   "place_id": 228659183,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 334974655,
+   "lat": "25.0296001",
+   "lon": "121.5650479",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "莊敬分隊",
+   "display_name": "莊敬分隊, 松智路, 景新里, 信義區, 三張犁, 臺北市, 110615, 臺灣",
+   "address": {
+    "office": "莊敬分隊",
+    "road": "松智路",
+    "neighbourhood": "景新里",
+    "suburb": "信義區",
+    "village": "三張犁",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "110615",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0294363",
+    "25.0297639",
+    "121.5648990",
+    "121.5651968"
+   ]
+  }
+ ],
+ "消防局莊敬分隊": [],
+ "臺北市信義區松智路40號": [],
+ "大直分隊": [
+  {
+   "place_id": 231390722,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 404545683,
+   "lat": "25.0802270",
+   "lon": "121.5568297",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "臺北市政府消防局第三大隊大直分隊",
+   "display_name": "臺北市政府消防局第三大隊大直分隊, 消防車通道, 金泰里, 中山區, 下塔悠, 臺北市, 104252, 臺灣",
+   "address": {
+    "office": "臺北市政府消防局第三大隊大直分隊",
+    "road": "消防車通道",
+    "neighbourhood": "金泰里",
+    "suburb": "中山區",
+    "village": "下塔悠",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "104252",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0801288",
+    "25.0803252",
+    "121.5565926",
+    "121.5570668"
+   ]
+  },
+  {
+   "place_id": 231210008,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 302554492,
+   "lat": "25.0815764",
+   "lon": "121.5468917",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "中山區清潔隊大直分隊",
+   "display_name": "中山區清潔隊大直分隊, 大直街21巷, 大直里, 中山區, 下塔悠, 臺北市, 10463, 臺灣",
+   "address": {
+    "office": "中山區清潔隊大直分隊",
+    "road": "大直街21巷",
+    "neighbourhood": "大直里",
+    "suburb": "中山區",
+    "village": "下塔悠",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10463",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0814717",
+    "25.0816482",
+    "121.5467430",
+    "121.5470419"
+   ]
+  }
+ ],
+ "消防局大直分隊": [],
+ "臺北市中山區樂群二路143號": [],
+ "松江分隊": [
+  {
+   "place_id": 229121659,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 437331547,
+   "lat": "25.0476633",
+   "lon": "121.5341255",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "松江分隊",
+   "display_name": "松江分隊, 9, 松江路25巷, 朱園里, 中山區, 朱厝崙, 臺北市, 104, 臺灣",
+   "address": {
+    "amenity": "松江分隊",
+    "house_number": "9",
+    "road": "松江路25巷",
+    "neighbourhood": "朱園里",
+    "suburb": "中山區",
+    "village": "朱厝崙",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "104",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0475014",
+    "25.0478311",
+    "121.5339695",
+    "121.5343531"
+   ]
+  }
+ ],
+ "消防局松江分隊": [],
+ "臺北市中山區松江路25巷9號": [],
+ "圓山分隊": [
+  {
+   "place_id": 231137035,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 258699152,
+   "lat": "25.0685960",
+   "lon": "121.5297909",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "圓山分隊",
+   "display_name": "圓山分隊, 臨41, 民族東路, 新庄里, 中山區, 下埤頭, 臺北市, 104, 臺灣",
+   "address": {
+    "office": "圓山分隊",
+    "house_number": "臨41",
+    "road": "民族東路",
+    "neighbourhood": "新庄里",
+    "suburb": "中山區",
+    "village": "下埤頭",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "104",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0685043",
+    "25.0686932",
+    "121.5295677",
+    "121.5300141"
+   ]
+  },
+  {
+   "place_id": 232038818,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5110489227,
+   "lat": "25.0090292",
+   "lon": "121.4817680",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 6.715571831841028e-05,
+   "addresstype": "amenity",
+   "name": "員山分隊",
+   "display_name": "員山分隊, 中正路, 員富里, 中和區, 深丘, 新北市, 23546, 臺灣",
+   "address": {
+    "amenity": "員山分隊",
+    "road": "中正路",
+    "neighbourhood": "員富里",
+    "suburb": "中和區",
+    "village": "深丘",
+    "city": "新北市",
+    "ISO3166-2-lvl4": "TW-NWT",
+    "postcode": "23546",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0089792",
+    "25.0090792",
+    "121.4817180",
+    "121.4818180"
+   ]
+  }
+ ],
+ "消防局圓山分隊": [],
+ "臺北市中山區民族東路41號": [],
+ "建國分隊": [
+  {
+   "place_id": 231302204,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 673327074,
+   "lat": "25.0399833",
+   "lon": "121.5377289",
+   "category": "building",
+   "type": "yes",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "building",
+   "name": "大安區清潔隊新生分隊",
+   "display_name": "大安區清潔隊新生分隊, 建國快速道路, 民輝里, 大安區, 東區商圈, 臺北市, 10655, 臺灣",
+   "address": {
+    "building": "大安區清潔隊新生分隊",
+    "road": "建國快速道路",
+    "neighbourhood": "民輝里",
+    "suburb": "大安區",
+    "village": "東區商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10655",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0398806",
+    "25.0400702",
+    "121.5375643",
+    "121.5378901"
+   ]
+  },
+  {
+   "place_id": 231670891,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4837986480,
+   "lat": "25.0673111",
+   "lon": "121.5341754",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "中山區清潔隊民權分隊",
+   "display_name": "中山區清潔隊民權分隊, 建國快速道路, 行政里, 中山區, 朱厝崙, 臺北市, 104068, 臺灣",
+   "address": {
+    "office": "中山區清潔隊民權分隊",
+    "road": "建國快速道路",
+    "neighbourhood": "行政里",
+    "suburb": "中山區",
+    "village": "朱厝崙",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "104068",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0672611",
+    "25.0673611",
+    "121.5341254",
+    "121.5342254"
+   ]
+  },
+  {
+   "place_id": 231189365,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4777315497,
+   "lat": "25.0351678",
+   "lon": "121.5356943",
+   "category": "amenity",
+   "type": "police",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "交通大隊大安分隊",
+   "display_name": "交通大隊大安分隊, 建國南路一段318巷, 民炤里, 大安區, 東區商圈, 臺北市, 10656, 臺灣",
+   "address": {
+    "amenity": "交通大隊大安分隊",
+    "road": "建國南路一段318巷",
+    "neighbourhood": "民炤里",
+    "suburb": "大安區",
+    "village": "東區商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10656",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0351178",
+    "25.0352178",
+    "121.5356443",
+    "121.5357443"
+   ]
+  }
+ ],
+ "消防局建國分隊": [],
+ "臺北市中山區民族東路282號": [],
+ "八德分隊": [
+  {
+   "place_id": 230280187,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 366004481,
+   "lat": "25.0484843",
+   "lon": "121.5630702",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "八德分隊",
+   "display_name": "八德分隊, 162, 八德路四段, 復盛里, 松山區, 興雅, 臺北市, 105, 臺灣",
+   "address": {
+    "amenity": "八德分隊",
+    "house_number": "162",
+    "road": "八德路四段",
+    "neighbourhood": "復盛里",
+    "suburb": "松山區",
+    "village": "興雅",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "105",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0483637",
+    "25.0486047",
+    "121.5629816",
+    "121.5631588"
+   ]
+  }
+ ],
+ "消防局八德分隊": [
+  {
+   "place_id": 230859305,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 366004481,
+   "lat": "25.0484843",
+   "lon": "121.5630702",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "八德分隊",
+   "display_name": "八德分隊, 162, 八德路四段, 復盛里, 松山區, 興雅, 臺北市, 105, 臺灣",
+   "address": {
+    "amenity": "八德分隊",
+    "house_number": "162",
+    "road": "八德路四段",
+    "neighbourhood": "復盛里",
+    "suburb": "松山區",
+    "village": "興雅",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "105",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0483637",
+    "25.0486047",
+    "121.5629816",
+    "121.5631588"
+   ]
+  }
+ ],
+ "臺北市松山區八德路4段162號": [],
+ "中崙分隊": [
+  {
+   "place_id": 231298709,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2678627712,
+   "lat": "25.0484022",
+   "lon": "121.5458041",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "中崙分隊",
+   "display_name": "中崙分隊, 長安東路二段, 中正里, 松山區, 中崙, 臺北市, 10552, 臺灣",
+   "address": {
+    "amenity": "中崙分隊",
+    "road": "長安東路二段",
+    "neighbourhood": "中正里",
+    "suburb": "松山區",
+    "village": "中崙",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10552",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0483522",
+    "25.0484522",
+    "121.5457541",
+    "121.5458541"
+   ]
+  }
+ ],
+ "消防局中崙分隊": [],
+ "臺北市松山區長安東路2段229號": [],
+ "東湖分隊": [
+  {
+   "place_id": 232921018,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 404387338,
+   "lat": "25.0669911",
+   "lon": "121.5781002",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "民權消防分隊",
+   "display_name": "民權消防分隊, 民權東路六段11巷, 湖元里, 內湖區, 潭美, 臺北市, 11494, 臺灣",
+   "address": {
+    "amenity": "民權消防分隊",
+    "road": "民權東路六段11巷",
+    "neighbourhood": "湖元里",
+    "suburb": "內湖區",
+    "village": "潭美",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11494",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0668403",
+    "25.0671189",
+    "121.5779206",
+    "121.5782796"
+   ]
+  },
+  {
+   "place_id": 229348580,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2700742930,
+   "lat": "25.0795079",
+   "lon": "121.5110401",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "highway",
+   "name": "社子消防分隊",
+   "display_name": "社子消防分隊, 延平北路五段, 富光里, 士林區, 社子, 臺北市, 111064, 臺灣",
+   "address": {
+    "highway": "社子消防分隊",
+    "road": "延平北路五段",
+    "neighbourhood": "富光里",
+    "suburb": "士林區",
+    "village": "社子",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111064",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0794579",
+    "25.0795579",
+    "121.5109901",
+    "121.5110901"
+   ]
+  },
+  {
+   "place_id": 228558298,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 3506736114,
+   "lat": "25.0478630",
+   "lon": "121.5868250",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "成德分隊",
+   "display_name": "成德分隊, 忠孝東路六段188巷, 聯成里, 南港區, 潭美, 臺北市, 11556, 臺灣",
+   "address": {
+    "amenity": "成德分隊",
+    "road": "忠孝東路六段188巷",
+    "neighbourhood": "聯成里",
+    "suburb": "南港區",
+    "village": "潭美",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11556",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0478130",
+    "25.0479130",
+    "121.5867750",
+    "121.5868750"
+   ]
+  },
+  {
+   "place_id": 230545402,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 1715784246,
+   "lat": "25.0791086",
+   "lon": "121.5114064",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "社子消防分隊",
+   "display_name": "社子消防分隊, 重慶北路四段1巷, 福順里, 士林區, 大龍峒, 臺北市, 103035, 臺灣",
+   "address": {
+    "amenity": "社子消防分隊",
+    "road": "重慶北路四段1巷",
+    "neighbourhood": "福順里",
+    "suburb": "士林區",
+    "village": "大龍峒",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "103035",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0790586",
+    "25.0791586",
+    "121.5113564",
+    "121.5114564"
+   ]
+  },
+  {
+   "place_id": 231067911,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2967020072,
+   "lat": "25.1651357",
+   "lon": "121.4498866",
+   "category": "amenity",
+   "type": "police",
+   "place_rank": 30,
+   "importance": 6.715571831841028e-05,
+   "addresstype": "amenity",
+   "name": "淡水分局交通分隊",
+   "display_name": "淡水分局交通分隊, 中正東路, 幸福里, 淡水區, 滬尾, 新北市, 25147, 臺灣",
+   "address": {
+    "amenity": "淡水分局交通分隊",
+    "road": "中正東路",
+    "neighbourhood": "幸福里",
+    "suburb": "淡水區",
+    "village": "滬尾",
+    "city": "新北市",
+    "ISO3166-2-lvl4": "TW-NWT",
+    "postcode": "25147",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1650857",
+    "25.1651857",
+    "121.4498366",
+    "121.4499366"
+   ]
+  }
+ ],
+ "消防局東湖分隊": [],
+ "臺北市內湖區五分街8號": [],
+ "大湖分隊": [
+  {
+   "place_id": 230811302,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 495024058,
+   "lat": "25.0839878",
+   "lon": "121.6014792",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "大湖分隊",
+   "display_name": "大湖分隊, 3;5, 成功路五段, 秀湖里, 內湖區, 五分, 臺北市, 114, 臺灣",
+   "address": {
+    "amenity": "大湖分隊",
+    "house_number": "3;5",
+    "road": "成功路五段",
+    "neighbourhood": "秀湖里",
+    "suburb": "內湖區",
+    "village": "五分",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "114",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0839171",
+    "25.0840583",
+    "121.6014116",
+    "121.6015467"
+   ]
+  }
+ ],
+ "消防局大湖分隊": [],
+ "臺北市內湖區成功路5段5號": [],
+ "內湖分隊": [
+  {
+   "place_id": 231883439,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1435256007,
+   "lat": "25.0696258",
+   "lon": "121.5899439",
+   "category": "landuse",
+   "type": "commercial",
+   "place_rank": 24,
+   "importance": 0.08007457007705802,
+   "addresstype": "commercial",
+   "name": "內湖分隊",
+   "display_name": "內湖分隊, 寶湖里, 內湖區, 潭美, 臺北市, 臺灣",
+   "address": {
+    "commercial": "內湖分隊",
+    "neighbourhood": "寶湖里",
+    "suburb": "內湖區",
+    "village": "潭美",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0691375",
+    "25.0700912",
+    "121.5894791",
+    "121.5904944"
+   ]
+  },
+  {
+   "place_id": 231658661,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 208362637,
+   "lat": "25.0697096",
+   "lon": "121.5902633",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "內湖分隊",
+   "display_name": "內湖分隊, 成功路二段, 寶湖里, 內湖區, 潭美, 臺北市, 114059, 臺灣",
+   "address": {
+    "amenity": "內湖分隊",
+    "road": "成功路二段",
+    "neighbourhood": "寶湖里",
+    "suburb": "內湖區",
+    "village": "潭美",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "114059",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0695974",
+    "25.0698387",
+    "121.5900836",
+    "121.5903822"
+   ]
+  }
+ ],
+ "消防局內湖分隊": [],
+ "臺北市內湖區成功路2段378號": [],
+ "民權分隊": [
+  {
+   "place_id": 232920985,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 404387338,
+   "lat": "25.0669911",
+   "lon": "121.5781002",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "民權消防分隊",
+   "display_name": "民權消防分隊, 民權東路六段11巷, 湖元里, 內湖區, 潭美, 臺北市, 11494, 臺灣",
+   "address": {
+    "office": "民權消防分隊",
+    "road": "民權東路六段11巷",
+    "neighbourhood": "湖元里",
+    "suburb": "內湖區",
+    "village": "潭美",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11494",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0668403",
+    "25.0671189",
+    "121.5779206",
+    "121.5782796"
+   ]
+  },
+  {
+   "place_id": 229295960,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 258699152,
+   "lat": "25.0685960",
+   "lon": "121.5297909",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "圓山分隊",
+   "display_name": "圓山分隊, 臨41, 民族東路, 新庄里, 中山區, 下埤頭, 臺北市, 104, 臺灣",
+   "address": {
+    "office": "圓山分隊",
+    "house_number": "臨41",
+    "road": "民族東路",
+    "neighbourhood": "新庄里",
+    "suburb": "中山區",
+    "village": "下埤頭",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "104",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0685043",
+    "25.0686932",
+    "121.5295677",
+    "121.5300141"
+   ]
+  },
+  {
+   "place_id": 233556451,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 383493921,
+   "lat": "25.0614085",
+   "lon": "121.5138595",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "臺北市消防局大同分隊",
+   "display_name": "臺北市消防局大同分隊, 重慶北路二段, 民權里, 大同區, 雙連, 臺北市, 103, 臺灣",
+   "address": {
+    "office": "臺北市消防局大同分隊",
+    "road": "重慶北路二段",
+    "neighbourhood": "民權里",
+    "suburb": "大同區",
+    "village": "雙連",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "103",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0613296",
+    "25.0615660",
+    "121.5137247",
+    "121.5139943"
+   ]
+  },
+  {
+   "place_id": 232171492,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4777315497,
+   "lat": "25.0351678",
+   "lon": "121.5356943",
+   "category": "amenity",
+   "type": "police",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "交通大隊大安分隊",
+   "display_name": "交通大隊大安分隊, 建國南路一段318巷, 民炤里, 大安區, 東區商圈, 臺北市, 10656, 臺灣",
+   "address": {
+    "amenity": "交通大隊大安分隊",
+    "road": "建國南路一段318巷",
+    "neighbourhood": "民炤里",
+    "suburb": "大安區",
+    "village": "東區商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10656",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0351178",
+    "25.0352178",
+    "121.5356443",
+    "121.5357443"
+   ]
+  }
+ ],
+ "消防局民權分隊": [],
+ "臺北市內湖區民權東路6段9號": [],
+ "建成分隊": [
+  {
+   "place_id": 228131770,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 258084035,
+   "lat": "25.0547858",
+   "lon": "121.5184749",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "建成分隊",
+   "display_name": "建成分隊, 35, 承德路二段, 光能里, 大同區, 建成, 臺北市, 10352, 臺灣",
+   "address": {
+    "amenity": "建成分隊",
+    "house_number": "35",
+    "road": "承德路二段",
+    "neighbourhood": "光能里",
+    "suburb": "大同區",
+    "village": "建成",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10352",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0547266",
+    "25.0548788",
+    "121.5184179",
+    "121.5185380"
+   ]
+  }
+ ],
+ "消防局建成分隊": [],
+ "臺北市大同區承德路2段35號": [],
+ "延平分隊": [
+  {
+   "place_id": 228805762,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 343713286,
+   "lat": "25.0503449",
+   "lon": "121.5113790",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "延平分隊",
+   "display_name": "延平分隊, 109, 鄭州路, 玉泉里, 大同區, 後車頭, 臺北市, 103012, 臺灣",
+   "address": {
+    "amenity": "延平分隊",
+    "house_number": "109",
+    "road": "鄭州路",
+    "neighbourhood": "玉泉里",
+    "suburb": "大同區",
+    "village": "後車頭",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "103012",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0502423",
+    "25.0504475",
+    "121.5112670",
+    "121.5114910"
+   ]
+  }
+ ],
+ "消防局延平分隊": [],
+ "臺北市大同區鄭州路109號": [],
+ "大同分隊": [
+  {
+   "place_id": 230956329,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 383493921,
+   "lat": "25.0614085",
+   "lon": "121.5138595",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "臺北市消防局大同分隊",
+   "display_name": "臺北市消防局大同分隊, 重慶北路二段, 民權里, 大同區, 雙連, 臺北市, 103, 臺灣",
+   "address": {
+    "office": "臺北市消防局大同分隊",
+    "road": "重慶北路二段",
+    "neighbourhood": "民權里",
+    "suburb": "大同區",
+    "village": "雙連",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "103",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0613296",
+    "25.0615660",
+    "121.5137247",
+    "121.5139943"
+   ]
+  },
+  {
+   "place_id": 230609700,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 343713286,
+   "lat": "25.0503449",
+   "lon": "121.5113790",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "延平分隊",
+   "display_name": "延平分隊, 109, 鄭州路, 玉泉里, 大同區, 後車頭, 臺北市, 103012, 臺灣",
+   "address": {
+    "amenity": "延平分隊",
+    "house_number": "109",
+    "road": "鄭州路",
+    "neighbourhood": "玉泉里",
+    "suburb": "大同區",
+    "village": "後車頭",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "103012",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0502423",
+    "25.0504475",
+    "121.5112670",
+    "121.5114910"
+   ]
+  },
+  {
+   "place_id": 230585716,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4777315497,
+   "lat": "25.0351678",
+   "lon": "121.5356943",
+   "category": "amenity",
+   "type": "police",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "交通大隊大安分隊",
+   "display_name": "交通大隊大安分隊, 建國南路一段318巷, 民炤里, 大安區, 東區商圈, 臺北市, 10656, 臺灣",
+   "address": {
+    "amenity": "交通大隊大安分隊",
+    "road": "建國南路一段318巷",
+    "neighbourhood": "民炤里",
+    "suburb": "大安區",
+    "village": "東區商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10656",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0351178",
+    "25.0352178",
+    "121.5356443",
+    "121.5357443"
+   ]
+  }
+ ],
+ "消防局大同分隊": [],
+ "臺北市大同區重慶北路2段223號": [],
+ "山仔后分隊": [
+  {
+   "place_id": 231137035,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 258699152,
+   "lat": "25.0685960",
+   "lon": "121.5297909",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "圓山分隊",
+   "display_name": "圓山分隊, 臨41, 民族東路, 新庄里, 中山區, 下埤頭, 臺北市, 104, 臺灣",
+   "address": {
+    "office": "圓山分隊",
+    "house_number": "臨41",
+    "road": "民族東路",
+    "neighbourhood": "新庄里",
+    "suburb": "中山區",
+    "village": "下埤頭",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "104",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0685043",
+    "25.0686932",
+    "121.5295677",
+    "121.5300141"
+   ]
+  }
+ ],
+ "消防局山仔后分隊": [],
+ "臺北市士林區仰德大道4段161號": [],
+ "天母分隊": [],
+ "消防局天母分隊": [],
+ "臺北市士林區中山北路7段194號": [],
+ "福安分隊": [
+  {
+   "place_id": 230508493,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 436654099,
+   "lat": "25.0116356",
+   "lon": "121.5376961",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "古亭分隊",
+   "display_name": "古亭分隊, 基隆路四段, 學府里, 大安區, 公館, 臺北市, 107, 臺灣",
+   "address": {
+    "office": "古亭分隊",
+    "road": "基隆路四段",
+    "neighbourhood": "學府里",
+    "suburb": "大安區",
+    "village": "公館",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "107",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0115285",
+    "25.0117427",
+    "121.5375748",
+    "121.5378174"
+   ]
+  },
+  {
+   "place_id": 230396664,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 447734845,
+   "lat": "25.0300327",
+   "lon": "121.5432298",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "復興分隊",
+   "display_name": "復興分隊, 92, 復興南路二段, 龍圖里, 大安區, 東區商圈, 臺北市, 106, 臺灣",
+   "address": {
+    "amenity": "復興分隊",
+    "house_number": "92",
+    "road": "復興南路二段",
+    "neighbourhood": "龍圖里",
+    "suburb": "大安區",
+    "village": "東區商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "106",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0299392",
+    "25.0301898",
+    "121.5431674",
+    "121.5432944"
+   ]
+  },
+  {
+   "place_id": 230491428,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 5110489319,
+   "lat": "25.0597259",
+   "lon": "121.5276049",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "義消圓山分隊",
+   "display_name": "義消圓山分隊, 新生高架道路, 中庄里, 中山區, 南西商圈, 臺北市, 10469, 臺灣",
+   "address": {
+    "amenity": "義消圓山分隊",
+    "road": "新生高架道路",
+    "neighbourhood": "中庄里",
+    "suburb": "中山區",
+    "village": "南西商圈",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "10469",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0596759",
+    "25.0597759",
+    "121.5275549",
+    "121.5276549"
+   ]
+  },
+  {
+   "place_id": 228852770,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 9020127868,
+   "lat": "25.0966900",
+   "lon": "121.4970600",
+   "category": "amenity",
+   "type": "bicycle_rental",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "福安消防分隊",
+   "display_name": "福安消防分隊, 環河北路出口匝道, 福安里, 士林區, 社子, 臺北市, 111068, 臺灣",
+   "address": {
+    "amenity": "福安消防分隊",
+    "road": "環河北路出口匝道",
+    "neighbourhood": "福安里",
+    "suburb": "士林區",
+    "village": "社子",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111068",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0966400",
+    "25.0967400",
+    "121.4970100",
+    "121.4971100"
+   ]
+  },
+  {
+   "place_id": 232708885,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2784785776,
+   "lat": "25.0042778",
+   "lon": "121.4434034",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 6.715571831841028e-05,
+   "addresstype": "amenity",
+   "name": "新北市政府消防局大觀分隊",
+   "display_name": "新北市政府消防局大觀分隊, 1-3, 大觀路一段38巷, 聚安里, 板橋區, 歡仔園, 新北市, 220, 臺灣",
+   "address": {
+    "amenity": "新北市政府消防局大觀分隊",
+    "house_number": "1-3",
+    "road": "大觀路一段38巷",
+    "neighbourhood": "聚安里",
+    "suburb": "板橋區",
+    "village": "歡仔園",
+    "city": "新北市",
+    "ISO3166-2-lvl4": "TW-NWT",
+    "postcode": "220",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0042278",
+    "25.0043278",
+    "121.4433534",
+    "121.4434534"
+   ]
+  }
+ ],
+ "消防局福安分隊": [],
+ "臺北市士林區延平北路7段42-7號": [],
+ "社子分隊": [
+  {
+   "place_id": 228235701,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 435181718,
+   "lat": "25.0899674",
+   "lon": "121.5278462",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "劍潭分隊",
+   "display_name": "劍潭分隊, 376, 中山北路五段, 福林里, 士林區, 石角, 臺北市, 111, 臺灣",
+   "address": {
+    "amenity": "劍潭分隊",
+    "house_number": "376",
+    "road": "中山北路五段",
+    "neighbourhood": "福林里",
+    "suburb": "士林區",
+    "village": "石角",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0897796",
+    "25.0901476",
+    "121.5276929",
+    "121.5280150"
+   ]
+  },
+  {
+   "place_id": 231400871,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4927497172,
+   "lat": "25.0871918",
+   "lon": "121.5180755",
+   "category": "amenity",
+   "type": "waste_transfer_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "士林清潔隊後港分隊",
+   "display_name": "士林清潔隊後港分隊, 福港街199巷, 福中里, 士林區, 社子, 臺北市, 111057, 臺灣",
+   "address": {
+    "amenity": "士林清潔隊後港分隊",
+    "road": "福港街199巷",
+    "neighbourhood": "福中里",
+    "suburb": "士林區",
+    "village": "社子",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111057",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0871418",
+    "25.0872418",
+    "121.5180255",
+    "121.5181255"
+   ]
+  },
+  {
+   "place_id": 230766327,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2700743214,
+   "lat": "25.0793827",
+   "lon": "121.5112126",
+   "category": "highway",
+   "type": "bus_stop",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "highway",
+   "name": "社子消防分隊",
+   "display_name": "社子消防分隊, 延平北路五段, 富光里, 士林區, 社子, 臺北市, 111064, 臺灣",
+   "address": {
+    "highway": "社子消防分隊",
+    "road": "延平北路五段",
+    "neighbourhood": "富光里",
+    "suburb": "士林區",
+    "village": "社子",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111064",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0793327",
+    "25.0794327",
+    "121.5111626",
+    "121.5112626"
+   ]
+  },
+  {
+   "place_id": 228852770,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 9020127868,
+   "lat": "25.0966900",
+   "lon": "121.4970600",
+   "category": "amenity",
+   "type": "bicycle_rental",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "福安消防分隊",
+   "display_name": "福安消防分隊, 環河北路出口匝道, 福安里, 士林區, 社子, 臺北市, 111068, 臺灣",
+   "address": {
+    "amenity": "福安消防分隊",
+    "road": "環河北路出口匝道",
+    "neighbourhood": "福安里",
+    "suburb": "士林區",
+    "village": "社子",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111068",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0966400",
+    "25.0967400",
+    "121.4970100",
+    "121.4971100"
+   ]
+  },
+  {
+   "place_id": 231379434,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 1715784246,
+   "lat": "25.0791086",
+   "lon": "121.5114064",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "社子消防分隊",
+   "display_name": "社子消防分隊, 重慶北路四段1巷, 福順里, 士林區, 大龍峒, 臺北市, 103035, 臺灣",
+   "address": {
+    "amenity": "社子消防分隊",
+    "road": "重慶北路四段1巷",
+    "neighbourhood": "福順里",
+    "suburb": "士林區",
+    "village": "大龍峒",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "103035",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0790586",
+    "25.0791586",
+    "121.5113564",
+    "121.5114564"
+   ]
+  }
+ ],
+ "消防局社子分隊": [],
+ "臺北市士林區延平北路5段2之1號": [],
+ "劍潭分隊": [
+  {
+   "place_id": 228235701,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 435181718,
+   "lat": "25.0899674",
+   "lon": "121.5278462",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "劍潭分隊",
+   "display_name": "劍潭分隊, 376, 中山北路五段, 福林里, 士林區, 石角, 臺北市, 111, 臺灣",
+   "address": {
+    "amenity": "劍潭分隊",
+    "house_number": "376",
+    "road": "中山北路五段",
+    "neighbourhood": "福林里",
+    "suburb": "士林區",
+    "village": "石角",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0897796",
+    "25.0901476",
+    "121.5276929",
+    "121.5280150"
+   ]
+  }
+ ],
+ "消防局劍潭分隊": [],
+ "臺北市士林區中山北路5段376號": [],
+ "雙溪分隊": [
+  {
+   "place_id": 231625257,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 608562611,
+   "lat": "25.0976672",
+   "lon": "121.5446741",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "雙溪分隊",
+   "display_name": "雙溪分隊, 至善路二段25巷, 臨溪里, 士林區, 石角, 臺北市, 11143, 臺灣",
+   "address": {
+    "amenity": "雙溪分隊",
+    "road": "至善路二段25巷",
+    "neighbourhood": "臨溪里",
+    "suburb": "士林區",
+    "village": "石角",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11143",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0975135",
+    "25.0978210",
+    "121.5445236",
+    "121.5448246"
+   ]
+  }
+ ],
+ "消防局雙溪分隊": [],
+ "臺北市士林區至善路2段41號": [],
+ "後港分隊": [
+  {
+   "place_id": 231169042,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 4927497172,
+   "lat": "25.0871918",
+   "lon": "121.5180755",
+   "category": "amenity",
+   "type": "waste_transfer_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "士林清潔隊後港分隊",
+   "display_name": "士林清潔隊後港分隊, 福港街199巷, 福中里, 士林區, 社子, 臺北市, 111057, 臺灣",
+   "address": {
+    "amenity": "士林清潔隊後港分隊",
+    "road": "福港街199巷",
+    "neighbourhood": "福中里",
+    "suburb": "士林區",
+    "village": "社子",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111057",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0871418",
+    "25.0872418",
+    "121.5180255",
+    "121.5181255"
+   ]
+  }
+ ],
+ "消防局後港分隊": [],
+ "臺北市士林區福港街153號": [],
+ "陽明山分隊": [
+  {
+   "place_id": 424217322,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 660423302,
+   "lat": "25.1514695",
+   "lon": "121.5464647",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "陽明山分隊",
+   "display_name": "陽明山分隊, 1, 勝利街, 湖山里, 北投區, 陽明山, 臺北市, 112, 臺灣",
+   "address": {
+    "amenity": "陽明山分隊",
+    "house_number": "1",
+    "road": "勝利街",
+    "neighbourhood": "湖山里",
+    "suburb": "北投區",
+    "village": "陽明山",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "112",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1513678",
+    "25.1516289",
+    "121.5463695",
+    "121.5465926"
+   ]
+  }
+ ],
+ "消防局陽明山分隊": [],
+ "臺北市北投區勝利街1號": [],
+ "光明分隊": [
+  {
+   "place_id": 231371586,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 378892669,
+   "lat": "25.1351599",
+   "lon": "121.5024479",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "光明分隊",
+   "display_name": "光明分隊, 光明路, 長安里, 北投區, 新北投, 臺北市, 112006, 臺灣",
+   "address": {
+    "amenity": "光明分隊",
+    "road": "光明路",
+    "neighbourhood": "長安里",
+    "suburb": "北投區",
+    "village": "新北投",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "112006",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1350467",
+    "25.1353192",
+    "121.5023270",
+    "121.5025700"
+   ]
+  }
+ ],
+ "消防局光明分隊": [],
+ "臺北市北投區光明路155號": [],
+ "關渡分隊": [
+  {
+   "place_id": 231295319,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 3820876919,
+   "lat": "25.1232488",
+   "lon": "121.4667823",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "關渡消防分隊",
+   "display_name": "關渡消防分隊, 345, 知行路, 知行路293巷巷口市場, 關渡里, 北投區, 臺北市, 112, 臺灣",
+   "address": {
+    "amenity": "關渡消防分隊",
+    "house_number": "345",
+    "road": "知行路",
+    "retail": "知行路293巷巷口市場",
+    "neighbourhood": "關渡里",
+    "suburb": "北投區",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "112",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1231988",
+    "25.1232988",
+    "121.4667323",
+    "121.4668323"
+   ]
+  }
+ ],
+ "消防局關渡分隊": [],
+ "臺北市北投區知行路345號": [],
+ "石牌分隊": [
+  {
+   "place_id": 231770875,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1146880089,
+   "lat": "25.1180501",
+   "lon": "121.5170971",
+   "category": "office",
+   "type": "government",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "office",
+   "name": "石牌分隊",
+   "display_name": "石牌分隊, 石牌路二段, 振華里, 北投區, 奇岩, 臺北市, 112063, 臺灣",
+   "address": {
+    "office": "石牌分隊",
+    "road": "石牌路二段",
+    "neighbourhood": "振華里",
+    "suburb": "北投區",
+    "village": "奇岩",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "112063",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1179228",
+    "25.1181703",
+    "121.5169591",
+    "121.5172387"
+   ]
+  }
+ ],
+ "消防局石牌分隊": [],
+ "臺北市北投區石牌路2段101號": [],
+ "秀山分隊": [
+  {
+   "place_id": 231588602,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 3822530557,
+   "lat": "25.1456630",
+   "lon": "121.4931148",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "秀山分隊",
+   "display_name": "秀山分隊, 秀山路, 秀山里, 北投區, 新北投, 臺北市, 11256, 臺灣",
+   "address": {
+    "amenity": "秀山分隊",
+    "road": "秀山路",
+    "neighbourhood": "秀山里",
+    "suburb": "北投區",
+    "village": "新北投",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11256",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1456130",
+    "25.1457130",
+    "121.4930648",
+    "121.4931648"
+   ]
+  }
+ ],
+ "消防局秀山分隊": [],
+ "臺北市北投區秀山路50號": [],
+ "福國分隊": [
+  {
+   "place_id": 226580505,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 734395310,
+   "lat": "24.9997735",
+   "lon": "121.4725716",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 6.715571831841028e-05,
+   "addresstype": "amenity",
+   "name": "新北市政府消防局第七大队国光分队",
+   "display_name": "新北市政府消防局第七大队国光分队, 莒光路, 冠穗里, 中和區, 穗和, 新北市, 23544, 臺灣",
+   "address": {
+    "amenity": "新北市政府消防局第七大队国光分队",
+    "road": "莒光路",
+    "neighbourhood": "冠穗里",
+    "suburb": "中和區",
+    "village": "穗和",
+    "city": "新北市",
+    "ISO3166-2-lvl4": "TW-NWT",
+    "postcode": "23544",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "24.9994612",
+    "25.0000592",
+    "121.4724296",
+    "121.4727576"
+   ]
+  },
+  {
+   "place_id": 229369684,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 2890339870,
+   "lat": "24.9996406",
+   "lon": "121.4725604",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 6.715571831841028e-05,
+   "addresstype": "amenity",
+   "name": "新北市政府消防局第七大隊國光分隊",
+   "display_name": "新北市政府消防局第七大隊國光分隊, 160-1, 莒光路, 冠穗里, 中和區, 穗和, 新北市, 235, 臺灣",
+   "address": {
+    "amenity": "新北市政府消防局第七大隊國光分隊",
+    "house_number": "160-1",
+    "road": "莒光路",
+    "neighbourhood": "冠穗里",
+    "suburb": "中和區",
+    "village": "穗和",
+    "city": "新北市",
+    "ISO3166-2-lvl4": "TW-NWT",
+    "postcode": "235",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "24.9995906",
+    "24.9996906",
+    "121.4725104",
+    "121.4726104"
+   ]
+  }
+ ],
+ "消防局福國分隊": [],
+ "臺北市北投區福國路172號": [],
+ "南港消防分隊": [
+  {
+   "place_id": 229760074,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 156426260,
+   "lat": "25.0450037",
+   "lon": "121.6151600",
+   "category": "amenity",
+   "type": "fire_station",
+   "place_rank": 30,
+   "importance": 7.457007705801507e-05,
+   "addresstype": "amenity",
+   "name": "舊莊消防分隊",
+   "display_name": "舊莊消防分隊, 研究院路二段84巷, 中研里, 南港區, 舊莊, 臺北市, 11564, 臺灣",
+   "address": {
+    "amenity": "舊莊消防分隊",
+    "road": "研究院路二段84巷",
+    "neighbourhood": "中研里",
+    "suburb": "南港區",
+    "village": "舊莊",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11564",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0448840",
+    "25.0451234",
+    "121.6149923",
+    "121.6153277"
+   ]
+  }
+ ],
+ "興中路, 南港區": [
+  {
+   "place_id": 229949912,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 73567623,
+   "lat": "25.0562976",
+   "lon": "121.6071081",
+   "category": "highway",
+   "type": "residential",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "residential",
+   "name": "興中路",
+   "display_name": "興中路, 南港里, 南港區, 三重埔, 臺北市, 115028, 臺灣",
+   "address": {
+    "road": "興中路",
+    "neighbourhood": "南港里",
+    "suburb": "南港區",
+    "village": "三重埔",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "115028",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0544901",
+    "25.0581034",
+    "121.6067019",
+    "121.6075008"
+   ]
+  },
+  {
+   "place_id": 427238521,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 335233773,
+   "lat": "25.0539395",
+   "lon": "121.6075999",
+   "category": "highway",
+   "type": "unclassified",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "unclassified",
+   "name": "興中路",
+   "display_name": "興中路, 南港里, 南港區, 三重埔, 臺北市, 115011, 臺灣",
+   "address": {
+    "road": "興中路",
+    "neighbourhood": "南港里",
+    "suburb": "南港區",
+    "village": "三重埔",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "115011",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0533894",
+    "25.0544901",
+    "121.6075008",
+    "121.6077051"
+   ]
+  },
+  {
+   "place_id": 427238522,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 335233774,
+   "lat": "25.0527977",
+   "lon": "121.6078144",
+   "category": "highway",
+   "type": "unclassified",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "unclassified",
+   "name": "興中路",
+   "display_name": "興中路, 中南里, 南港區, 三重埔, 臺北市, 115011, 臺灣",
+   "address": {
+    "road": "興中路",
+    "neighbourhood": "中南里",
+    "suburb": "南港區",
+    "village": "三重埔",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "115011",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.0522603",
+    "25.0533366",
+    "121.6077164",
+    "121.6079203"
+   ]
+  }
+ ],
+ "山仔后消防分隊": [],
+ "仰德大道四段, 士林區": [],
+ "天母消防分隊": [],
+ "中山北路七段, 士林區": [
+  {
+   "place_id": 231914214,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 259727927,
+   "lat": "25.1230367",
+   "lon": "121.5321682",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "secondary",
+   "name": "中山北路七段",
+   "display_name": "中山北路七段, 天山里, 士林區, 蘭雅, 臺北市, 111029, 臺灣",
+   "address": {
+    "road": "中山北路七段",
+    "neighbourhood": "天山里",
+    "suburb": "士林區",
+    "village": "蘭雅",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111029",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1215013",
+    "25.1245677",
+    "121.5315912",
+    "121.5327569"
+   ]
+  },
+  {
+   "place_id": 231234828,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 35837823,
+   "lat": "25.1238187",
+   "lon": "121.5323831",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "secondary",
+   "name": "中山北路七段",
+   "display_name": "中山北路七段, 天母里, 士林區, 東勢, 臺北市, 11156, 臺灣",
+   "address": {
+    "road": "中山北路七段",
+    "neighbourhood": "天母里",
+    "suburb": "士林區",
+    "village": "東勢",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11156",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1230458",
+    "25.1245932",
+    "121.5320845",
+    "121.5326778"
+   ]
+  },
+  {
+   "place_id": 231843053,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 259730086,
+   "lat": "25.1222851",
+   "lon": "121.5317995",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "secondary",
+   "name": "中山北路七段",
+   "display_name": "中山北路七段, 天母里, 士林區, 蘭雅, 臺北市, 111029, 臺灣",
+   "address": {
+    "road": "中山北路七段",
+    "neighbourhood": "天母里",
+    "suburb": "士林區",
+    "village": "蘭雅",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111029",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1215251",
+    "25.1230458",
+    "121.5315128",
+    "121.5320845"
+   ]
+  },
+  {
+   "place_id": 231487744,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 259731388,
+   "lat": "25.1272636",
+   "lon": "121.5331293",
+   "category": "highway",
+   "type": "residential",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "residential",
+   "name": "中山北路七段",
+   "display_name": "中山北路七段, 天母里, 士林區, 東勢, 臺北市, 11151, 臺灣",
+   "address": {
+    "road": "中山北路七段",
+    "neighbourhood": "天母里",
+    "suburb": "士林區",
+    "village": "東勢",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11151",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1266964",
+    "25.1278365",
+    "121.5328640",
+    "121.5333820"
+   ]
+  },
+  {
+   "place_id": 232066340,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 264547554,
+   "lat": "25.1185631",
+   "lon": "121.5304197",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "secondary",
+   "name": "中山北路七段",
+   "display_name": "中山北路七段, 天山里, 士林區, 蘭雅, 臺北市, 11152, 臺灣",
+   "address": {
+    "road": "中山北路七段",
+    "neighbourhood": "天山里",
+    "suburb": "士林區",
+    "village": "蘭雅",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11152",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1182988",
+    "25.1188476",
+    "121.5301822",
+    "121.5306140"
+   ]
+  }
+ ],
+ "木柵消防分隊": [],
+ "木柵路二段, 文山區": [
+  {
+   "place_id": 229329889,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 111484729,
+   "lat": "24.9889277",
+   "lon": "121.5621185",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "secondary",
+   "name": "木柵路二段",
+   "display_name": "木柵路二段, 明興里, 文山區, 臺北市, 116007, 臺灣",
+   "address": {
+    "road": "木柵路二段",
+    "neighbourhood": "明興里",
+    "suburb": "文山區",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "116007",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "24.9888259",
+    "24.9890562",
+    "121.5611324",
+    "121.5631004"
+   ]
+  },
+  {
+   "place_id": 229234380,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 316698034,
+   "lat": "24.9887440",
+   "lon": "121.5608360",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "secondary",
+   "name": "木柵路二段",
+   "display_name": "木柵路二段, 明興里, 文山區, 臺北市, 11646, 臺灣",
+   "address": {
+    "road": "木柵路二段",
+    "neighbourhood": "明興里",
+    "suburb": "文山區",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11646",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "24.9887291",
+    "24.9887979",
+    "121.5602089",
+    "121.5614615"
+   ]
+  },
+  {
+   "place_id": 229251860,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 316901074,
+   "lat": "24.9887852",
+   "lon": "121.5588953",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "secondary",
+   "name": "木柵路二段",
+   "display_name": "木柵路二段, 明義里, 文山區, 萬隆, 臺北市, 116009, 臺灣",
+   "address": {
+    "road": "木柵路二段",
+    "neighbourhood": "明義里",
+    "suburb": "文山區",
+    "village": "萬隆",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "116009",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "24.9887680",
+    "24.9887937",
+    "121.5576889",
+    "121.5601030"
+   ]
+  },
+  {
+   "place_id": 230121856,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 222745221,
+   "lat": "24.9887881",
+   "lon": "121.5601451",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "secondary",
+   "name": "木柵路二段",
+   "display_name": "木柵路二段, 明興里, 文山區, 臺北市, 116009, 臺灣",
+   "address": {
+    "road": "木柵路二段",
+    "neighbourhood": "明興里",
+    "suburb": "文山區",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "116009",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "24.9887867",
+    "24.9887894",
+    "121.5601030",
+    "121.5601871"
+   ]
+  }
+ ],
+ "福國路, 北投區": [
+  {
+   "place_id": 230934988,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 909692140,
+   "lat": "25.1015553",
+   "lon": "121.5101699",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "tertiary",
+   "name": "福國路",
+   "display_name": "福國路, 洲美里, 北投區, 臺北市, 11287, 臺灣",
+   "address": {
+    "road": "福國路",
+    "neighbourhood": "洲美里",
+    "suburb": "北投區",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11287",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1014807",
+    "25.1016299",
+    "121.5081193",
+    "121.5122205"
+   ]
+  },
+  {
+   "place_id": 230929516,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 909692141,
+   "lat": "25.1015583",
+   "lon": "121.5135946",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "tertiary",
+   "name": "福國路",
+   "display_name": "福國路, 北投士林科技園區, 建民里, 北投區, 社子, 臺北市, 11287, 臺灣",
+   "address": {
+    "road": "福國路",
+    "industrial": "北投士林科技園區",
+    "neighbourhood": "建民里",
+    "suburb": "北投區",
+    "village": "社子",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "11287",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1014663",
+    "25.1016504",
+    "121.5124447",
+    "121.5147445"
+   ]
+  },
+  {
+   "place_id": 231190821,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1118312835,
+   "lat": "25.1011828",
+   "lon": "121.5048063",
+   "category": "highway",
+   "type": "unclassified",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "unclassified",
+   "name": "福國路",
+   "display_name": "福國路, 洲美里, 北投區, 臺北市, 111063, 臺灣",
+   "address": {
+    "road": "福國路",
+    "neighbourhood": "洲美里",
+    "suburb": "北投區",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111063",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1011331",
+    "25.1012651",
+    "121.5036686",
+    "121.5059405"
+   ]
+  },
+  {
+   "place_id": 230999622,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1133685544,
+   "lat": "25.1013085",
+   "lon": "121.5070692",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "tertiary",
+   "name": "福國路",
+   "display_name": "福國路, 洲美里, 北投區, 臺北市, 111063, 臺灣",
+   "address": {
+    "road": "福國路",
+    "neighbourhood": "洲美里",
+    "suburb": "北投區",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111063",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1012651",
+    "25.1013517",
+    "121.5059405",
+    "121.5081980"
+   ]
+  },
+  {
+   "place_id": 230936307,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 910296945,
+   "lat": "25.1013986",
+   "lon": "121.5047951",
+   "category": "highway",
+   "type": "unclassified",
+   "place_rank": 26,
+   "importance": 0.05340790341039136,
+   "addresstype": "unclassified",
+   "name": "福國路",
+   "display_name": "福國路, 洲美里, 北投區, 社子, 臺北市, 111063, 臺灣",
+   "address": {
+    "road": "福國路",
+    "neighbourhood": "洲美里",
+    "suburb": "北投區",
+    "village": "社子",
+    "city": "臺北市",
+    "ISO3166-2-lvl4": "TW-TPE",
+    "postcode": "111063",
+    "country": "臺灣",
+    "country_code": "tw"
+   },
+   "boundingbox": [
+    "25.1013696",
+    "25.1014194",
+    "121.5036605",
+    "121.5059292"
+   ]
+  }
+ ]
+}
