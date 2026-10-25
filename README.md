@@ -75,9 +75,12 @@ python scripts/08_build_network.py
 python scripts/09_demand_and_times.py
 python scripts/10_optimize.py
 python scripts/11_map.py
+python scripts/12_build_web_data.py   # 網頁資料 web/data.js
 ```
 
 ## 輸出
+
+- `web/index.html` + `web/data.js`：互動試算網頁（由 `scripts/12_build_web_data.py` 產生資料）。點選分隊切換保留／裁撤，即時重算覆蓋與行車時間
 
 - `output/results.json`：各情境的最多裁撤數、建議名單與各項指標
 - `output/map_recommended10.html`：互動地圖（分隊位置，以及各里現況、裁撤後、增加時間的分層設色）
