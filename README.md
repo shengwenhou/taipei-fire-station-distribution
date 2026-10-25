@@ -176,7 +176,7 @@ python scripts/14_workload.py         # 分隊出勤負擔 → output/station_wo
 
 ## 輸出
 
-- `web/index.html` + `web/data.js`：互動試算網頁（由 `scripts/12_build_web_data.py` 產生資料）。可切換兩種判定標準，點選分隊切換保留／裁撤，即時重算覆蓋與行車時間
+- `web/index.html` + `web/data.js`：互動試算網頁（地圖用 Leaflet，可縮放拖曳；GitHub Pages 版本有內政部國土測繪中心的街道底圖，Artifact 版本因安全政策無法載入底圖）（由 `scripts/12_build_web_data.py` 產生資料）。可切換兩種判定標準，點選分隊切換保留／裁撤，即時重算覆蓋與行車時間
 
 - `output/results.json`：各情境的最多裁撤數、建議名單與各項指標
 - `output/map_recommended10.html`：互動地圖（分隊位置，以及各里現況、裁撤後、增加時間的分層設色）
@@ -187,4 +187,5 @@ python scripts/14_workload.py         # 分隊出勤負擔 → output/station_wo
 - 臺北市政府消防局官網（分隊名單、地址）
 - © OpenStreetMap contributors（ODbL）；Overture Maps Foundation（transportation、places、buildings、divisions）
 - 內政部戶政司 村里戶數、單一年齡人口（ODRP014）
+- 內政部國土測繪中心 臺灣通用電子地圖 WMTS（`EMAP6_OPENDATA`，網頁街道底圖）
 - 臺北市政府消防局 114 年臺北市消防統計年報 表 6-1（各區救護出勤次數，原始 PDF 存於 `data/raw/ems/`）
