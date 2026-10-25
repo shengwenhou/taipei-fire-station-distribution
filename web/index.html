@@ -154,20 +154,25 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   <header>
     <div class="eyebrow">臺北市 46 個消防分隊　·　救護車行車時間模型　·　2026 年 10 月</div>
     <h1>砍掉 10 個分隊，還守得住 10 分鐘嗎？</h1>
-    <p class="lead"><strong>守得住。</strong>以救護車的行車時間計算，現況已在 10 分鐘內可到達的 <span class="num">240</span> 萬居民，裁撤下方建議的 10 個分隊後仍全部在 10 分鐘內，平均只多約 <span class="num">10</span> 秒。10 分鐘的門檻其實很寬鬆，真正會受影響的是同時出勤與平均反應時間。</p>
+    <p class="lead"><strong>守得住，但要挑對分隊。</strong>把「10 分鐘」算成<strong>出勤準備 2 分＋行車 8 分</strong>，慢速車流下最多只能裁撤 11 隊，砍 10 隊已接近極限；照下方建議的 10 隊裁撤，三種車速下現況達標的居民仍全部達標，平均行車只多約 <span class="num">13</span> 秒。若只算行車 10 分鐘，空間更寬，最多可裁撤 16 到 23 隊。</p>
   </header>
 
+  <div class="seg" role="group" aria-label="判定標準" id="stdSeg" style="max-width:560px">
+    <button type="button" data-std="d8" aria-pressed="true">出勤 2 分＋行車 8 分<small>行車上限 8 分鐘</small></button>
+    <button type="button" data-std="d10" aria-pressed="false">行車 10 分<small>不計出勤準備</small></button>
+  </div>
+
   <div class="verdict" role="list">
-    <div role="listitem"><span class="k">最多可裁撤（覆蓋不變）</span><span class="v" id="vMax">16–21<small>隊</small></span><span class="s">慢速情境 16、基準 21、快速 23</span></div>
-    <div role="listitem"><span class="k">建議 10 隊方案：失去覆蓋</span><span class="v">0<small>人</small></span><span class="s">三種車速情境皆為 0</span></div>
-    <div role="listitem"><span class="k">人口加權平均行車時間</span><span class="v" id="vMean">2.97→3.13<small>分</small></span><span class="s">基準車速，現況 → 裁撤 10 隊</span></div>
-    <div role="listitem"><span class="k">現況 10 分鐘內人口</span><span class="v">99.25<small>%</small></span><span class="s">其餘多在陽明山、南港與文山山區</span></div>
+    <div role="listitem"><span class="k">最多可裁撤（覆蓋不變）</span><span class="v" id="vMax">–</span><span class="s" id="vMaxS"></span></div>
+    <div role="listitem"><span class="k">建議 10 隊方案：失去覆蓋</span><span class="v" id="vLost">–</span><span class="s">三種車速情境皆為 0</span></div>
+    <div role="listitem"><span class="k">人口加權平均行車時間</span><span class="v" id="vMean">–</span><span class="s">基準車速，現況 → 建議 10 隊</span></div>
+    <div role="listitem"><span class="k" id="vCovK">現況達標人口</span><span class="v" id="vCov">–</span><span class="s" id="vCovS"></span></div>
   </div>
 
   <section class="block" aria-labelledby="h-console">
     <div style="display:grid;gap:6px">
       <h2 id="h-console">試算台</h2>
-      <p class="note" style="font-size:14px;color:var(--ink-2)">點地圖上的分隊（或右側清單）即可切換保留／裁撤，所有數字即時重算。建國、後港、永吉、忠孝依需求指定保留。</p>
+      <p class="note" style="font-size:14px;color:var(--ink-2)">點地圖上的分隊（或右側清單）即可切換保留／裁撤，所有數字即時重算。判定標準以上方切換為準。建國、後港、永吉、忠孝依需求指定保留。</p>
     </div>
     <div class="console">
       <div class="mapbox">
@@ -196,11 +201,11 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
           <div id="statusBox"></div>
           <div class="readout">
             <div><div class="k">裁撤分隊數</div><div class="v" id="rClosed">0</div><div class="d">共 46 隊</div></div>
-            <div><div class="k">失去 10 分鐘覆蓋</div><div class="v" id="rLost">0</div><div class="d">人（現況達標者）</div></div>
+            <div><div class="k">失去覆蓋</div><div class="v" id="rLost">0</div><div class="d">人（現況達標者）</div></div>
             <div><div class="k">平均行車時間</div><div class="v" id="rMean">–</div><div class="d" id="rMeanD">分</div></div>
             <div><div class="k">90% 居民在</div><div class="v" id="rP90">–</div><div class="d" id="rP90D">分內</div></div>
-            <div><div class="k">10 分內有 ≥2 隊</div><div class="v" id="rDouble">–</div><div class="d" id="rDoubleD">人口比例（約）</div></div>
-            <div><div class="k">10 分鐘內人口</div><div class="v" id="rCov">–</div><div class="d">占全市</div></div>
+            <div><div class="k" id="rDoubleK">達標範圍內有 ≥2 隊</div><div class="v" id="rDouble">–</div><div class="d" id="rDoubleD">人口比例（約）</div></div>
+            <div><div class="k">達標人口</div><div class="v" id="rCov">–</div><div class="d">占全市</div></div>
           </div>
           <div class="note" id="flash"></div>
         </section>
@@ -223,10 +228,10 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
 
   <section class="block" aria-labelledby="h-curve">
     <h2 id="h-curve">裁撤越多，代價在哪裡</h2>
-    <p>在 10 分鐘覆蓋不變的限制下，每個裁撤數各自求出平均時間最短的組合（基準車速）。到 16 隊之前曲線幾乎是平的；超過之後，平均時間和雙重覆蓋都開始明顯變差。</p>
+    <p id="curveText"></p>
     <div class="charts">
       <figure class="chart" style="margin:0"><h3>人口加權平均行車時間</h3><svg id="cMean" viewBox="0 0 520 260" role="img" aria-label="裁撤數與平均行車時間"></svg><figcaption class="cap">縱軸：分鐘；橫軸：裁撤分隊數</figcaption></figure>
-      <figure class="chart" style="margin:0"><h3>10 分鐘內有 2 個以上分隊可到的人口</h3><svg id="cDouble" viewBox="0 0 520 260" role="img" aria-label="裁撤數與雙重覆蓋比例"></svg><figcaption class="cap">縱軸：占全市人口 %；橫軸：裁撤分隊數。可視為「最近分隊沒車時，還有沒有第二隊」的粗略指標</figcaption></figure>
+      <figure class="chart" style="margin:0"><h3 id="cDoubleH">達標範圍內有 2 個以上分隊可到的人口</h3><svg id="cDouble" viewBox="0 0 520 260" role="img" aria-label="裁撤數與雙重覆蓋比例"></svg><figcaption class="cap">縱軸：占全市人口 %；橫軸：裁撤分隊數。可視為「最近分隊沒車時，還有沒有第二隊」的粗略指標</figcaption></figure>
     </div>
   </section>
 
@@ -239,14 +244,14 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
           <li><strong>分隊：</strong>消防局官網列出的 45 個分隊，加上 2026 年 9 月新增的福國分隊；古亭分隊用臨時駐地。座標由官網地圖、OpenStreetMap、Overture Maps 交叉比對。</li>
           <li><strong>路網：</strong>Overture Maps 道路（以 OSM 為基礎），遵守單行道。車速依道路等級：國道 60、快速道路 50、主要道路 35、次要道路 30、三級道路 25、巷道 20、服務道路 15 km/h。</li>
           <li><strong>人口：</strong>內政部 2026 年 9 月各里人口（456 里、241.9 萬人），依建物面積分配到 96,129 個建物點。</li>
-          <li><strong>覆蓋規則：</strong>現況 10 分鐘內可到的每一個點，裁撤後仍須在 10 分鐘內；現況就超過 10 分鐘的點不列入限制。</li>
+          <li><strong>覆蓋規則：</strong>現況達標的每一個點，裁撤後仍須達標；現況就不達標的點不列入限制。兩種判定標準：「出勤 2 分＋行車 8 分」（行車上限 8 分鐘）與「行車 10 分」。</li>
           <li><strong>最佳化：</strong>整數規劃（CBC）。「最多可裁撤」為集合覆蓋；「指定裁撤 K 隊」為 p-median，在覆蓋限制下讓平均時間最短。</li>
         </ul>
       </div>
       <div>
         <h3>限制</h3>
         <ul>
-          <li><strong>只算行車時間：</strong>沒有計入受理派遣和出勤準備。若改成「出勤 2 分＋行車 8 分」，可裁撤數會變少。</li>
+          <li><strong>出勤準備固定 2 分鐘：</strong>實際受理派遣與著裝出勤時間因時段與案件而異，模型以固定值處理。</li>
           <li><strong>不考慮同時出勤：</strong>分隊變少後每隊出勤量增加，「最近分隊沒車」的機率會上升。</li>
           <li><strong>以救護車為準：</strong>消防車較慢、車體較大，狹小巷道實際更久。</li>
           <li><strong>車速未經實測校正：</strong>模型中華山到信義（直線 4.9 km）為 9.1 分鐘，接近鳴笛行駛；建議以慢速情境為準。</li>
@@ -269,35 +274,38 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   const D = window.TFD_DATA;
   const ST = D.stations, S = ST.length, NAMES = ST.map(s => s.name);
   const G = D.cells.pop.length, POP = Float64Array.from(D.cells.pop), TOTAL = POP.reduce((a, b) => a + b, 0);
-  const LIMIT = 600;
   const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
-  const SC = {};
+  const TIMES = {}, PAT = { d10: {}, d8: {} };
   for (const sc of ["slow", "base", "fast"]) {
-    const tb = b64(D.times[sc]);
-    const P = D.patterns[sc], nb = D.bytes_per_pattern, bits = b64(P.bits);
-    const n = P.pop.length, members = [];
-    for (let p = 0; p < n; p++) {
-      const m = [];
-      for (let s = 0; s < S; s++) if (bits[p * nb + (s >> 3)] & (128 >> (s & 7))) m.push(s);
-      members.push(m);
+    TIMES[sc] = new Uint16Array(b64(D.times[sc]).buffer);
+    for (const std of ["d10", "d8"]) {
+      const P = D.patterns[std][sc], nb = D.bytes_per_pattern, bits = b64(P.bits);
+      const n = P.pop.length, members = [];
+      for (let p = 0; p < n; p++) {
+        const m = [];
+        for (let s = 0; s < S; s++) if (bits[p * nb + (s >> 3)] & (128 >> (s & 7))) m.push(s);
+        members.push(m);
+      }
+      PAT[std][sc] = { members, ppop: P.pop, pp: P.pair_pattern, pc: P.pair_cell, pw: P.pair_pop };
     }
-    SC[sc] = { T: new Uint16Array(tb.buffer), members, ppop: P.pop, pp: P.pair_pattern, pc: P.pair_cell, pw: P.pair_pop };
   }
-  const R = D.results;
+  const STD_LABEL = { d8: "出勤 2 分＋行車 8 分", d10: "行車 10 分" };
   const short = n => n.replace("分隊", "");
 
   // ---------- state ----------
-  const state = { sc: "base", closed: new Set(R.robust10.closed), mode: "time", preset: "robust" };
+  const state = { std: "d8", sc: "base", closed: new Set(D.results.d8.robust10.closed), mode: "time", preset: "robust" };
+  const res = () => D.results[state.std];
+  const limit = () => res().limit_s;
   const presets = [
     { id: "none", label: "現況", sub: "46 隊全部保留", set: () => [] },
-    { id: "robust", label: "建議 10 隊", sub: "三種車速皆不失覆蓋", set: () => R.robust10.closed },
-    { id: "best", label: "平均最佳 10 隊", sub: "基準車速最佳，慢速會失覆蓋", set: () => R.best10_base.closed },
-    { id: "max", label: "本情境最大裁撤", sub: "", set: () => R.scenarios[state.sc].max_set },
+    { id: "robust", label: "建議 10 隊", sub: "三種車速皆不失覆蓋", set: () => res().robust10.closed },
+    { id: "best", label: "平均最佳 10 隊", sub: "基準車速最佳，慢速會失覆蓋", set: () => res().best10_base.closed },
+    { id: "max", label: "本情境最大裁撤", sub: "", set: () => res().scenarios[state.sc].max_set },
   ];
 
   // ---------- compute ----------
-  function evaluate(sc, closed) {
-    const { T, members, ppop, pp, pc, pw } = SC[sc];
+  function evaluate(sc, closed, std = state.std) {
+    const T = TIMES[sc], { members, ppop, pp, pc, pw } = PAT[std][sc], LIMIT = D.results[std].limit_s;
     const open = [];
     for (let s = 0; s < S; s++) if (!closed.has(NAMES[s])) open.push(s);
     const best = new Float64Array(G), nearest = new Int16Array(G), within = new Uint8Array(G);
@@ -322,7 +330,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     return { best, nearest, lost, lostCell, covCell, mean: sum / TOTAL / 60, p90: p90 / 60, dbl: dbl / TOTAL * 100, cov: covered / TOTAL * 100, nClosed: closed.size };
   }
   const baseCache = {};
-  const baseline = sc => baseCache[sc] || (baseCache[sc] = evaluate(sc, new Set()));
+  const baseline = sc => baseCache[state.std + sc] || (baseCache[state.std + sc] = evaluate(sc, new Set()));
 
   // ---------- map geometry ----------
   const canvas = document.getElementById("map"), ctx = canvas.getContext("2d");
@@ -350,9 +358,12 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   // colours
   const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
   const isDark = () => matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light" || document.documentElement.dataset.theme === "dark";
-  const TIME_BINS = [2, 4, 6, 8, 10];
-  const TIME_LIGHT = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#1c5cab"];
-  const TIME_DARK = ["#104281", "#1c5cab", "#2a78d6", "#5598e7", "#9ec5f4"];
+  const TIME_LIGHT_ALL = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#1c5cab"];
+  const TIME_DARK_ALL = ["#104281", "#1c5cab", "#2a78d6", "#5598e7", "#9ec5f4"];
+  // bins end at the standard's driving limit; the darkest/brightest step always means "just inside the limit"
+  const timeBins = () => state.std === "d10" ? [2, 4, 6, 8, 10] : [2, 4, 6, 8];
+  const pick = a => state.std === "d10" ? a : [a[0], a[1], a[3], a[4]];
+  const timeRamp = dark => pick(dark ? TIME_DARK_ALL : TIME_LIGHT_ALL);
   const DELTA_BINS = [0.05, 1, 2, 3, 5, Infinity];
   const DELTA_LIGHT = ["#e9ecee", "#fbd3bf", "#f6a582", "#eb6834", "#c24a1c", "#8f3210"];
   const DELTA_DARK = ["#222b31", "#5a2a16", "#8f3d1c", "#d95926", "#f08a5d", "#f8b597"];
@@ -364,7 +375,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     ctx.fillStyle = css("--surface"); ctx.fillRect(0, 0, W, H);
     const base = baseline(state.sc), crit = css("--critical");
-    const tRamp = dark ? TIME_DARK : TIME_LIGHT, dRamp = dark ? DELTA_DARK : DELTA_LIGHT, over = dark ? OVER_DARK : OVER_LIGHT;
+    const tRamp = timeRamp(dark), bins = timeBins(), Lm = limit() / 60, dRamp = dark ? DELTA_DARK : DELTA_LIGHT, over = dark ? OVER_DARK : OVER_LIGHT;
     const half = cellSize / 2;
     for (let g = 0; g < G; g++) {
       if (POP[g] <= 0) continue;
@@ -372,7 +383,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       if (cur.lostCell[g] > 0.05) col = crit;
       else if (state.mode === "time") {
         const m = cur.best[g] / 60;
-        if (m > 10) col = over; else { let i = 0; while (m > TIME_BINS[i]) i++; col = tRamp[i]; }
+        if (m > Lm) col = over; else { let i = 0; while (m > bins[i]) i++; col = tRamp[i]; }
       } else {
         const d = (cur.best[g] - base.best[g]) / 60;
         let i = 0; while (d > DELTA_BINS[i]) i++; col = dRamp[Math.min(i, dRamp.length - 1)];
@@ -417,12 +428,13 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
 
   function legend() {
     const dark = isDark(), el = document.getElementById("legend");
-    const crit = `<span><span class="sw" style="background:var(--critical)"></span>失去 10 分鐘覆蓋</span>`;
+    const Lm = limit() / 60;
+    const crit = `<span><span class="sw" style="background:var(--critical)"></span>失去覆蓋（行車超過 ${Lm} 分）</span>`;
     let rows;
     if (state.mode === "time") {
-      const r = dark ? TIME_DARK : TIME_LIGHT, lab = ["≤2", "2–4", "4–6", "6–8", "8–10"];
+      const r = timeRamp(dark), lab = ["≤2", "2–4", "4–6", "6–8", "8–10"].slice(0, r.length);
       rows = `<div class="row"><span style="color:var(--ink-2)">最近分隊行車（分）</span>${r.map((c, i) => `<span><span class="sw" style="background:${c}"></span>${lab[i]}</span>`).join("")}</div>
-              <div class="row"><span><span class="sw" style="background:${dark ? OVER_DARK : OVER_LIGHT}"></span>現況已超過 10 分</span>${crit}</div>`;
+              <div class="row"><span><span class="sw" style="background:${dark ? OVER_DARK : OVER_LIGHT}"></span>現況已超過 ${Lm} 分</span>${crit}</div>`;
     } else {
       const r = dark ? DELTA_DARK : DELTA_LIGHT, lab = ["不變", "≤1", "1–2", "2–3", "3–5", ">5"];
       rows = `<div class="row"><span style="color:var(--ink-2)">比現況增加（分）</span>${r.map((c, i) => `<span><span class="sw" style="background:${c}"></span>${lab[i]}</span>`).join("")}</div><div class="row">${crit}</div>`;
@@ -445,14 +457,15 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     document.getElementById("rDouble").textContent = cur.dbl.toFixed(1) + "%";
     document.getElementById("rDoubleD").textContent = `現況 ${base.dbl.toFixed(1)}%（約）`;
     document.getElementById("rCov").textContent = cur.cov.toFixed(2) + "%";
-    const ok = cur.lost < 0.5;
+    const ok = cur.lost < 0.5, Lm = limit() / 60;
     const scName = { slow: "慢速", base: "基準", fast: "快速" }[state.sc];
     document.getElementById("statusBox").innerHTML = ok
-      ? `<div class="status ok"><span class="ic">✓</span><span>${scName}情境下，現況 10 分鐘內可到的居民全部仍在 10 分鐘內。</span></div>`
-      : `<div class="status bad"><span class="ic">!</span><span>${scName}情境下，有 <b class="num">${fmtInt(cur.lost)}</b> 位原本 10 分鐘內可到的居民超過 10 分鐘（地圖紅色區塊）。</span></div>`;
+      ? `<div class="status ok"><span class="ic">✓</span><span>${scName}情境、${STD_LABEL[state.std]}標準下，現況達標（行車 ${Lm} 分內）的居民全部仍達標。</span></div>`
+      : `<div class="status bad"><span class="ic">!</span><span>${scName}情境、${STD_LABEL[state.std]}標準下，有 <b class="num">${fmtInt(cur.lost)}</b> 位原本達標的居民行車超過 ${Lm} 分鐘（地圖紅色區塊）。</span></div>`;
     document.querySelectorAll("[data-sc]").forEach(b => b.setAttribute("aria-pressed", b.dataset.sc === state.sc));
+    document.querySelectorAll("[data-std]").forEach(b => b.setAttribute("aria-pressed", b.dataset.std === state.std));
     document.querySelectorAll("#presets button").forEach(b => b.setAttribute("aria-pressed", b.dataset.p === state.preset));
-    const mx = R.scenarios[state.sc].max;
+    const mx = res().scenarios[state.sc].max;
     document.querySelector('#presets [data-p="max"] small').textContent = `${scName}情境可裁撤 ${mx} 隊`;
     document.querySelectorAll(".chip").forEach(c => c.classList.toggle("closed", state.closed.has(c.dataset.n)));
     document.querySelectorAll(".chip:not(.locked)").forEach(c => c.setAttribute("aria-pressed", state.closed.has(c.dataset.n)));
@@ -484,7 +497,13 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       const p = presets.find(x => x.id === b.dataset.p); state.preset = p.id; state.closed = new Set(p.set()); update();
     }));
     document.querySelectorAll("[data-sc]").forEach(b => b.addEventListener("click", () => {
-      state.sc = b.dataset.sc; if (state.preset === "max") state.closed = new Set(R.scenarios[state.sc].max_set); update();
+      state.sc = b.dataset.sc; if (state.preset === "max") state.closed = new Set(res().scenarios[state.sc].max_set); update();
+    }));
+    document.querySelectorAll("[data-std]").forEach(b => b.addEventListener("click", () => {
+      state.std = b.dataset.std;
+      const p = presets.find(x => x.id === state.preset);
+      if (p) state.closed = new Set(p.set());
+      renderStatic(); update();
     }));
     const groups = new Map();
     ST.forEach(s => { const k = `${s.brigade}｜${s.squadron}`; (groups.get(k) || groups.set(k, []).get(k)).push(s); });
@@ -538,7 +557,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     const g = hitCell(mx, my);
     if (g < 0) { tip.hidden = true; return; }
     const base = baseline(state.sc);
-    const lostTxt = cur.lostCell[g] > 0.05 ? `<br><span style="color:#ff8a8a">失去 10 分覆蓋約 ${Math.max(1, Math.round(cur.lostCell[g]))} 人</span>` : "";
+    const lostTxt = cur.lostCell[g] > 0.05 ? `<br><span style="color:#ff8a8a">失去覆蓋約 ${Math.max(1, Math.round(cur.lostCell[g]))} 人</span>` : "";
     showTip(`<b>${D.cells.vill[g]}</b>　約 ${Math.max(1, Math.round(POP[g]))} 人<br>最近分隊：${short(NAMES[cur.nearest[g]])} ${fmt1(cur.best[g] / 60)} 分<br>現況：${short(NAMES[base.nearest[g]])} ${fmt1(base.best[g] / 60)} 分${lostTxt}`, mx, my);
   });
   canvas.addEventListener("mouseleave", () => tip.hidden = true);
@@ -556,13 +575,14 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     s += `<line x1="${m.l}" x2="${w - m.r}" y1="${h - m.b}" y2="${h - m.b}" stroke="var(--line-strong)"/>`;
     for (let k = 0; k <= 20; k += 4) s += `<text x="${x(k)}" y="${h - m.b + 18}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${k}</text>`;
     s += `<rect x="${x(mark[0])}" y="${m.t}" width="${x(mark[1]) - x(mark[0])}" height="${h - m.t - m.b}" fill="var(--closed)" opacity="0.08"/>`;
-    s += `<text x="${x(mark[0]) + 4}" y="${m.t + 12}" font-size="11" fill="var(--ink-2)">超過 16 隊後明顯變差</text>`;
+    s += `<text x="${x(mark[0]) - 4}" y="${m.t + 12}" text-anchor="end" font-size="11" fill="var(--ink-2)">超過 ${mark[0]} 隊後明顯變差</text>`;
     s += `<polyline fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" points="${pts.map(p => `${x(p.k)},${y(p.v)}`).join(" ")}"/>`;
     s += pts.map(p => `<circle cx="${x(p.k)}" cy="${y(p.v)}" r="${p.k === 10 ? 5.5 : 4}" fill="${p.k === 10 ? "var(--closed)" : "#2a78d6"}" stroke="var(--surface)" stroke-width="2"/>`).join("");
     const p10 = pts.find(p => p.k === 10);
     s += `<text x="${x(10)}" y="${y(p10.v) - 12}" text-anchor="middle" font-size="11.5" fill="var(--ink)" font-weight="600">裁撤 10 隊：${fmtY(p10.v)}</text>`;
     s += pts.map(p => `<rect x="${x(p.k) - 12}" y="${m.t}" width="24" height="${h - m.t - m.b}" fill="transparent" data-k="${p.k}" data-v="${p.v}"><title>裁撤 ${p.k} 隊：${yLab} ${fmtY(p.v)}</title></rect>`).join("");
     svg.innerHTML = s;
+    svg.parentElement.querySelectorAll(".ctip").forEach(el => el.remove());
     const tipC = document.createElement("div"); tipC.className = "ctip"; tipC.hidden = true;
     Object.assign(tipC.style, { position: "absolute", pointerEvents: "none", background: "var(--ink)", color: "var(--bg)", padding: "5px 8px", borderRadius: "4px", fontSize: "12px" });
     svg.parentElement.appendChild(tipC);
@@ -576,12 +596,32 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       r.addEventListener("mouseleave", () => tipC.hidden = true);
     });
   }
-  const curve = R.curve;
-  lineChart("cMean", curve.map(c => ({ k: c.k, v: c.mean_min })), "平均", v => v.toFixed(2) + " 分", 2.8, 3.8, [16, 20]);
-  lineChart("cDouble", curve.map(c => ({ k: c.k, v: c.pop_double_covered_pct })), "雙重覆蓋", v => v.toFixed(1) + "%", 94, 98, [16, 20]);
+  // knee of each curve: where the mean-time step first exceeds 0.15 min
+  const KNEE = { d10: [16, 20], d8: [14, 16] };
+  function renderStatic() {
+    const r = res(), sc = r.scenarios, rb = r.robust10;
+    document.getElementById("vMax").innerHTML = `${sc.slow.max}–${sc.base.max}<small>隊</small>`;
+    document.getElementById("vMaxS").textContent = `慢速 ${sc.slow.max}、基準 ${sc.base.max}、快速 ${sc.fast.max}`;
+    const lostAll = ["slow", "base", "fast"].reduce((a, s) => a + rb[`eval_${s}`].pop_lost_coverage, 0);
+    document.getElementById("vLost").innerHTML = `${fmtInt(lostAll)}<small>人</small>`;
+    document.getElementById("vMean").innerHTML = `${sc.base.baseline.mean_min.toFixed(2)}→${rb.eval_base.mean_min.toFixed(2)}<small>分</small>`;
+    document.getElementById("vCovK").textContent = `現況行車 ${r.limit_s / 60} 分內人口`;
+    document.getElementById("vCov").innerHTML = `${sc.base.baseline.pop_within_10min_pct.toFixed(2)}<small>%</small>`;
+    document.getElementById("vCovS").textContent = `基準車速；慢速 ${sc.slow.baseline.pop_within_10min_pct.toFixed(2)}%`;
+    const Lm = r.limit_s / 60, knee = KNEE[state.std];
+    document.getElementById("rDoubleK").textContent = `${Lm} 分內有 ≥2 隊`;
+    document.getElementById("cDoubleH").textContent = `行車 ${Lm} 分內有 2 個以上分隊可到的人口`;
+    document.getElementById("curveText").textContent =
+      `在${STD_LABEL[state.std]}的覆蓋限制下，每個裁撤數各自求出平均時間最短的組合（基準車速，最多可裁撤 ${sc.base.max} 隊）。到 ${knee[0]} 隊之前曲線幾乎是平的；超過之後，平均時間和雙重覆蓋都開始明顯變差。`;
+    const curve = r.curve, means = curve.map(c => c.mean_min), dbl = curve.map(c => c.pop_double_covered_pct);
+    lineChart("cMean", curve.map(c => ({ k: c.k, v: c.mean_min })), "平均", v => v.toFixed(2) + " 分",
+              Math.floor(Math.min(...means) * 5) / 5 - 0.2, Math.ceil(Math.max(...means) * 5) / 5 + 0.2, knee);
+    lineChart("cDouble", curve.map(c => ({ k: c.k, v: c.pop_double_covered_pct })), "雙重覆蓋", v => v.toFixed(1) + "%",
+              Math.floor(Math.min(...dbl)) - 1, Math.ceil(Math.max(...dbl)) + 1, knee);
+  }
 
   // ---------- boot ----------
-  buildPanel(); layout(); update();
+  buildPanel(); layout(); renderStatic(); update();
   new ResizeObserver(() => { layout(); draw(); }).observe(canvas);
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { legend(); draw(); });
   new MutationObserver(() => { legend(); draw(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });

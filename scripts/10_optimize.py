@@ -12,7 +12,7 @@ Part B  best set of exactly K closures: minimise population-weighted mean
         nearest-station time, subject to the coverage rule (ILP p-median on
         aggregated demand, then exact re-evaluation on all demand points).
 """
-import os, json, itertools
+import os, sys, json, itertools
 import numpy as np
 import pandas as pd
 import pulp
@@ -21,7 +21,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 C = f"{ROOT}/data/cache"
 OUT = f"{ROOT}/output"
 os.makedirs(OUT, exist_ok=True)
-LIMIT = 600
+# driving-time limit in seconds (argv[1]); 600 = 10 min pure driving,
+# 480 = 10 min response with 2 min dispatch/turnout + 8 min driving
+LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 600
+RESULT_FILE = "results.json" if LIMIT == 600 else f"results_drive{LIMIT}.json"
 K_TARGET = 10
 
 st = pd.read_csv(f"{C}/stations_snapped.csv")
@@ -123,6 +126,8 @@ def best_k_closures(T, k):
             m += x[i] == 1
     m.solve(pulp.PULP_CBC_CMD(msg=0, timeLimit=600))
     status = pulp.LpStatus[m.status]
+    if status != "Optimal":
+        return None, status, G
     closed = [names[i] for i in range(S) if x[i].value() < 0.5]
     return closed, status, G
 
@@ -136,15 +141,16 @@ for s in ("base", "slow", "fast"):
     print(f"[{s}] max closures keeping coverage: {kmax}  (coverage patterns: {npat})")
 
 # Part B: optimal 10 under base speeds, then stress-test under slow speeds
+results["limit_s"] = LIMIT
 closed10, status, G = best_k_closures(T["base"], K_TARGET)
 print(f"best {K_TARGET} (base): status={status}, groups={G}: {closed10}")
 results["recommended_10"] = {"status": status, "closed": closed10,
-                             **{f"eval_{s}": evaluate(T[s], closed10) for s in T}}
+                             **({f"eval_{s}": evaluate(T[s], closed10) for s in T} if closed10 is not None else {})}
 
 # robust variant: choose 10 under the slow scenario so it holds even in heavier traffic
 closed10_slow, status_s, _ = best_k_closures(T["slow"], K_TARGET)
 results["robust_10"] = {"status": status_s, "closed": closed10_slow,
-                        **{f"eval_{s}": evaluate(T[s], closed10_slow) for s in T}}
+                        **({f"eval_{s}": evaluate(T[s], closed10_slow) for s in T} if closed10_slow is not None else {})}
 print(f"best {K_TARGET} (slow): {closed10_slow}")
 
 # curve: best mean time for k = 0..kmax under base
@@ -156,4 +162,4 @@ for k in range(0, results["base"]["max_closures"] + 1, 2):
     print(f"k={k:2d} mean={ev['mean_min']:.2f} p90={ev['p90_min']:.2f} double={ev['pop_double_covered_pct']:.1f}% {stt}")
 results["curve_base"] = curve
 
-json.dump(results, open(f"{OUT}/results.json", "w"), ensure_ascii=False, indent=1)
+json.dump(results, open(f"{OUT}/{RESULT_FILE}", "w"), ensure_ascii=False, indent=1)
