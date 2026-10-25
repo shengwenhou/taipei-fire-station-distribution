@@ -37,6 +37,7 @@ img { max-width: 100%; }
   --chip: #e8edf0;
   --focus: #2a78d6;
   --tile-filter: grayscale(1) brightness(1.05) contrast(0.9);
+  --bar-base: #a3adb5;
   --font-display: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
   --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
   --font-num: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -47,6 +48,7 @@ img { max-width: 100%; }
     --line: #26313a; --line-strong: #3a4751; --closed: #f07a46; --critical: #e05252; --good: #3cb43c;
     --village: rgba(233,238,241,0.10); --district: rgba(233,238,241,0.45); --chip: #1f2930; --focus: #5598e7;
     --tile-filter: grayscale(1) invert(1) brightness(0.8) contrast(0.85);
+    --bar-base: #5d6a74;
     color-scheme: dark;
   }
 }
@@ -55,6 +57,7 @@ img { max-width: 100%; }
   --line: #26313a; --line-strong: #3a4751; --closed: #f07a46; --critical: #e05252; --good: #3cb43c;
   --village: rgba(233,238,241,0.10); --district: rgba(233,238,241,0.45); --chip: #1f2930; --focus: #5598e7;
   --tile-filter: grayscale(1) invert(1) brightness(0.8) contrast(0.85);
+  --bar-base: #5d6a74;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -203,19 +206,20 @@ tr:last-child td { border-bottom: 0; }
 .cols ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; color: var(--ink-2); }
 .cols li strong { color: var(--ink); }
 @media (max-width: 760px) { .cols { grid-template-columns: minmax(0, 1fr); } }
-.loadchart { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 3px; }
-.lrow { display: grid; grid-template-columns: 76px minmax(0, 1fr) 128px; gap: 10px; align-items: center; font-size: 13px; min-height: 20px; }
+.loadchart { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.lrow { display: grid; grid-template-columns: 76px minmax(0, 1fr) 190px; gap: 10px; align-items: center; font-size: 13px; min-height: 20px; }
 .lrow .nm { text-align: right; white-space: nowrap; }
-.lrow .tr { position: relative; height: 14px; }
-.lrow .was, .lrow .now { position: absolute; left: 0; top: 0; height: 14px; border-radius: 0 3px 3px 0; }
-.lrow .was { background: var(--chip); box-shadow: inset 0 0 0 1px var(--line-strong); }
-.lrow .now { top: 3px; height: 8px; background: #2a78d6; }
-.lrow.up .now { background: #1c5cab; }
+.lrow .tr { display: flex; gap: 2px; height: 14px; }
+.lrow .tr span { height: 100%; flex: none; }
+.lrow .tr .b-was { background: var(--bar-base); border-radius: 0 2px 2px 0; }
+.lrow .tr .b-add { background: var(--closed); border-radius: 0 3px 3px 0; min-width: 4px; }
+.lrow .tr .b-was:has(+ .b-add) { border-radius: 0; }
 .lrow .val { font-family: var(--font-num); font-variant-numeric: tabular-nums; font-size: 12px; color: var(--ink-2); white-space: nowrap; }
-.lrow .cap { position: absolute; top: -3px; bottom: -3px; width: 0; border-left: 1.5px dashed var(--muted); }
-.lhead { display: grid; grid-template-columns: 76px minmax(0, 1fr) 128px; gap: 10px; font-size: 12px; color: var(--muted); padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
-.lhead .key { display: flex; flex-wrap: wrap; gap: 4px 14px; }
-@media (max-width: 560px) { .lrow, .lhead { grid-template-columns: 52px minmax(0, 1fr) 92px; gap: 6px; } .lrow .val small { display: none; } }
+.lrow .val b { color: var(--ink); font-weight: 600; }
+.lhead { display: grid; grid-template-columns: 76px minmax(0, 1fr) 190px; gap: 10px; font-size: 12px; color: var(--ink-2); padding-bottom: 8px; border-bottom: 1px solid var(--line); margin-bottom: 4px; align-items: end; }
+.lhead .key { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.lhead .key .sw { width: 16px; height: 12px; }
+@media (max-width: 560px) { .lrow, .lhead { grid-template-columns: 52px minmax(0, 1fr) 118px; gap: 6px; } .lrow .val small { display: none; } }
 footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; display: grid; gap: 4px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -712,22 +716,21 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     update();
   }
   function renderLoad() {
-    const base = baseline(state.sc), cap = maxOf(base.load), capI = base.load.indexOf(cap);
+    const base = baseline(state.sc);
     const open = [...Array(S).keys()].filter(i => !state.closed.has(NAMES[i]));
     open.sort((a, b) => cur.load[b] - cur.load[a]);
-    const top = Math.max(maxOf(cur.load), cap) * 1.04, pct = v => (v / top * 100).toFixed(2) + "%";
+    const top = maxOf(cur.load) * 1.02, pct = v => (v / top * 100).toFixed(2) + "%";
     let h = `<div class="lhead"><span></span><span class="key">
-        <span><span class="sw" style="background:var(--chip);box-shadow:inset 0 0 0 1px var(--line-strong)"></span>現況</span>
-        <span><span class="sw" style="background:#2a78d6;height:6px"></span>移防後</span>
-        <span><span class="sw" style="background:#1c5cab;height:6px"></span>接收移防（出勤增加）</span>
-        <span style="color:var(--muted)">┆ 現況最高：${short(NAMES[capI])} ${fmtInt(cap)} 次／年</span></span><span style="text-align:right">年出勤（每天）</span></div>`;
+        <span><span class="sw" style="background:var(--bar-base)"></span>現況出勤</span>
+        <span><span class="sw" style="background:var(--closed)"></span>移防後增加（來自被裁撤分隊的轄區）</span></span>
+        <span style="text-align:right">移防後年出勤（現況＋增加）</span></div>`;
     h += open.map(i => {
-      const was = base.load[i], now = cur.load[i], d = now - was, up = d > 0.5 && state.closed.size > 0;
-      const ch = was > 0.5 && Math.abs(d) > 0.5 ? ` <small style="color:var(--muted)">${d > 0 ? "+" : "−"}${Math.round(Math.abs(d) / was * 100)}%</small>` : "";
-      return `<div class="lrow${up ? " up" : ""}" title="${NAMES[i]}：現況 ${fmtInt(was)} 次／年 → ${fmtInt(now)} 次／年">
+      const was = base.load[i], now = cur.load[i], add = Math.max(0, now - was);
+      const addTxt = add > 0.5 ? ` <small>（+${fmtInt(add)}）</small>` : "";
+      return `<div class="lrow" title="${NAMES[i]}：現況 ${fmtInt(was)} 次／年${add > 0.5 ? `＋移防增加 ${fmtInt(add)} 次` : ""}＝${fmtInt(now)} 次／年（每天 ${(now / 365).toFixed(1)} 次）">
         <span class="nm">${short(NAMES[i])}</span>
-        <span class="tr"><span class="was" style="width:${pct(was)}"></span><span class="now" style="width:${pct(now)}"></span><span class="cap" style="left:${pct(cap)}"></span></span>
-        <span class="val">${fmtInt(now)}（${(now / 365).toFixed(1)}）${ch}</span></div>`;
+        <span class="tr"><span class="b-was" style="width:${pct(Math.min(was, now))}"></span>${add > 0.5 ? `<span class="b-add" style="width:calc(${pct(add)} - 2px)"></span>` : ""}</span>
+        <span class="val"><b>${fmtInt(now)}</b>${addTxt}<small> 每天 ${(now / 365).toFixed(1)}</small></span></div>`;
     }).join("");
     document.getElementById("loadChart").innerHTML = h;
     document.getElementById("loadClosed").textContent = state.closed.size
