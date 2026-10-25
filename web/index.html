@@ -176,6 +176,33 @@ header { display: grid; gap: 14px; }
   .panel { max-height: none; }
 }
 
+/* share + compare */
+.share-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.act { border: 1px solid var(--line-strong); background: transparent; border-radius: 5px; padding: 8px 9px; cursor: pointer; font-size: 13px; line-height: 1.35; }
+.act:hover { background: var(--chip); }
+.act.on { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.share-url { width: 100%; min-width: 0; font-family: var(--font-num); font-size: 11.5px; color: var(--ink-2); background: var(--chip); border: 1px solid var(--line); border-radius: 4px; padding: 6px 8px; }
+.cmp-pick { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.cmp-pick label { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.cmp-pick select { flex: 1; min-width: 0; font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line-strong); border-radius: 5px; padding: 8px 10px; }
+.cmp-tag { font-family: var(--font-num); font-weight: 600; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--bg); flex: none; }
+table.cmp { min-width: 560px; }
+table.cmp td.r { font-family: var(--font-num); font-variant-numeric: tabular-nums; }
+table.cmp td.better { color: var(--good); font-weight: 600; }
+table.cmp td.worse { color: var(--critical); font-weight: 600; }
+.cmp-diff { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.cmp-diff > div { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.cmp-diff h3 { font-size: 14px; }
+.cmp-diff p { color: var(--ink-2); font-size: 14px; }
+@media (max-width: 760px) { .cmp-pick, .cmp-diff { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) {
+  table.cmp { min-width: 0; font-size: 12.5px; }
+  table.cmp th, table.cmp td { padding: 7px 6px; }
+  table.cmp td:first-child, table.cmp td:last-child { white-space: normal; }
+  table.cmp .hl { display: none; }
+  table.cmp small { display: block; white-space: nowrap; }
+}
+
 /* sections */
 .block { display: grid; gap: 16px; }
 .block > p { color: var(--ink-2); }
@@ -318,11 +345,34 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
           <div class="note" id="flash"></div>
         </section>
         <section>
+          <span class="lbl">分享與比較</span>
+          <div class="share-row">
+            <button type="button" class="act" id="copyLink">複製這個方案的連結</button>
+            <button type="button" class="act" id="pinPlan">釘選為比較方案</button>
+          </div>
+          <input id="shareUrl" class="share-url" readonly aria-label="這個方案的連結">
+          <div class="note" id="shareMsg">連結會記住判定標準、車速與裁撤名單；打開後就是同一個方案。</div>
+        </section>
+        <section>
           <span class="lbl">分隊（依大隊／中隊）</span>
           <div id="stationList" style="display:grid;gap:10px"></div>
         </section>
       </div>
     </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-compare">
+    <h2 id="h-compare">方案比較</h2>
+    <p id="cmpText">挑兩個方案並排比較。在試算台按「釘選為比較方案」，可以先存下一個組合，再繼續調整另一個。</p>
+    <div class="cmp-pick">
+      <label for="cmpA"><span class="cmp-tag">A</span><select id="cmpA"></select></label>
+      <label for="cmpB"><span class="cmp-tag">B</span><select id="cmpB"></select></label>
+    </div>
+    <div class="tablewrap"><table class="cmp">
+      <thead><tr><th>指標</th><th class="r" id="cmpHA">A</th><th class="r" id="cmpHB">B</th><th class="r">B − A</th></tr></thead>
+      <tbody id="cmpBody"></tbody>
+    </table></div>
+    <div class="cmp-diff" id="cmpDiff"></div>
   </section>
 
   <section class="block" aria-labelledby="h-table">
@@ -411,7 +461,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   const short = n => n.replace("分隊", "");
 
   // ---------- state ----------
-  const state = { std: "d8", sc: "base", closed: new Set(D.results.d8.robust10.closed), mode: "time", preset: "robust" };
+  const state = { std: "d8", sc: "base", closed: new Set(D.results.d8.robust10.closed), mode: "time", preset: "robust", pinned: null };
   const res = () => D.results[state.std];
   const limit = () => res().limit_s;
   const presets = [
@@ -729,7 +779,115 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       (ups.length ? `目前方案下接收最多的是：${ups.slice(0, 3).map(i => `${short(NAMES[i])}（每天 +${((cur.load[i] - base.load[i]) / 365).toFixed(1)} 次）`).join("、")}。` : "");
   }
   const maxOf = a => a.reduce((m, v) => v > m ? v : m, 0);
-  function update() { cur = evaluate(state.sc, state.closed); renderPanel(); renderTakeover(); renderLoad(); legend(); draw(); }
+  function update() {
+    cur = evaluate(state.sc, state.closed);
+    renderPanel(); renderTakeover(); renderLoad(); legend(); draw(); renderCompare(); writeHash();
+  }
+
+  // ---------- share links ----------
+  // Token (plain #anchor so it also survives the artifact viewer): v1-<std>-<speed>-<closed mask>[-<pinned mask>]
+  // The mask is a base-36 bitset over the station order in data.js (stations.csv).
+  const SHARE_BASE = "https://shengwenhou.github.io/taipei-fire-station-distribution/";
+  const encodeMask = set => { let v = 0n; NAMES.forEach((n, i) => { if (set.has(n)) v |= 1n << BigInt(i); }); return v.toString(36); };
+  const decodeMask = str => {
+    let v = 0n; for (const ch of str) { const d = parseInt(ch, 36); if (Number.isNaN(d)) return null; v = v * 36n + BigInt(d); }
+    return new Set(NAMES.filter((n, i) => (v >> BigInt(i)) & 1n).filter(n => !ST[NAMES.indexOf(n)].protected));
+  };
+  const token = () => `v1-${state.std}-${state.sc}-${encodeMask(state.closed)}` + (state.pinned ? `-${encodeMask(state.pinned)}` : "");
+  function readHash() {
+    const m = /^#v1-(d8|d10)-(slow|base|fast)-([0-9a-z]+)(?:-([0-9a-z]+))?$/.exec(location.hash || "");
+    if (!m) return false;
+    const closed = decodeMask(m[3]), pinned = m[4] ? decodeMask(m[4]) : null;
+    if (!closed) return false;
+    Object.assign(state, { std: m[1], sc: m[2], closed, pinned });
+    state.preset = matchPreset();
+    return true;
+  }
+  function matchPreset() {
+    const key = [...state.closed].sort().join();
+    const p = presets.find(p => [...p.set()].sort().join() === key);
+    return p ? p.id : "custom";
+  }
+  let hashWritten = "";
+  function writeHash() {
+    const t = token(); hashWritten = "#" + t;
+    document.getElementById("shareUrl").value = SHARE_BASE + "#" + t;
+    try { history.replaceState(null, "", "#" + t); } catch (e) { /* viewer may not allow it; the link box still works */ }
+  }
+  window.addEventListener("hashchange", () => {
+    if (location.hash === hashWritten) return;
+    if (readHash()) { renderStatic(); update(); }
+  });
+  document.getElementById("copyLink").addEventListener("click", () => {
+    const box = document.getElementById("shareUrl"), msg = document.getElementById("shareMsg");
+    const done = () => { msg.textContent = "已複製連結。"; };
+    const fallback = () => { box.focus(); box.select(); msg.textContent = "請按 Ctrl+C（Mac 為 ⌘+C）複製上方連結。"; };
+    try { navigator.clipboard.writeText(box.value).then(done, fallback); } catch (e) { fallback(); }
+  });
+  document.getElementById("pinPlan").addEventListener("click", () => {
+    state.pinned = new Set(state.closed);
+    document.getElementById("shareMsg").textContent = `已釘選目前方案（裁撤 ${state.pinned.size} 隊），可在下方「方案比較」選取。`;
+    if (cmpSel.A !== "pinned" && cmpSel.B !== "pinned") cmpSel.A = "pinned";
+    update();
+  });
+
+  // ---------- plan comparison ----------
+  const cmpSel = { A: "robust", B: "current" };
+  function planList() {
+    const L = [
+      { id: "none", label: "現況（46 隊）", closed: [] },
+      { id: "robust", label: "建議 10 隊", closed: res().robust10.closed },
+      { id: "best", label: "平均最佳 10 隊", closed: res().best10_base.closed },
+      { id: "max", label: `本情境最大裁撤（${res().scenarios[state.sc].max} 隊）`, closed: res().scenarios[state.sc].max_set },
+      { id: "current", label: `試算台目前方案（${state.closed.size} 隊）`, closed: [...state.closed] },
+    ];
+    if (state.pinned) L.push({ id: "pinned", label: `釘選的方案（${state.pinned.size} 隊）`, closed: [...state.pinned] });
+    return L;
+  }
+  function renderCompare() {
+    const L = planList();
+    for (const k of ["A", "B"]) {
+      if (!L.some(p => p.id === cmpSel[k])) cmpSel[k] = k === "A" ? "robust" : "current";
+      const el = document.getElementById("cmp" + k);
+      el.innerHTML = L.map(p => `<option value="${p.id}"${p.id === cmpSel[k] ? " selected" : ""}>${p.label}</option>`).join("");
+    }
+    const A = L.find(p => p.id === cmpSel.A), B = L.find(p => p.id === cmpSel.B);
+    const ev = plan => {
+      const set = new Set(plan.closed), e = evaluate(state.sc, set);
+      const lost = Object.fromEntries(["slow", "base", "fast"].map(sc => [sc, sc === state.sc ? e.lost : evaluate(sc, set).lost]));
+      return { set, e, lost, busy: maxOf(e.load) / 365 };
+    };
+    const a = ev(A), b = ev(B), Lm = limit() / 60;
+    document.getElementById("cmpHA").innerHTML = `A<span class="hl">：${A.label}</span>`;
+    document.getElementById("cmpHB").innerHTML = `B<span class="hl">：${B.label}</span>`;
+    // dir: -1 lower is better, +1 higher is better, 0 neutral (shown without colour)
+    const rows = [
+      ["裁撤分隊數", a.set.size, b.set.size, v => v + " 隊", 0],
+      ["值班台", S - a.set.size, S - b.set.size, v => v + " 個", -1],
+      ...["slow", "base", "fast"].map(sc => [`失去覆蓋（${{ slow: "慢速", base: "基準", fast: "快速" }[sc]}車速）`, a.lost[sc], b.lost[sc], v => fmtInt(v) + " 人", -1]),
+      ["平均行車時間", a.e.mean, b.e.mean, v => v.toFixed(2) + " 分", -1],
+      ["90% 居民在", a.e.p90, b.e.p90, v => v.toFixed(2) + " 分內", -1],
+      [`行車 ${Lm} 分內有 ≥2 隊（約）`, a.e.dbl, b.e.dbl, v => v.toFixed(1) + "%", 1],
+      [`行車 ${Lm} 分內人口`, a.e.cov, b.e.cov, v => v.toFixed(2) + "%", 1],
+      ["最忙分隊每天出勤", a.busy, b.busy, v => v.toFixed(1) + " 次", 0],
+    ];
+    const diffTxt = (d, fmt) => Math.abs(d) < 1e-9 ? "—" : (d > 0 ? "+" : "−") + fmt(Math.abs(d)).replace(/ .*/, "");
+    document.getElementById("cmpBody").innerHTML = rows.map(([k, va, vb, fmt, dir]) => {
+      const d = vb - va, eps = 1e-6 + (fmt(1).includes("人") ? 0.5 : 0);
+      const cls = !dir || Math.abs(d) <= eps ? "" : (d * dir > 0 ? "better" : "worse");
+      const word = cls === "better" ? "（B 較好）" : cls === "worse" ? "（B 較差）" : "";
+      return `<tr><td>${k}</td><td class="r">${fmt(va)}</td><td class="r">${fmt(vb)}</td><td class="r ${cls}">${Math.abs(d) <= eps ? "—" : diffTxt(d, fmt)}${word ? `<small>${word}</small>` : ""}</td></tr>`;
+    }).join("");
+    const onlyA = [...a.set].filter(n => !b.set.has(n)), onlyB = [...b.set].filter(n => !a.set.has(n)), both = [...a.set].filter(n => b.set.has(n));
+    const list = arr => arr.length ? arr.map(short).join("、") : "（無）";
+    document.getElementById("cmpDiff").innerHTML =
+      `<div><h3>兩個方案都裁撤（${both.length}）</h3><p>${list(both)}</p></div>` +
+      `<div><h3>只有 A 裁撤（${onlyA.length}）</h3><p>${list(onlyA)}</p></div>` +
+      `<div><h3>只有 B 裁撤（${onlyB.length}）</h3><p>${list(onlyB)}</p></div>`;
+    document.getElementById("cmpText").textContent =
+      `挑兩個方案並排比較（${STD_LABEL[state.std]}標準、${{ slow: "慢速", base: "基準", fast: "快速" }[state.sc]}車速；失去覆蓋則三種車速都列出）。在試算台按「釘選為比較方案」，可以先存下一個組合，再繼續調整另一個。`;
+  }
+  for (const k of ["A", "B"]) document.getElementById("cmp" + k).addEventListener("change", e => { cmpSel[k] = e.target.value; renderCompare(); });
 
   // ---------- hover / click ----------
   const tip = document.getElementById("tip");
@@ -888,6 +1046,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   }
 
   // ---------- boot ----------
+  readHash();
   buildPanel(); layout(); setTiles(); histChart(); renderStatic(); update();
   new ResizeObserver(() => map.invalidateSize()).observe(mapEl);
   new ResizeObserver(() => histChart()).observe(document.getElementById("cHist").parentElement);
