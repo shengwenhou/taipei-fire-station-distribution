@@ -76,6 +76,8 @@ header { display: grid; gap: 14px; max-width: 900px; }
 .why-hist-head { display: grid; gap: 4px; }
 .why-hist-head p { color: var(--ink-2); font-size: 14.5px; max-width: 76ch; }
 .why-hist svg { width: 100%; height: auto; display: block; }
+.why-panel { display: grid; gap: 2px; }
+.why-panel-t { font-size: 12.5px; color: var(--ink-2); font-weight: 500; }
 .why-events { margin: 0; padding-left: 1.6em; display: grid; gap: 3px; font-size: 13.5px; color: var(--ink-2); }
 .why-events li::marker { font-family: var(--font-num); font-weight: 600; color: var(--ink); }
 @media (max-width: 760px) {
@@ -193,7 +195,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
 
   <section class="why" aria-labelledby="h-why">
     <h2 id="h-why">為何要裁撤分隊？</h2>
-    <p class="why-lead">臺北市的分隊是跟著城市發展一路蓋出來的。這些分隊的位置都很好，彼此也能互相支援；問題是每多一個分隊，就多一組不能省的基本值班，人力被分散到每一個據點。</p>
+    <p class="why-lead">臺北市的分隊是跟著救護量一路上升而陸續開設的。這些分隊的位置都很好，彼此也能互相支援；問題是每多一個分隊，就多一組不能省的基本值班，人力被分散到每一個據點。</p>
     <div class="why-grid">
       <div>
         <h3>值班台人力</h3>
@@ -210,12 +212,13 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     </div>
     <figure class="why-hist">
       <div class="why-hist-head">
-        <h3>分隊越蓋越多，人口卻已開始減少</h3>
-        <p>臺北市人口 2015 年底達到 <span class="num">270.5</span> 萬的高峰，到 2025 年底減為 <span class="num">243.9</span> 萬，10 年少了約 <span class="num">26.5</span> 萬人（−9.8%）。同一段期間，分隊仍持續增設。</p>
+        <h3>救護量一路上升，分隊跟著增設</h3>
+        <p>2001 到 2011 年，臺北市人口幾乎沒變，救護出勤卻從 <span class="num">7.7</span> 萬次增加到 <span class="num">13.7</span> 萬次（+78%），每千人出勤從 <span class="num">29.3</span> 次升到 <span class="num">51.8</span> 次；分隊也在這段期間陸續開設到 45 隊。2011 年後出勤量維持在每年 11 到 14 萬次的高檔，人口則從 2015 年的高峰減少了約 26.5 萬人。</p>
       </div>
-      <svg id="cHist" viewBox="0 0 720 260" role="img" aria-label="2000 年至 2026 年臺北市人口與消防分隊大事"></svg>
+      <div class="why-panel"><span class="why-panel-t">救護出勤次數（每年）</span><svg id="cEms" viewBox="0 0 720 230" role="img" aria-label="2001 年至 2025 年臺北市救護出勤次數與分隊大事"></svg></div>
+      <div class="why-panel"><span class="why-panel-t">臺北市人口（年底）</span><svg id="cHist" viewBox="0 0 720 170" role="img" aria-label="2000 年至 2026 年臺北市人口"></svg></div>
       <ol class="why-events" id="histEvents"></ol>
-      <figcaption class="note">人口：內政部戶政司 歷年各縣市人口數（年底）；2026 年為 9 月村里人口。分隊與編制：臺北市政府消防局官網〈<a href="https://www.119.gov.taipei/cp.aspx?n=E44E3134369AF681" target="_blank" rel="noopener">歷史沿革</a>〉〈<a href="https://www.119.gov.taipei/cp.aspx?n=B1302E83CDFB7821" target="_blank" rel="noopener">大事紀</a>〉。</figcaption>
+      <figcaption class="note">救護出勤：臺北市消防統計年報 表 6-1（100、107、114 年版）；2008 年以前以「案件數」計，2009 年起改以「車輛次」計，兩者不完全可比。人口：內政部戶政司 歷年各縣市人口數（年底）；2026 年為 9 月村里人口。分隊與編制：臺北市政府消防局官網〈<a href="https://www.119.gov.taipei/cp.aspx?n=E44E3134369AF681" target="_blank" rel="noopener">歷史沿革</a>〉〈<a href="https://www.119.gov.taipei/cp.aspx?n=B1302E83CDFB7821" target="_blank" rel="noopener">大事紀</a>〉。</figcaption>
     </figure>
     <div class="why-law">
       <h3>釋字第 785 號</h3>
@@ -709,31 +712,46 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     });
   }
   function histChart() {
-    const H = D.history, svg = document.getElementById("cHist");
-    const w = Math.max(300, Math.round(svg.getBoundingClientRect().width || 720)), narrow = w < 560;
-    const h = narrow ? 220 : 260, m = { l: narrow ? 44 : 52, r: narrow ? 12 : 18, t: 30, b: 30 }, R = narrow ? 7 : 9;
-    svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
-    const x0 = 2000, x1 = 2027, y0 = 2350000, y1 = 2750000;
-    const x = v => m.l + (v - x0) / (x1 - x0) * (w - m.l - m.r), y = v => m.t + (1 - (v - y0) / (y1 - y0)) * (h - m.t - m.b);
-    let s = "";
-    for (let v = 2400000; v <= 2700000; v += 100000)
-      s += `<line x1="${m.l}" x2="${w - m.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${m.l - 8}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${v / 10000} 萬</text>`;
-    for (let v = 2000; v <= 2025; v += narrow ? 10 : 5)
-      s += `<text x="${x(v)}" y="${h - m.b + 18}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${v}</text>`;
-    s += `<line x1="${m.l}" x2="${w - m.r}" y1="${h - m.b}" y2="${h - m.b}" stroke="var(--line-strong)"/>`;
-    H.events.forEach((e, i) => {
-      s += `<line x1="${x(e.x)}" x2="${x(e.x)}" y1="${m.t - 6}" y2="${h - m.b}" stroke="var(--closed)" stroke-dasharray="3 3" stroke-width="1.2"/>`;
-      s += `<circle cx="${x(e.x)}" cy="${m.t - 14}" r="${R}" fill="var(--surface)" stroke="var(--closed)" stroke-width="1.5"/><text x="${x(e.x)}" y="${m.t - 10}" text-anchor="middle" font-size="${narrow ? 9.5 : 11}" font-weight="600" fill="var(--ink)" font-family="var(--font-num)">${i + 1}</text>`;
+    const H = D.history;
+    const panel = (id, series, opts) => {
+      const svg = document.getElementById(id);
+      const w = Math.max(300, Math.round(svg.getBoundingClientRect().width || 720)), narrow = w < 560;
+      const h = opts.h, m = { l: narrow ? 44 : 52, r: narrow ? 12 : 18, t: opts.top, b: 26 }, R = narrow ? 6 : 9;
+      svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+      const x0 = 2000, x1 = 2027, [y0, y1] = opts.y;
+      const x = v => m.l + (v - x0) / (x1 - x0) * (w - m.l - m.r), y = v => m.t + (1 - (v - y0) / (y1 - y0)) * (h - m.t - m.b);
+      let s = "";
+      for (const v of opts.ticks)
+        s += `<line x1="${m.l}" x2="${w - m.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${m.l - 8}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${opts.fmt(v)}</text>`;
+      for (let v = 2000; v <= 2025; v += narrow ? 10 : 5)
+        s += `<text x="${x(v)}" y="${h - m.b + 17}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${v}</text>`;
+      s += `<line x1="${m.l}" x2="${w - m.r}" y1="${h - m.b}" y2="${h - m.b}" stroke="var(--line-strong)"/>`;
+      if (opts.unitChange) {
+        const ux = x(opts.unitChange - 0.5);
+        s += `<rect x="${x(2000)}" y="${m.t}" width="${ux - x(2000)}" height="${h - m.t - m.b}" fill="var(--chip)" opacity="0.7"/>`;
+        s += `<text x="${x(2000) + 6}" y="${h - m.b - 7}" font-size="10.5" fill="var(--ink-2)">以案件數計</text><text x="${ux + 6}" y="${h - m.b - 7}" font-size="10.5" fill="var(--ink-2)">${narrow ? "車輛次" : "2009 年起以車輛次計"}</text>`;
+      }
+      H.events.forEach((e, i) => {
+        s += `<line x1="${x(e.x)}" x2="${x(e.x)}" y1="${opts.labels ? m.t - 6 : m.t}" y2="${h - m.b}" stroke="var(--closed)" stroke-dasharray="3 3" stroke-width="1.2"/>`;
+        if (opts.labels) s += `<circle cx="${x(e.x)}" cy="${m.t - 14}" r="${R}" fill="var(--surface)" stroke="var(--closed)" stroke-width="1.5"/><text x="${x(e.x)}" y="${m.t - 10}" text-anchor="middle" font-size="${narrow ? 9.5 : 11}" font-weight="600" fill="var(--ink)" font-family="var(--font-num)">${i + 1}</text>`;
+      });
+      s += `<polyline fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" points="${series.map(([a, b]) => `${x(a)},${y(b)}`).join(" ")}"/>`;
+      for (const [pt, lab, anchor, dy] of opts.marks(series))
+        s += `<circle cx="${x(pt[0])}" cy="${y(pt[1])}" r="4.5" fill="#2a78d6" stroke="var(--surface)" stroke-width="2"/><text x="${x(pt[0]) + (anchor === "start" ? 6 : anchor === "end" ? -8 : 0)}" y="${y(pt[1]) + dy}" text-anchor="${anchor}" font-size="11.5" font-weight="600" fill="var(--ink)" font-family="var(--font-num)">${lab}</text>`;
+      s += series.map(([a, b]) => `<circle cx="${x(a)}" cy="${y(b)}" r="9" fill="transparent"><title>${opts.tip(a, b)}</title></circle>`).join("");
+      svg.innerHTML = s;
+    };
+    const E = H.ems, P = H.population, byYear = (arr, yr) => arr.find(d => d[0] === yr);
+    panel("cEms", E, {
+      h: 230, top: 34, y: [60000, 150000], ticks: [75000, 100000, 125000, 150000], fmt: v => (v / 10000) + " 萬", labels: true, unitChange: H.ems_unit_change,
+      marks: S => [[S[0], "7.7 萬", "start", -10], [byYear(S, 2011), "13.7 萬", "middle", -12], [S[S.length - 1], "13.8 萬", "end", -12]],
+      tip: (a, b) => `${a} 年：救護出勤 ${b.toLocaleString("zh-TW")} 次`,
     });
-    const P = H.population;
-    s += `<polyline fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" points="${P.map(([a, b]) => `${x(a)},${y(b)}`).join(" ")}"/>`;
-    const peak = P.reduce((a, b) => b[1] > a[1] ? b : a), last = P[P.length - 1], first = P[0];
-    for (const [pt, lab, anchor, dy] of [[first, "264.6 萬", "start", -10], [peak, "270.5 萬", "middle", -12], [last, "241.9 萬", "end", 18]]) {
-      s += `<circle cx="${x(pt[0])}" cy="${y(pt[1])}" r="4.5" fill="#2a78d6" stroke="var(--surface)" stroke-width="2"/>`;
-      s += `<text x="${x(pt[0]) + (anchor === "start" ? 6 : anchor === "end" ? -8 : 0)}" y="${y(pt[1]) + dy}" text-anchor="${anchor}" font-size="11.5" font-weight="600" fill="var(--ink)" font-family="var(--font-num)">${lab}</text>`;
-    }
-    s += P.map(([a, b]) => `<circle cx="${x(a)}" cy="${y(b)}" r="9" fill="transparent"><title>${a === 2026.7 ? "2026 年 9 月" : a + " 年底"}：${b.toLocaleString("zh-TW")} 人</title></circle>`).join("");
-    svg.innerHTML = s;
+    panel("cHist", P, {
+      h: 170, top: 12, y: [2350000, 2750000], ticks: [2400000, 2550000, 2700000], fmt: v => (v / 10000) + " 萬", labels: false,
+      marks: S => [[S[0], "264.6 萬", "start", -10], [S.reduce((a, b) => b[1] > a[1] ? b : a), "270.5 萬", "middle", -10], [S[S.length - 1], "241.9 萬", "end", 16]],
+      tip: (a, b) => `${a === 2026.7 ? "2026 年 9 月" : a + " 年底"}：${b.toLocaleString("zh-TW")} 人`,
+    });
     document.getElementById("histEvents").innerHTML = H.events.map(e => `<li>${e.label}</li>`).join("");
   }
 
