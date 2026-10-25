@@ -2,6 +2,8 @@
 
 **研究問題：** 臺北市目前 46 個消防分隊中，能不能裁撤約 10 個，同時讓原本 10 分鐘內可到達的居民，裁撤後仍在 10 分鐘內可到達？
 
+**互動網頁：** https://shengwenhou.github.io/taipei-fire-station-distribution/
+
 ## 結論
 
 本研究用兩種方式定義「10 分鐘」：
@@ -117,6 +119,7 @@ python scripts/10_optimize.py        # 行車 10 分 → output/results.json
 python scripts/10_optimize.py 480    # 出勤 2 分＋行車 8 分 → output/results_drive480.json
 python scripts/11_map.py
 python scripts/12_build_web_data.py   # 網頁資料 web/data.js
+python scripts/13_build_site.py       # GitHub Pages 網站 docs/
 ```
 
 ## 輸出
