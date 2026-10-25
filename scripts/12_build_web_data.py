@@ -95,6 +95,21 @@ for std, (limit, fname) in STANDARDS.items():
         "robust10": res["robust_10"], "best10_base": res["recommended_10"], "curve": res["curve_base"],
     }
 out["params"] = json.load(open(f"{C}/params.json"))
+hist = pd.read_csv(f"{ROOT}/data/raw/history/taipei_population_year_end.csv")
+hist = hist[hist.year >= 2000]
+out["history"] = {
+    "population": [[int(y), int(p)] for y, p in zip(hist.year, hist.population_year_end)]
+                  + [[2026.7, int(pop.sum().round())]],  # 2026-09 village data used by the model
+    "source_population": "內政部戶政司 歷年各縣市人口數（年底）；2026 年為 9 月村里人口",
+    # 臺北市政府消防局官網「歷史沿革」「大事紀」
+    "events": [
+        {"x": 2011.6, "label": "2011：組織修編，45 個分隊、編制 2,063 人"},
+        {"x": 2015.95, "label": "2015：臺北市人口高峰 270.5 萬"},
+        {"x": 2023.4, "label": "2023：規劃新增福國、興隆、西門、民生 4 分隊，編制仍為 2,063 人"},
+        {"x": 2024.9, "label": "2024：配合釋字第 785 號與新勤休制度，編制增為 2,550 人"},
+        {"x": 2026.7, "label": "2026/9：福國分隊成立，共 46 個分隊（興隆分隊 5 月已完工）"},
+    ],
+}
 out["ems"] = {"year": 2025, "source": "114年臺北市消防統計年報 表6-1",
               "by_district": ems.ambulance_dispatches_2025.to_dict(), "total": int(ems.ambulance_dispatches_2025.sum())}
 os.makedirs(f"{ROOT}/web", exist_ok=True)

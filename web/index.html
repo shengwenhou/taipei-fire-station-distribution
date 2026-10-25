@@ -62,6 +62,27 @@ header { display: grid; gap: 14px; max-width: 900px; }
 .lead { font-size: 17px; color: var(--ink-2); max-width: 64ch; }
 .lead strong { color: var(--ink); }
 
+/* why section */
+.why { display: grid; gap: 18px; padding-block: 22px 24px; border-top: 1px solid var(--line-strong); }
+.why-lead { max-width: 68ch; color: var(--ink-2); font-size: 15.5px; }
+.why-lead strong { color: var(--ink); }
+.why-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-block: 1px solid var(--line); }
+.why-grid > div { padding: 14px 18px 16px 0; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.why-grid > div + div { padding-left: 18px; border-left: 1px solid var(--line); }
+.why-grid p { color: var(--ink-2); font-size: 14.5px; }
+.why-law { display: grid; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; max-width: 900px; }
+.why-law p { color: var(--ink-2); font-size: 14.5px; max-width: 76ch; }
+.why-hist { margin: 0; display: grid; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; }
+.why-hist-head { display: grid; gap: 4px; }
+.why-hist-head p { color: var(--ink-2); font-size: 14.5px; max-width: 76ch; }
+.why-hist svg { width: 100%; height: auto; display: block; }
+.why-events { margin: 0; padding-left: 1.6em; display: grid; gap: 3px; font-size: 13.5px; color: var(--ink-2); }
+.why-events li::marker { font-family: var(--font-num); font-weight: 600; color: var(--ink); }
+@media (max-width: 760px) {
+  .why-grid { grid-template-columns: minmax(0, 1fr); }
+  .why-grid > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+}
+
 /* verdict strip */
 .verdict { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line-strong); }
 .verdict > div { padding: 14px 18px 16px 0; display: grid; gap: 4px; align-content: start; min-width: 0; }
@@ -153,10 +174,9 @@ tr:last-child td { border-bottom: 0; }
 .lrow .was, .lrow .now { position: absolute; left: 0; top: 0; height: 14px; border-radius: 0 3px 3px 0; }
 .lrow .was { background: var(--chip); box-shadow: inset 0 0 0 1px var(--line-strong); }
 .lrow .now { top: 3px; height: 8px; background: #2a78d6; }
-.lrow.over .now { background: var(--critical); }
-.lrow.over .nm { color: var(--critical); font-weight: 700; }
+.lrow.up .now { background: #1c5cab; }
 .lrow .val { font-family: var(--font-num); font-variant-numeric: tabular-nums; font-size: 12px; color: var(--ink-2); white-space: nowrap; }
-.lrow .cap { position: absolute; top: -3px; bottom: -3px; width: 0; border-left: 1.5px dashed var(--critical); }
+.lrow .cap { position: absolute; top: -3px; bottom: -3px; width: 0; border-left: 1.5px dashed var(--muted); }
 .lhead { display: grid; grid-template-columns: 76px minmax(0, 1fr) 128px; gap: 10px; font-size: 12px; color: var(--muted); padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
 .lhead .key { display: flex; flex-wrap: wrap; gap: 4px 14px; }
 @media (max-width: 560px) { .lrow, .lhead { grid-template-columns: 52px minmax(0, 1fr) 92px; gap: 6px; } .lrow .val small { display: none; } }
@@ -170,6 +190,40 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     <h1>砍掉 10 個分隊，還守得住 10 分鐘嗎？</h1>
     <p class="lead"><strong>守得住，但要挑對分隊。</strong>把「10 分鐘」算成<strong>出勤準備 2 分＋行車 8 分</strong>，慢速車流下最多只能裁撤 11 隊，砍 10 隊已接近極限；照下方建議的 10 隊裁撤，三種車速下現況達標的居民仍全部達標，平均行車只多約 <span class="num">13</span> 秒。若只算行車 10 分鐘，空間更寬，最多可裁撤 16 到 23 隊。</p>
   </header>
+
+  <section class="why" aria-labelledby="h-why">
+    <h2 id="h-why">為何要裁撤分隊？</h2>
+    <p class="why-lead">臺北市的分隊是跟著城市發展一路蓋出來的。這些分隊的位置都很好，彼此也能互相支援；問題是每多一個分隊，就多一組不能省的基本值班，人力被分散到每一個據點。</p>
+    <div class="why-grid">
+      <div>
+        <h3>值班台人力</h3>
+        <p>每個分隊都要有人 24 小時守值班台。裁撤 10 隊，全市值班台就從 46 個減為 36 個。</p>
+      </div>
+      <div>
+        <h3>夜間最低車組</h3>
+        <p>每個分隊夜間至少要留一台車待命。分隊合併、人車移防後，夜間有機會只留一台車，全市需要值夜班的人員就會減少。</p>
+      </div>
+      <div>
+        <h3>人力很難補齊</h3>
+        <p>少子化下，消防機關「把人補齊」可能永遠做不到；而釋字第 785 號要求的合理工時，又需要更多人力才能排得出班。</p>
+      </div>
+    </div>
+    <figure class="why-hist">
+      <div class="why-hist-head">
+        <h3>分隊越蓋越多，人口卻已開始減少</h3>
+        <p>臺北市人口 2015 年底達到 <span class="num">270.5</span> 萬的高峰，到 2025 年底減為 <span class="num">243.9</span> 萬，10 年少了約 <span class="num">26.5</span> 萬人（−9.8%）。同一段期間，分隊仍持續增設。</p>
+      </div>
+      <svg id="cHist" viewBox="0 0 720 260" role="img" aria-label="2000 年至 2026 年臺北市人口與消防分隊大事"></svg>
+      <ol class="why-events" id="histEvents"></ol>
+      <figcaption class="note">人口：內政部戶政司 歷年各縣市人口數（年底）；2026 年為 9 月村里人口。分隊與編制：臺北市政府消防局官網〈<a href="https://www.119.gov.taipei/cp.aspx?n=E44E3134369AF681" target="_blank" rel="noopener">歷史沿革</a>〉〈<a href="https://www.119.gov.taipei/cp.aspx?n=B1302E83CDFB7821" target="_blank" rel="noopener">大事紀</a>〉。</figcaption>
+    </figure>
+    <div class="why-law">
+      <h3>釋字第 785 號</h3>
+      <p>2019 年 11 月 29 日，大法官作成釋字第 785 號解釋：消防等輪班輪休機關的規範，沒有就服勤時數上限、輪班頻率、最低連續休息等設定框架，與憲法保障的服公職權與健康權不符，相關機關應於 3 年內檢討修正；外勤消防人員的超時服勤也「有未獲適當評價與補償之虞」。臺北市消防局在 2024 年為配合新勤休制度，編制從 2,063 人增為 2,550 人。要降低每個人的工時、又補不齊人，減少必須值班的據點是另一條路。</p>
+      <p class="note">來源：<a href="https://lawyer.get.com.tw/Justices/detail.aspx?no=121625" target="_blank" rel="noopener">釋字第 785 號解釋要旨</a>；<a href="https://news.pts.org.tw/article/571834" target="_blank" rel="noopener">公視新聞（2022-03-15）消防工時新制爭議</a>；臺北市政府消防局〈歷史沿革〉。</p>
+    </div>
+    <p class="why-lead">所以本頁要回答的問題是：<strong>在不犧牲到達時間的前提下，可以減少多少個據點。</strong>裁撤後，被裁分隊的人車移防到留下來的分隊，出勤量也會跟著集中過去；下方列出各分隊移防後的出勤量，供配置人車參考。</p>
+  </section>
 
   <div class="seg" role="group" aria-label="判定標準" id="stdSeg" style="max-width:560px">
     <button type="button" data-std="d8" aria-pressed="true">出勤 2 分＋行車 8 分<small>行車上限 8 分鐘</small></button>
@@ -221,7 +275,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
             <div><div class="k" id="rDoubleK">達標範圍內有 ≥2 隊</div><div class="v" id="rDouble">–</div><div class="d" id="rDoubleD">人口比例（約）</div></div>
             <div><div class="k">達標人口</div><div class="v" id="rCov">–</div><div class="d">占全市</div></div>
             <div><div class="k">最忙分隊每天出勤</div><div class="v" id="rBusy">–</div><div class="d" id="rBusyD">次</div></div>
-            <div><div class="k">過載分隊</div><div class="v" id="rOver">–</div><div class="d">超過現況最忙分隊</div></div>
+            <div><div class="k">值班台</div><div class="v" id="rOver">–</div><div class="d">現況 46 個</div></div>
           </div>
           <div class="note" id="flash"></div>
         </section>
@@ -243,8 +297,8 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   </section>
 
   <section class="block" aria-labelledby="h-load">
-    <h2 id="h-load">分隊出勤負擔</h2>
-    <p id="loadText">每個分隊預估一年要出幾次救護勤務。依 2025 年各行政區實際救護出勤次數，按區內人口分配，由最近的分隊負責。</p>
+    <h2 id="h-load">移防後各分隊出勤量</h2>
+    <p id="loadText">每個分隊預估一年要出幾次救護勤務。</p>
     <div class="loadchart" id="loadChart" role="img" aria-label="各分隊預估年出勤次數，現況與目前方案比較"></div>
     <p class="note" id="loadClosed"></p>
   </section>
@@ -278,7 +332,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
           <li><strong>不考慮同時出勤：</strong>分隊變少後每隊出勤量增加，「最近分隊沒車」的機率會上升。</li>
           <li><strong>以救護車為準：</strong>消防車較慢、車體較大，狹小巷道實際更久。</li>
           <li><strong>車速未經實測校正：</strong>模型中華山到信義（直線 4.9 km）為 9.1 分鐘，接近鳴笛行駛；建議以慢速情境為準。</li>
-          <li><strong>出勤負擔是估計值：</strong>各區 2025 年救護出勤次數是實際統計，但區內依居住人口分配，且假設每件都由最近分隊出勤；實務上最近分隊沒車時會由他隊支援，所以過載分隊的部分案件會外溢到鄰近分隊。</li>
+          <li><strong>出勤量是估計值：</strong>各區 2025 年救護出勤次數是實際統計，但區內依居住人口分配，且假設每件都由最近分隊出勤；實務上最近分隊沒車時會由他隊支援。裁撤分隊的人車會移防到留下的分隊，出勤量集中是預期中的結果。</li>
           <li><strong>只看居住人口：</strong>覆蓋判定以居住人口為準，白天人口（商辦區）、道路與河濱事故未加權。</li>
           <li><strong>本頁的平均、90%、雙重覆蓋</strong>以 150 m 網格計算，與精確模型差距約 0.02 分；「失去覆蓋」與精確模型完全一致。</li>
         </ul>
@@ -430,12 +484,9 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       ctx.fillStyle = css("--ink-2"); ctx.fillText(d.d, x, y - 14);
     }
     // stations
-    const ink = css("--ink"), surf = css("--surface"), closedC = css("--closed"), capLoad = maxOf(base.load);
+    const ink = css("--ink"), surf = css("--surface"), closedC = css("--closed");
     ST.forEach((s, i) => {
       const [x, y] = stPx[i], closed = state.closed.has(s.name);
-      if (!closed && cur.load[i] > capLoad + 0.5) {
-        ctx.beginPath(); ctx.arc(x, y, 12, 0, 7); ctx.lineWidth = 3; ctx.strokeStyle = crit; ctx.stroke();
-      }
       if (closed) {
         ctx.lineWidth = 3.2; ctx.strokeStyle = surf; xmark(x, y, 5.5); ctx.lineWidth = 2; ctx.strokeStyle = closedC; xmark(x, y, 5.5);
       } else {
@@ -468,7 +519,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       const r = dark ? DELTA_DARK : DELTA_LIGHT, lab = ["不變", "≤1", "1–2", "2–3", "3–5", ">5"];
       rows = `<div class="row"><span style="color:var(--ink-2)">比現況增加（分）</span>${r.map((c, i) => `<span><span class="sw" style="background:${c}"></span>${lab[i]}</span>`).join("")}</div><div class="row">${crit}</div>`;
     }
-    rows += `<div class="row"><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4.5" fill="none" stroke="var(--critical)" stroke-width="2.2"/></svg>出勤過載</span><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="var(--ink)"/></svg>保留</span><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="3" fill="var(--ink)"/><circle cx="6" cy="6" r="5.2" fill="none" stroke="var(--ink)" stroke-width="1.2"/></svg>指定保留</span><span><svg class="mk" viewBox="0 0 12 12"><path d="M2 2L10 10M10 2L2 10" stroke="var(--closed)" stroke-width="2"/></svg>裁撤</span></div>`;
+    rows += `<div class="row"><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="var(--ink)"/></svg>保留</span><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="3" fill="var(--ink)"/><circle cx="6" cy="6" r="5.2" fill="none" stroke="var(--ink)" stroke-width="1.2"/></svg>指定保留</span><span><svg class="mk" viewBox="0 0 12 12"><path d="M2 2L10 10M10 2L2 10" stroke="var(--closed)" stroke-width="2"/></svg>裁撤</span></div>`;
     el.innerHTML = rows;
   }
 
@@ -487,10 +538,9 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     document.getElementById("rDoubleD").textContent = `現況 ${base.dbl.toFixed(1)}%（約）`;
     document.getElementById("rCov").textContent = cur.cov.toFixed(2) + "%";
     const capLoad = maxOf(base.load), busy = maxOf(cur.load), busyI = cur.load.indexOf(busy);
-    const nOver = cur.load.filter(v => v > capLoad + 0.5).length;
     document.getElementById("rBusy").textContent = (busy / 365).toFixed(1);
     document.getElementById("rBusyD").textContent = `${short(NAMES[busyI])}；現況最高 ${(capLoad / 365).toFixed(1)}`;
-    const ov = document.getElementById("rOver"); ov.textContent = nOver + " 隊"; ov.style.color = nOver ? "var(--critical)" : "";
+    document.getElementById("rOver").textContent = (S - cur.nClosed) + " 個";
     const ok = cur.lost < 0.5, Lm = limit() / 60;
     const scName = { slow: "慢速", base: "基準", fast: "快速" }[state.sc];
     document.getElementById("statusBox").innerHTML = ok
@@ -566,16 +616,15 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     const open = [...Array(S).keys()].filter(i => !state.closed.has(NAMES[i]));
     open.sort((a, b) => cur.load[b] - cur.load[a]);
     const top = Math.max(maxOf(cur.load), cap) * 1.04, pct = v => (v / top * 100).toFixed(2) + "%";
-    const over = open.filter(i => cur.load[i] > cap + 0.5);
     let h = `<div class="lhead"><span></span><span class="key">
         <span><span class="sw" style="background:var(--chip);box-shadow:inset 0 0 0 1px var(--line-strong)"></span>現況</span>
-        <span><span class="sw" style="background:#2a78d6;height:6px"></span>目前方案</span>
-        <span><span class="sw" style="background:var(--critical);height:6px"></span>超過現況最忙分隊</span>
-        <span style="color:var(--critical)">┆ 現況最忙：${short(NAMES[capI])} ${fmtInt(cap)} 次／年</span></span><span style="text-align:right">年出勤（每天）</span></div>`;
+        <span><span class="sw" style="background:#2a78d6;height:6px"></span>移防後</span>
+        <span><span class="sw" style="background:#1c5cab;height:6px"></span>接收移防（出勤增加）</span>
+        <span style="color:var(--muted)">┆ 現況最高：${short(NAMES[capI])} ${fmtInt(cap)} 次／年</span></span><span style="text-align:right">年出勤（每天）</span></div>`;
     h += open.map(i => {
-      const was = base.load[i], now = cur.load[i], d = now - was, o = now > cap + 0.5;
-      const ch = was > 0.5 && Math.abs(d) > 0.5 ? ` <small style="color:${d > 0 ? "var(--ink-2)" : "var(--muted)"}">${d > 0 ? "+" : "−"}${Math.round(Math.abs(d) / was * 100)}%</small>` : "";
-      return `<div class="lrow${o ? " over" : ""}" title="${NAMES[i]}：現況 ${fmtInt(was)} 次／年 → ${fmtInt(now)} 次／年">
+      const was = base.load[i], now = cur.load[i], d = now - was, up = d > 0.5 && state.closed.size > 0;
+      const ch = was > 0.5 && Math.abs(d) > 0.5 ? ` <small style="color:var(--muted)">${d > 0 ? "+" : "−"}${Math.round(Math.abs(d) / was * 100)}%</small>` : "";
+      return `<div class="lrow${up ? " up" : ""}" title="${NAMES[i]}：現況 ${fmtInt(was)} 次／年 → ${fmtInt(now)} 次／年">
         <span class="nm">${short(NAMES[i])}</span>
         <span class="tr"><span class="was" style="width:${pct(was)}"></span><span class="now" style="width:${pct(now)}"></span><span class="cap" style="left:${pct(cap)}"></span></span>
         <span class="val">${fmtInt(now)}（${(now / 365).toFixed(1)}）${ch}</span></div>`;
@@ -584,11 +633,10 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     document.getElementById("loadClosed").textContent = state.closed.size
       ? `已裁撤、不列入圖中：${[...state.closed].map(short).join("、")}。` : "";
     const scName = { slow: "慢速", base: "基準", fast: "快速" }[state.sc];
+    const ups = open.filter(i => cur.load[i] - base.load[i] > 0.5).sort((a, b) => (cur.load[b] - base.load[b]) - (cur.load[a] - base.load[a]));
     document.getElementById("loadText").textContent =
-      `每個分隊預估一年要出幾次救護勤務：依 2025 年各行政區實際救護出勤次數（共 ${fmtInt(D.ems.total)} 次），按區內人口分配，由最近的分隊負責（${scName}車速）。` +
-      (state.closed.size ? (over.length
-        ? `目前方案下有 ${over.length} 個分隊超過現況最忙分隊的出勤量：${over.map(i => `${short(NAMES[i])}（每天 ${(cur.load[i] / 365).toFixed(1)} 次）`).join("、")}。`
-        : "目前方案下沒有分隊超過現況最忙分隊的出勤量。") : "");
+      `依 2025 年各行政區實際救護出勤次數（共 ${fmtInt(D.ems.total)} 次）按區內人口分配，由最近的分隊負責（${scName}車速）。被裁撤分隊的人車移防後，原轄區的出勤會轉到鄰近分隊；這張圖可用來估算各分隊需要接收多少人車。` +
+      (ups.length ? `目前方案下接收最多的是：${ups.slice(0, 3).map(i => `${short(NAMES[i])}（每天 +${((cur.load[i] - base.load[i]) / 365).toFixed(1)} 次）`).join("、")}。` : "");
   }
   const maxOf = a => a.reduce((m, v) => v > m ? v : m, 0);
   function update() { cur = evaluate(state.sc, state.closed); renderPanel(); renderTakeover(); renderLoad(); legend(); draw(); }
@@ -660,6 +708,35 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       r.addEventListener("mouseleave", () => tipC.hidden = true);
     });
   }
+  function histChart() {
+    const H = D.history, svg = document.getElementById("cHist");
+    const w = Math.max(300, Math.round(svg.getBoundingClientRect().width || 720)), narrow = w < 560;
+    const h = narrow ? 220 : 260, m = { l: narrow ? 44 : 52, r: narrow ? 12 : 18, t: 30, b: 30 }, R = narrow ? 7 : 9;
+    svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+    const x0 = 2000, x1 = 2027, y0 = 2350000, y1 = 2750000;
+    const x = v => m.l + (v - x0) / (x1 - x0) * (w - m.l - m.r), y = v => m.t + (1 - (v - y0) / (y1 - y0)) * (h - m.t - m.b);
+    let s = "";
+    for (let v = 2400000; v <= 2700000; v += 100000)
+      s += `<line x1="${m.l}" x2="${w - m.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${m.l - 8}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${v / 10000} 萬</text>`;
+    for (let v = 2000; v <= 2025; v += narrow ? 10 : 5)
+      s += `<text x="${x(v)}" y="${h - m.b + 18}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${v}</text>`;
+    s += `<line x1="${m.l}" x2="${w - m.r}" y1="${h - m.b}" y2="${h - m.b}" stroke="var(--line-strong)"/>`;
+    H.events.forEach((e, i) => {
+      s += `<line x1="${x(e.x)}" x2="${x(e.x)}" y1="${m.t - 6}" y2="${h - m.b}" stroke="var(--closed)" stroke-dasharray="3 3" stroke-width="1.2"/>`;
+      s += `<circle cx="${x(e.x)}" cy="${m.t - 14}" r="${R}" fill="var(--surface)" stroke="var(--closed)" stroke-width="1.5"/><text x="${x(e.x)}" y="${m.t - 10}" text-anchor="middle" font-size="${narrow ? 9.5 : 11}" font-weight="600" fill="var(--ink)" font-family="var(--font-num)">${i + 1}</text>`;
+    });
+    const P = H.population;
+    s += `<polyline fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" points="${P.map(([a, b]) => `${x(a)},${y(b)}`).join(" ")}"/>`;
+    const peak = P.reduce((a, b) => b[1] > a[1] ? b : a), last = P[P.length - 1], first = P[0];
+    for (const [pt, lab, anchor, dy] of [[first, "264.6 萬", "start", -10], [peak, "270.5 萬", "middle", -12], [last, "241.9 萬", "end", 18]]) {
+      s += `<circle cx="${x(pt[0])}" cy="${y(pt[1])}" r="4.5" fill="#2a78d6" stroke="var(--surface)" stroke-width="2"/>`;
+      s += `<text x="${x(pt[0]) + (anchor === "start" ? 6 : anchor === "end" ? -8 : 0)}" y="${y(pt[1]) + dy}" text-anchor="${anchor}" font-size="11.5" font-weight="600" fill="var(--ink)" font-family="var(--font-num)">${lab}</text>`;
+    }
+    s += P.map(([a, b]) => `<circle cx="${x(a)}" cy="${y(b)}" r="9" fill="transparent"><title>${a === 2026.7 ? "2026 年 9 月" : a + " 年底"}：${b.toLocaleString("zh-TW")} 人</title></circle>`).join("");
+    svg.innerHTML = s;
+    document.getElementById("histEvents").innerHTML = H.events.map(e => `<li>${e.label}</li>`).join("");
+  }
+
   // knee of each curve: where the mean-time step first exceeds 0.15 min
   const KNEE = { d10: [16, 20], d8: [14, 16] };
   function renderStatic() {
@@ -685,8 +762,9 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   }
 
   // ---------- boot ----------
-  buildPanel(); layout(); renderStatic(); update();
+  buildPanel(); layout(); histChart(); renderStatic(); update();
   new ResizeObserver(() => { layout(); draw(); }).observe(canvas);
+  new ResizeObserver(() => histChart()).observe(document.getElementById("cHist").parentElement);
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { legend(); draw(); });
   new MutationObserver(() => { legend(); draw(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();
