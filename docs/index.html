@@ -157,6 +157,20 @@ tr:last-child td { border-bottom: 0; }
 .cols ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; color: var(--ink-2); }
 .cols li strong { color: var(--ink); }
 @media (max-width: 760px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+.loadchart { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 3px; }
+.lrow { display: grid; grid-template-columns: 76px minmax(0, 1fr) 128px; gap: 10px; align-items: center; font-size: 13px; min-height: 20px; }
+.lrow .nm { text-align: right; white-space: nowrap; }
+.lrow .tr { position: relative; height: 14px; }
+.lrow .was, .lrow .now { position: absolute; left: 0; top: 0; height: 14px; border-radius: 0 3px 3px 0; }
+.lrow .was { background: var(--chip); box-shadow: inset 0 0 0 1px var(--line-strong); }
+.lrow .now { top: 3px; height: 8px; background: #2a78d6; }
+.lrow.over .now { background: var(--critical); }
+.lrow.over .nm { color: var(--critical); font-weight: 700; }
+.lrow .val { font-family: var(--font-num); font-variant-numeric: tabular-nums; font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+.lrow .cap { position: absolute; top: -3px; bottom: -3px; width: 0; border-left: 1.5px dashed var(--critical); }
+.lhead { display: grid; grid-template-columns: 76px minmax(0, 1fr) 128px; gap: 10px; font-size: 12px; color: var(--muted); padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
+.lhead .key { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+@media (max-width: 560px) { .lrow, .lhead { grid-template-columns: 52px minmax(0, 1fr) 92px; gap: 6px; } .lrow .val small { display: none; } }
 footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; display: grid; gap: 4px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -219,6 +233,8 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
             <div><div class="k">90% 居民在</div><div class="v" id="rP90">–</div><div class="d" id="rP90D">分內</div></div>
             <div><div class="k" id="rDoubleK">達標範圍內有 ≥2 隊</div><div class="v" id="rDouble">–</div><div class="d" id="rDoubleD">人口比例（約）</div></div>
             <div><div class="k">達標人口</div><div class="v" id="rCov">–</div><div class="d">占全市</div></div>
+            <div><div class="k">最忙分隊每天出勤</div><div class="v" id="rBusy">–</div><div class="d" id="rBusyD">次</div></div>
+            <div><div class="k">過載分隊</div><div class="v" id="rOver">–</div><div class="d">超過現況最忙分隊</div></div>
           </div>
           <div class="note" id="flash"></div>
         </section>
@@ -237,6 +253,13 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       <thead><tr><th>裁撤分隊</th><th>行政區</th><th>中隊</th><th class="r">原轄區人口</th><th class="r">現況平均</th><th class="r">裁撤後平均</th><th class="r">原轄區最長</th><th>主要接手分隊</th></tr></thead>
       <tbody id="takeover"></tbody>
     </table></div>
+  </section>
+
+  <section class="block" aria-labelledby="h-load">
+    <h2 id="h-load">分隊出勤負擔</h2>
+    <p id="loadText">每個分隊預估一年要出幾次救護勤務。依 2025 年各行政區實際救護出勤次數，按區內人口分配，由最近的分隊負責。</p>
+    <div class="loadchart" id="loadChart" role="img" aria-label="各分隊預估年出勤次數，現況與目前方案比較"></div>
+    <p class="note" id="loadClosed"></p>
   </section>
 
   <section class="block" aria-labelledby="h-curve">
@@ -268,7 +291,8 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
           <li><strong>不考慮同時出勤：</strong>分隊變少後每隊出勤量增加，「最近分隊沒車」的機率會上升。</li>
           <li><strong>以救護車為準：</strong>消防車較慢、車體較大，狹小巷道實際更久。</li>
           <li><strong>車速未經實測校正：</strong>模型中華山到信義（直線 4.9 km）為 9.1 分鐘，接近鳴笛行駛；建議以慢速情境為準。</li>
-          <li><strong>只看居住人口：</strong>白天人口（商辦區）、道路與河濱事故未加權。</li>
+          <li><strong>出勤負擔是估計值：</strong>各區 2025 年救護出勤次數是實際統計，但區內依居住人口分配，且假設每件都由最近分隊出勤；實務上最近分隊沒車時會由他隊支援，所以過載分隊的部分案件會外溢到鄰近分隊。</li>
+          <li><strong>只看居住人口：</strong>覆蓋判定以居住人口為準，白天人口（商辦區）、道路與河濱事故未加權。</li>
           <li><strong>本頁的平均、90%、雙重覆蓋</strong>以 150 m 網格計算，與精確模型差距約 0.02 分；「失去覆蓋」與精確模型完全一致。</li>
         </ul>
       </div>
@@ -276,7 +300,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   </section>
 
   <footer>
-    <span>資料來源：臺北市政府消防局官網（分隊名單與地址）；© OpenStreetMap contributors；Overture Maps Foundation（道路、地點、建物、村里界）；內政部戶政司 村里人口（ODRP014，民國 115 年 9 月）。</span>
+    <span>資料來源：臺北市政府消防局官網（分隊名單與地址）；114 年臺北市消防統計年報 表 6-1（各區救護出勤次數）；© OpenStreetMap contributors；Overture Maps Foundation（道路、地點、建物、村里界）；內政部戶政司 村里人口（ODRP014，民國 115 年 9 月）。</span>
     <span>程式與完整資料：<a href="https://github.com/shengwenhou/taipei-fire-station-distribution" target="_blank" rel="noopener">github.com/shengwenhou/taipei-fire-station-distribution</a></span>
   </footer>
 </div>
@@ -287,6 +311,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   const D = window.TFD_DATA;
   const ST = D.stations, S = ST.length, NAMES = ST.map(s => s.name);
   const G = D.cells.pop.length, POP = Float64Array.from(D.cells.pop), TOTAL = POP.reduce((a, b) => a + b, 0);
+  const CALLS = Float64Array.from(D.cells.calls);
   const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
   const TIMES = {}, PAT = { d10: {}, d8: {} };
   for (const sc of ["slow", "base", "fast"]) {
@@ -335,12 +360,13 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     const lostCell = new Float64Array(G), covCell = new Float64Array(G);
     for (let i = 0; i < pp.length; i++) { covCell[pc[i]] += pw[i]; if (lostPat[pp[i]]) lostCell[pc[i]] += pw[i]; }
     let sum = 0, dbl = 0;
-    for (let g = 0; g < G; g++) { sum += POP[g] * best[g]; if (within[g] >= 2) dbl += POP[g]; }
+    const load = new Float64Array(S);
+    for (let g = 0; g < G; g++) { sum += POP[g] * best[g]; if (within[g] >= 2) dbl += POP[g]; if (nearest[g] >= 0) load[nearest[g]] += CALLS[g]; }
     let covered = 0; for (let p = 0; p < ppop.length; p++) if (!lostPat[p]) covered += ppop[p];
     const idx = Array.from(best.keys()).sort((a, b) => best[a] - best[b]);
     let acc = 0, p90 = 0;
     for (const g of idx) { acc += POP[g]; if (acc >= 0.9 * TOTAL) { p90 = best[g]; break; } }
-    return { best, nearest, lost, lostCell, covCell, mean: sum / TOTAL / 60, p90: p90 / 60, dbl: dbl / TOTAL * 100, cov: covered / TOTAL * 100, nClosed: closed.size };
+    return { best, nearest, lost, lostCell, covCell, load, mean: sum / TOTAL / 60, p90: p90 / 60, dbl: dbl / TOTAL * 100, cov: covered / TOTAL * 100, nClosed: closed.size };
   }
   const baseCache = {};
   const baseline = sc => baseCache[state.std + sc] || (baseCache[state.std + sc] = evaluate(sc, new Set()));
@@ -417,9 +443,12 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       ctx.fillStyle = css("--ink-2"); ctx.fillText(d.d, x, y - 14);
     }
     // stations
-    const ink = css("--ink"), surf = css("--surface"), closedC = css("--closed");
+    const ink = css("--ink"), surf = css("--surface"), closedC = css("--closed"), capLoad = maxOf(base.load);
     ST.forEach((s, i) => {
       const [x, y] = stPx[i], closed = state.closed.has(s.name);
+      if (!closed && cur.load[i] > capLoad + 0.5) {
+        ctx.beginPath(); ctx.arc(x, y, 12, 0, 7); ctx.lineWidth = 3; ctx.strokeStyle = crit; ctx.stroke();
+      }
       if (closed) {
         ctx.lineWidth = 3.2; ctx.strokeStyle = surf; xmark(x, y, 5.5); ctx.lineWidth = 2; ctx.strokeStyle = closedC; xmark(x, y, 5.5);
       } else {
@@ -452,7 +481,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       const r = dark ? DELTA_DARK : DELTA_LIGHT, lab = ["不變", "≤1", "1–2", "2–3", "3–5", ">5"];
       rows = `<div class="row"><span style="color:var(--ink-2)">比現況增加（分）</span>${r.map((c, i) => `<span><span class="sw" style="background:${c}"></span>${lab[i]}</span>`).join("")}</div><div class="row">${crit}</div>`;
     }
-    rows += `<div class="row"><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="var(--ink)"/></svg>保留</span><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="3" fill="var(--ink)"/><circle cx="6" cy="6" r="5.2" fill="none" stroke="var(--ink)" stroke-width="1.2"/></svg>指定保留</span><span><svg class="mk" viewBox="0 0 12 12"><path d="M2 2L10 10M10 2L2 10" stroke="var(--closed)" stroke-width="2"/></svg>裁撤</span></div>`;
+    rows += `<div class="row"><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4.5" fill="none" stroke="var(--critical)" stroke-width="2.2"/></svg>出勤過載</span><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="var(--ink)"/></svg>保留</span><span><svg class="mk" viewBox="0 0 12 12"><circle cx="6" cy="6" r="3" fill="var(--ink)"/><circle cx="6" cy="6" r="5.2" fill="none" stroke="var(--ink)" stroke-width="1.2"/></svg>指定保留</span><span><svg class="mk" viewBox="0 0 12 12"><path d="M2 2L10 10M10 2L2 10" stroke="var(--closed)" stroke-width="2"/></svg>裁撤</span></div>`;
     el.innerHTML = rows;
   }
 
@@ -470,6 +499,11 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     document.getElementById("rDouble").textContent = cur.dbl.toFixed(1) + "%";
     document.getElementById("rDoubleD").textContent = `現況 ${base.dbl.toFixed(1)}%（約）`;
     document.getElementById("rCov").textContent = cur.cov.toFixed(2) + "%";
+    const capLoad = maxOf(base.load), busy = maxOf(cur.load), busyI = cur.load.indexOf(busy);
+    const nOver = cur.load.filter(v => v > capLoad + 0.5).length;
+    document.getElementById("rBusy").textContent = (busy / 365).toFixed(1);
+    document.getElementById("rBusyD").textContent = `${short(NAMES[busyI])}；現況最高 ${(capLoad / 365).toFixed(1)}`;
+    const ov = document.getElementById("rOver"); ov.textContent = nOver + " 隊"; ov.style.color = nOver ? "var(--critical)" : "";
     const ok = cur.lost < 0.5, Lm = limit() / 60;
     const scName = { slow: "慢速", base: "基準", fast: "快速" }[state.sc];
     document.getElementById("statusBox").innerHTML = ok
@@ -540,7 +574,37 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     state.preset = "custom"; flash.textContent = `${n}已${state.closed.has(n) ? "裁撤" : "恢復"}。`;
     update();
   }
-  function update() { cur = evaluate(state.sc, state.closed); renderPanel(); renderTakeover(); legend(); draw(); }
+  function renderLoad() {
+    const base = baseline(state.sc), cap = maxOf(base.load), capI = base.load.indexOf(cap);
+    const open = [...Array(S).keys()].filter(i => !state.closed.has(NAMES[i]));
+    open.sort((a, b) => cur.load[b] - cur.load[a]);
+    const top = Math.max(maxOf(cur.load), cap) * 1.04, pct = v => (v / top * 100).toFixed(2) + "%";
+    const over = open.filter(i => cur.load[i] > cap + 0.5);
+    let h = `<div class="lhead"><span></span><span class="key">
+        <span><span class="sw" style="background:var(--chip);box-shadow:inset 0 0 0 1px var(--line-strong)"></span>現況</span>
+        <span><span class="sw" style="background:#2a78d6;height:6px"></span>目前方案</span>
+        <span><span class="sw" style="background:var(--critical);height:6px"></span>超過現況最忙分隊</span>
+        <span style="color:var(--critical)">┆ 現況最忙：${short(NAMES[capI])} ${fmtInt(cap)} 次／年</span></span><span style="text-align:right">年出勤（每天）</span></div>`;
+    h += open.map(i => {
+      const was = base.load[i], now = cur.load[i], d = now - was, o = now > cap + 0.5;
+      const ch = was > 0.5 && Math.abs(d) > 0.5 ? ` <small style="color:${d > 0 ? "var(--ink-2)" : "var(--muted)"}">${d > 0 ? "+" : "−"}${Math.round(Math.abs(d) / was * 100)}%</small>` : "";
+      return `<div class="lrow${o ? " over" : ""}" title="${NAMES[i]}：現況 ${fmtInt(was)} 次／年 → ${fmtInt(now)} 次／年">
+        <span class="nm">${short(NAMES[i])}</span>
+        <span class="tr"><span class="was" style="width:${pct(was)}"></span><span class="now" style="width:${pct(now)}"></span><span class="cap" style="left:${pct(cap)}"></span></span>
+        <span class="val">${fmtInt(now)}（${(now / 365).toFixed(1)}）${ch}</span></div>`;
+    }).join("");
+    document.getElementById("loadChart").innerHTML = h;
+    document.getElementById("loadClosed").textContent = state.closed.size
+      ? `已裁撤、不列入圖中：${[...state.closed].map(short).join("、")}。` : "";
+    const scName = { slow: "慢速", base: "基準", fast: "快速" }[state.sc];
+    document.getElementById("loadText").textContent =
+      `每個分隊預估一年要出幾次救護勤務：依 2025 年各行政區實際救護出勤次數（共 ${fmtInt(D.ems.total)} 次），按區內人口分配，由最近的分隊負責（${scName}車速）。` +
+      (state.closed.size ? (over.length
+        ? `目前方案下有 ${over.length} 個分隊超過現況最忙分隊的出勤量：${over.map(i => `${short(NAMES[i])}（每天 ${(cur.load[i] / 365).toFixed(1)} 次）`).join("、")}。`
+        : "目前方案下沒有分隊超過現況最忙分隊的出勤量。") : "");
+  }
+  const maxOf = a => a.reduce((m, v) => v > m ? v : m, 0);
+  function update() { cur = evaluate(state.sc, state.closed); renderPanel(); renderTakeover(); renderLoad(); legend(); draw(); }
 
   // ---------- hover ----------
   const tip = document.getElementById("tip");

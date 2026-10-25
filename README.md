@@ -84,6 +84,30 @@
 
 裁撤到 16 隊左右，影響都還很小；超過之後雙重覆蓋開始明顯下降。
 
+## 分隊出勤負擔
+
+覆蓋之外，還要看裁撤後接手的分隊會不會太忙。
+
+**估算方式：**
+
+- 依 2025 年各行政區實際救護出勤次數（114 年臺北市消防統計年報 表 6-1，12 區合計 137,590 次），按區內居住人口分配到各需求點。
+- 每件由最近的分隊出勤，加總後就是各分隊的預估年出勤次數。
+- 以「現況最忙分隊」的出勤量作為過載基準，也就是泉州分隊，每年約 8,900 次、每天約 24 次。
+
+各區每千人年出勤次數差異很大：萬華區 86.5 次、中正區 75.4 次，內湖區只有 39.6 次。
+
+| 方案（基準車速） | 最忙分隊 | 超過現況最忙水準的分隊 |
+|---|---|---|
+| 現況 | 泉州 8,924 次（每天 24.4） | — |
+| 建議 10 隊（出勤 2 分＋行車 8 分） | 泉州 12,814 次（每天 35.1） | **3 隊**：泉州、龍山（10,219）、大同（9,262） |
+| 建議 10 隊（行車 10 分） | 泉州 11,619 次（每天 31.8） | **2 隊**：泉州、龍山（10,113） |
+
+覆蓋率雖然守得住，但出勤量會集中到萬華、中正、大同一帶的少數分隊；這一帶人均出勤率最高，同時也是建議裁撤最集中的地方。
+
+這是估計值：區內依居住人口分配，且假設每件都由最近分隊出勤。實務上最近分隊沒車時會由他隊支援，所以過載分隊的部分案件會外溢到鄰近分隊。
+
+結果檔：`output/station_workload_2025.csv`（`python scripts/14_workload.py`）。
+
 ## 方法
 
 1. **分隊清單**（`data/stations.csv`）：依[組織架構頁](https://www.119.gov.taipei/cp.aspx?n=09C8261FD0DBCA04)列出的 45 個分隊，加上[聯絡資訊頁](https://www.119.gov.taipei/cp.aspx?n=40AA1CAF59C994CF)所列、2026-09 新增的**福國分隊**，共 46 個。只納入分隊，不含大隊、中隊。古亭分隊採用官網標示的臨時駐地（基隆路四段156號）。
@@ -120,6 +144,7 @@ python scripts/10_optimize.py 480    # 出勤 2 分＋行車 8 分 → output/re
 python scripts/11_map.py
 python scripts/12_build_web_data.py   # 網頁資料 web/data.js
 python scripts/13_build_site.py       # GitHub Pages 網站 docs/
+python scripts/14_workload.py         # 分隊出勤負擔 → output/station_workload_2025.csv
 ```
 
 ## 輸出
@@ -135,3 +160,4 @@ python scripts/13_build_site.py       # GitHub Pages 網站 docs/
 - 臺北市政府消防局官網（分隊名單、地址）
 - © OpenStreetMap contributors（ODbL）；Overture Maps Foundation（transportation、places、buildings、divisions）
 - 內政部戶政司 村里戶數、單一年齡人口（ODRP014）
+- 臺北市政府消防局 114 年臺北市消防統計年報 表 6-1（各區救護出勤次數，原始 PDF 存於 `data/raw/ems/`）

@@ -29,12 +29,17 @@ cell = (np.floor(d.x.values / GRID).astype(np.int64) * 100000 + np.floor(d.y.val
 ukeys, inv = np.unique(cell, return_inverse=True)
 G = len(ukeys)
 w = np.bincount(inv, weights=pop, minlength=G)
+# expected annual ambulance dispatches per cell: 2025 district totals spread by resident population
+ems = pd.read_csv(f"{ROOT}/data/raw/ems/ems_calls_by_district_114.csv").set_index("district")
+calls = d["pop"].values * d.district.map(ems.ambulance_dispatches_2025 / d.groupby("district")["pop"].sum()).values
+cell_calls = np.bincount(inv, weights=calls, minlength=G)
 cx = (ukeys // 100000 + 0.5) * GRID
 cy = (ukeys % 100000 + 0.5) * GRID
 ll = gpd.GeoSeries(gpd.points_from_xy(cx, cy), crs=3826).to_crs(4326)
 
 out = {"grid_m": GRID, "cells": {"lon": np.round(ll.x.values, 5).tolist(), "lat": np.round(ll.y.values, 5).tolist(),
-                                  "pop": np.round(w, 1).tolist()}, "times": {}, "patterns": {k: {} for k in STANDARDS}}
+                                  "pop": np.round(w, 1).tolist(),
+                                  "calls": np.round(cell_calls, 2).tolist()}, "times": {}, "patterns": {k: {} for k in STANDARDS}}
 check = {}
 for sc in ("slow", "base", "fast"):
     T = np.load(f"{C}/times_{sc}.npy").astype(float)
@@ -90,6 +95,8 @@ for std, (limit, fname) in STANDARDS.items():
         "robust10": res["robust_10"], "best10_base": res["recommended_10"], "curve": res["curve_base"],
     }
 out["params"] = json.load(open(f"{C}/params.json"))
+out["ems"] = {"year": 2025, "source": "114年臺北市消防統計年報 表6-1",
+              "by_district": ems.ambulance_dispatches_2025.to_dict(), "total": int(ems.ambulance_dispatches_2025.sum())}
 os.makedirs(f"{ROOT}/web", exist_ok=True)
 js = "window.TFD_DATA = " + json.dumps(out, ensure_ascii=False, separators=(",", ":")) + ";\n"
 open(f"{ROOT}/web/data.js", "w").write(js)
