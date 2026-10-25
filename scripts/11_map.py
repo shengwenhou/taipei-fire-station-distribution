@@ -9,7 +9,7 @@ import folium
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 C = f"{ROOT}/data/cache"
 res = json.load(open(f"{ROOT}/output/results.json"))
-closed = set(res["recommended_10"]["closed"])
+closed = set(res["robust_10"]["closed"])  # chosen under slow speeds; holds in all scenarios
 
 st = pd.read_csv(f"{C}/stations_snapped.csv")
 demand = pd.read_parquet(f"{C}/demand.parquet")
