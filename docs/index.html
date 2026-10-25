@@ -76,23 +76,23 @@ button, input { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
 /* header */
-header { display: grid; gap: 14px; max-width: 900px; }
-.lead { font-size: 17px; color: var(--ink-2); max-width: 64ch; }
+header { display: grid; gap: 14px; }
+.lead { font-size: 17px; color: var(--ink-2); }
 .lead strong { color: var(--ink); }
 
 /* why section */
 .why { display: grid; gap: 18px; padding-block: 22px 24px; border-top: 1px solid var(--line-strong); }
-.why-lead { max-width: 68ch; color: var(--ink-2); font-size: 15.5px; }
+.why-lead { color: var(--ink-2); font-size: 15.5px; }
 .why-lead strong { color: var(--ink); }
 .why-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-block: 1px solid var(--line); }
 .why-grid > div { padding: 14px 18px 16px 0; display: grid; gap: 6px; align-content: start; min-width: 0; }
 .why-grid > div + div { padding-left: 18px; border-left: 1px solid var(--line); }
 .why-grid p { color: var(--ink-2); font-size: 14.5px; }
-.why-law { display: grid; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; max-width: 900px; }
-.why-law p { color: var(--ink-2); font-size: 14.5px; max-width: 76ch; }
+.why-law { display: grid; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; }
+.why-law p { color: var(--ink-2); font-size: 14.5px; }
 .why-hist { margin: 0; display: grid; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; }
 .why-hist-head { display: grid; gap: 4px; }
-.why-hist-head p { color: var(--ink-2); font-size: 14.5px; max-width: 76ch; }
+.why-hist-head p { color: var(--ink-2); font-size: 14.5px; }
 .why-hist svg { width: 100%; height: auto; display: block; }
 .why-panel { display: grid; gap: 2px; }
 .why-panel-t { font-size: 12.5px; color: var(--ink-2); font-weight: 500; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; }
@@ -105,6 +105,8 @@ header { display: grid; gap: 14px; max-width: 900px; }
   .why-grid { grid-template-columns: minmax(0, 1fr); }
   .why-grid > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
 }
+
+.std-row { display: grid; gap: 8px; }
 
 /* verdict strip */
 .verdict { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line-strong); }
@@ -184,7 +186,7 @@ header { display: grid; gap: 14px; max-width: 900px; }
 
 /* sections */
 .block { display: grid; gap: 16px; }
-.block > p { max-width: 70ch; color: var(--ink-2); }
+.block > p { color: var(--ink-2); }
 .charts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .chart { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px 10px; display: grid; gap: 6px; min-width: 0; position: relative; }
 .chart svg { width: 100%; height: auto; display: block; overflow: visible; }
@@ -263,9 +265,12 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     <p class="why-lead">所以本頁要回答的問題是：<strong>在不犧牲到達時間的前提下，可以減少多少個據點。</strong>裁撤後，被裁分隊的人車移防到留下來的分隊，出勤量也會跟著集中過去；下方列出各分隊移防後的出勤量，供配置人車參考。</p>
   </section>
 
-  <div class="seg" role="group" aria-label="判定標準" id="stdSeg" style="max-width:560px">
+  <div class="std-row">
+    <span class="eyebrow">判定標準：切換後，下方所有數字跟著改變</span>
+  <div class="seg" role="group" aria-label="判定標準" id="stdSeg">
     <button type="button" data-std="d8" aria-pressed="true">出勤 2 分＋行車 8 分<small>行車上限 8 分鐘</small></button>
     <button type="button" data-std="d10" aria-pressed="false">行車 10 分<small>不計出勤準備</small></button>
+  </div>
   </div>
 
   <div class="verdict" role="list">
