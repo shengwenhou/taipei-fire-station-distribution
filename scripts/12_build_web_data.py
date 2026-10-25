@@ -103,12 +103,19 @@ out["history"] = {
                   + [[2026.7, int(pop.sum().round())]],  # 2026-09 village data used by the model
     "ems": [[int(y), int(v)] for y, v in zip(ems_hist.year, ems_hist.ambulance_dispatches)],
     "ems_unit_change": 2009,  # 97年以前以案件數計，98年起以車輛次計
+    # 分隊 count as a step series at the opening dates recorded in 大事紀 (year + fraction of year).
+    # Values before 2011 are reconstructed (33 in Nov 1995 + openings); the 2011 yearbook's year-end 44
+    # confirms the reconstruction, and later values match each yearbook (see taipei_station_count.csv).
+    "stations": [[2000.0, 38, "推算"], [2002.88, 39, "推算"],                      # 1999 已開設圓山、雙溪、復興、寶橋；2002/11/18 民權
+                 [2006.04, 40, "推算"], [2006.26, 41, "推算"], [2006.35, 42, "推算"],  # 莊敬 1/16、延平 4/4、後港 5/9
+                 [2010.64, 43, "推算"], [2010.97, 44, "年報"],                       # 福安 8/21、成德 12/19（2011 年報年底 44）
+                 [2012.01, 45, "年報"], [2026.71, 46, "大事紀"]],                     # 建國 2012/1/5、福國 2026/9/16
     # 臺北市政府消防局官網「歷史沿革」「大事紀」
     "events": [
         {"x": 2002.9, "label": "2002：民權分隊落成啟用"},
         {"x": 2006.3, "label": "2006：莊敬、延平、後港分隊新建落成啟用"},
         {"x": 2010.9, "label": "2010：福安、成德分隊落成啟用"},
-        {"x": 2011.6, "label": "2011：組織修編，45 個分隊、編制 2,063 人"},
+        {"x": 2011.6, "label": "2011：組織修編，編制 45 個分隊、2,063 人（年底實際 44 隊，2012 年 1 月建國分隊成立後為 45 隊）"},
         {"x": 2023.4, "label": "2023：規劃新增福國、興隆、西門、民生 4 分隊，編制仍為 2,063 人"},
         {"x": 2024.9, "label": "2024：配合釋字第 785 號與新勤休制度，編制增為 2,550 人"},
         {"x": 2026.7, "label": "2026/9：福國分隊成立，共 46 個分隊（興隆分隊 5 月已完工）"},
