@@ -1,6 +1,6 @@
 {
  "base": {
-  "max_closures": 21,
+  "max_closures": 22,
   "max_closure_set": [
    "中崙分隊",
    "信義分隊",
@@ -8,7 +8,6 @@
    "八德分隊",
    "劍潭分隊",
    "南港分隊",
-   "古亭分隊",
    "圓山分隊",
    "城中分隊",
    "大同分隊",
@@ -18,22 +17,24 @@
    "復興分隊",
    "松江分隊",
    "民權分隊",
+   "泉州分隊",
+   "社子分隊",
    "福國分隊",
+   "興隆分隊",
    "華山分隊",
    "金華分隊",
-   "雙園分隊",
-   "龍山分隊"
+   "雙園分隊"
   ],
-  "patterns": 1328,
+  "patterns": 1316,
   "baseline": {
    "closed": [],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 2.968974131863953,
-   "p90_min": 4.672109985351563,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.68228262118294
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 2.85806933928095,
+   "p90_min": 4.524045308430989,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.73221760316677
   }
  },
  "slow": {
@@ -43,7 +44,6 @@
    "八德分隊",
    "劍潭分隊",
    "南港分隊",
-   "古亭分隊",
    "城中分隊",
    "大同分隊",
    "延平分隊",
@@ -51,21 +51,22 @@
    "復興分隊",
    "松江分隊",
    "社子分隊",
+   "興隆分隊",
    "華山分隊",
    "金華分隊",
    "雙園分隊",
    "龍山分隊"
   ],
-  "patterns": 1000,
+  "patterns": 999,
   "baseline": {
    "closed": [],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 98.42539282645771,
-   "mean_min": 3.679786216574247,
-   "p90_min": 5.810523986816406,
-   "max_min_covered_pop": 9.998888142903645,
-   "pop_double_covered_pct": 95.95580421730317
+   "pop_within_10min_pct": 98.46038696507746,
+   "mean_min": 3.5411552267510022,
+   "p90_min": 5.623559061686198,
+   "max_min_covered_pop": 9.999937947591146,
+   "pop_double_covered_pct": 96.02042818927372
   }
  },
  "fast": {
@@ -77,7 +78,6 @@
    "八德分隊",
    "劍潭分隊",
    "南港分隊",
-   "古亭分隊",
    "圓山分隊",
    "城中分隊",
    "大同分隊",
@@ -91,98 +91,100 @@
    "泉州分隊",
    "社子分隊",
    "福國分隊",
+   "興隆分隊",
    "華山分隊",
    "金華分隊",
    "雙園分隊"
   ],
-  "patterns": 1447,
+  "patterns": 1441,
   "baseline": {
    "closed": [],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.53300311855304,
-   "mean_min": 2.495099409553964,
-   "p90_min": 3.91533203125,
+   "pop_within_10min_pct": 99.5313241067079,
+   "mean_min": 2.402678748684608,
+   "p90_min": 3.7933891296386717,
    "max_min_covered_pop": 9.997629801432291,
-   "pop_double_covered_pct": 98.98571250369324
+   "pop_double_covered_pct": 99.02265873029239
   }
  },
+ "limit_s": 600,
  "recommended_10": {
   "status": "Optimal",
   "closed": [
    "華山分隊",
    "城中分隊",
-   "古亭分隊",
-   "雙園分隊",
    "南港分隊",
+   "信義分隊",
    "松江分隊",
    "圓山分隊",
    "民權分隊",
    "延平分隊",
+   "社子分隊",
    "福國分隊"
   ],
   "eval_base": {
    "closed": [
+    "信義分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "延平分隊",
     "松江分隊",
     "民權分隊",
+    "社子分隊",
     "福國分隊",
-    "華山分隊",
-    "雙園分隊"
+    "華山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.099749092417787,
-   "p90_min": 4.873034159342448,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.44829703485405
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 3.0055941304329803,
+   "p90_min": 4.726263427734375,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.37592999974144
   },
   "eval_slow": {
    "closed": [
+    "信義分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "延平分隊",
     "松江分隊",
     "民權分隊",
+    "社子分隊",
     "福國分隊",
-    "華山分隊",
-    "雙園分隊"
+    "華山分隊"
    ],
    "coverage_kept": false,
    "pop_lost_coverage": 137.3085839027131,
-   "pop_within_10min_pct": 98.41971627210083,
-   "mean_min": 3.843254917375126,
-   "p90_min": 6.057759094238281,
-   "max_min_covered_pop": 11.959902954101562,
-   "pop_double_covered_pct": 94.94360229982063
+   "pop_within_10min_pct": 98.45471041072061,
+   "mean_min": 3.7255612153438387,
+   "p90_min": 5.8731531778971355,
+   "max_min_covered_pop": 11.591256713867187,
+   "pop_double_covered_pct": 94.82811780551872
   },
   "eval_fast": {
    "closed": [
+    "信義分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "延平分隊",
     "松江分隊",
     "民權分隊",
+    "社子分隊",
     "福國分隊",
-    "華山分隊",
-    "雙園分隊"
+    "華山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.53300311855304,
-   "mean_min": 2.6040785432192255,
-   "p90_min": 4.080986531575521,
+   "pop_within_10min_pct": 99.5313241067079,
+   "mean_min": 2.5256160750077497,
+   "p90_min": 3.960135650634766,
    "max_min_covered_pop": 9.997629801432291,
-   "pop_double_covered_pct": 98.7908673592387
+   "pop_double_covered_pct": 98.79161139148617
   }
  },
  "robust_10": {
@@ -190,77 +192,77 @@
   "closed": [
    "華山分隊",
    "城中分隊",
-   "古亭分隊",
-   "雙園分隊",
    "安和分隊",
    "南港分隊",
    "信義分隊",
    "松江分隊",
    "圓山分隊",
-   "延平分隊"
+   "建成分隊",
+   "延平分隊",
+   "社子分隊"
   ],
   "eval_base": {
    "closed": [
     "信義分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "安和分隊",
     "延平分隊",
+    "建成分隊",
     "松江分隊",
-    "華山分隊",
-    "雙園分隊"
+    "社子分隊",
+    "華山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.1263845333146345,
-   "p90_min": 4.784633382161458,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.46643457888877
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 3.0454122313367527,
+   "p90_min": 4.663886515299479,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.51765814823122
   },
   "eval_slow": {
    "closed": [
     "信義分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "安和分隊",
     "延平分隊",
+    "建成分隊",
     "松江分隊",
-    "華山分隊",
-    "雙園分隊"
+    "社子分隊",
+    "華山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 98.42539282645771,
-   "mean_min": 3.876549218646262,
-   "p90_min": 5.9473388671875,
-   "max_min_covered_pop": 9.998888142903645,
-   "pop_double_covered_pct": 95.33029416861075
+   "pop_within_10min_pct": 98.46038696507746,
+   "mean_min": 3.775333842064047,
+   "p90_min": 5.798348999023437,
+   "max_min_covered_pop": 9.999937947591146,
+   "pop_double_covered_pct": 95.45787206974302
   },
   "eval_fast": {
    "closed": [
     "信義分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "安和分隊",
     "延平分隊",
+    "建成分隊",
     "松江分隊",
-    "華山分隊",
-    "雙園分隊"
+    "社子分隊",
+    "華山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.53300311855304,
-   "mean_min": 2.6262747440625773,
-   "p90_min": 4.007149759928385,
+   "pop_within_10min_pct": 99.5313241067079,
+   "mean_min": 2.5587978255508332,
+   "p90_min": 3.9085957845052084,
    "max_min_covered_pop": 9.997629801432291,
-   "pop_double_covered_pct": 98.82896783647523
+   "pop_double_covered_pct": 98.86591406307437
   }
  },
  "curve_base": [
@@ -270,11 +272,11 @@
    "closed": [],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 2.968974131863953,
-   "p90_min": 4.672109985351563,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.68228262118294
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 2.85806933928095,
+   "p90_min": 4.524045308430989,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.73221760316677
   },
   {
    "k": 2,
@@ -285,11 +287,11 @@
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 2.9792879610903418,
-   "p90_min": 4.672425842285156,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.68228262118294
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 2.8666656388725484,
+   "p90_min": 4.524045308430989,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.73221760316677
   },
   {
    "k": 4,
@@ -302,99 +304,99 @@
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 2.998204895675536,
-   "p90_min": 4.701871236165364,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.58202101577685
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 2.887549074625711,
+   "p90_min": 4.55880126953125,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.6304139640214
   },
   {
    "k": 6,
    "status": "Optimal",
    "closed": [
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
+    "延平分隊",
     "松江分隊",
     "福國分隊",
     "華山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.020368761044808,
-   "p90_min": 4.732695007324219,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.58178759339336
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 2.9124569000921734,
+   "p90_min": 4.560498046875,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.6304139640214
   },
   {
    "k": 8,
    "status": "Optimal",
    "closed": [
-    "古亭分隊",
-    "圓山分隊",
-    "城中分隊",
-    "延平分隊",
-    "松江分隊",
-    "福國分隊",
-    "華山分隊",
-    "雙園分隊"
-   ],
-   "coverage_kept": true,
-   "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.0541945797819445,
-   "p90_min": 4.751016235351562,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.58178759339336
-  },
-  {
-   "k": 10,
-   "status": "Optimal",
-   "closed": [
-    "南港分隊",
-    "古亭分隊",
+    "信義分隊",
     "圓山分隊",
     "城中分隊",
     "延平分隊",
     "松江分隊",
     "民權分隊",
     "福國分隊",
-    "華山分隊",
-    "雙園分隊"
+    "華山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.099749092417787,
-   "p90_min": 4.873034159342448,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.44829703485405
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 2.952202898783549,
+   "p90_min": 4.632561238606771,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.53506024801891
+  },
+  {
+   "k": 10,
+   "status": "Optimal",
+   "closed": [
+    "信義分隊",
+    "南港分隊",
+    "圓山分隊",
+    "城中分隊",
+    "延平分隊",
+    "松江分隊",
+    "民權分隊",
+    "社子分隊",
+    "福國分隊",
+    "華山分隊"
+   ],
+   "coverage_kept": true,
+   "pop_lost_coverage": 0.0,
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 3.0055941304329803,
+   "p90_min": 4.726263427734375,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.37592999974144
   },
   {
    "k": 12,
    "status": "Optimal",
    "closed": [
     "信義分隊",
+    "劍潭分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "安和分隊",
     "延平分隊",
     "松江分隊",
     "民權分隊",
+    "社子分隊",
     "福國分隊",
-    "華山分隊",
-    "雙園分隊"
+    "華山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.1569292199419663,
-   "p90_min": 4.877543640136719,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.35348655477826
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 3.066933107372827,
+   "p90_min": 4.864878845214844,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.33841438436521
   },
   {
    "k": 14,
@@ -403,7 +405,6 @@
     "信義分隊",
     "劍潭分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "安和分隊",
@@ -411,17 +412,18 @@
     "建成分隊",
     "松江分隊",
     "民權分隊",
+    "社子分隊",
     "福國分隊",
     "華山分隊",
-    "雙園分隊"
+    "龍山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.21903188206553,
-   "p90_min": 5.00539296468099,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.32587924905819
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 3.1431986466889774,
+   "p90_min": 4.911390177408854,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.33841438436521
   },
   {
    "k": 16,
@@ -429,28 +431,28 @@
    "closed": [
     "信義分隊",
     "內湖分隊",
-    "八德分隊",
     "劍潭分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "安和分隊",
     "延平分隊",
     "建成分隊",
     "松江分隊",
+    "民權分隊",
+    "社子分隊",
     "福國分隊",
     "華山分隊",
     "金華分隊",
-    "雙園分隊"
+    "龍山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.2982571318886866,
-   "p90_min": 5.026539103190104,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 97.30487627084577
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 3.234809362758265,
+   "p90_min": 5.069200134277343,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.2681607621275
   },
   {
    "k": 18,
@@ -461,7 +463,6 @@
     "八德分隊",
     "劍潭分隊",
     "南港分隊",
-    "古亭分隊",
     "圓山分隊",
     "城中分隊",
     "安和分隊",
@@ -469,19 +470,20 @@
     "建成分隊",
     "松江分隊",
     "民權分隊",
+    "社子分隊",
     "福國分隊",
+    "興隆分隊",
     "華山分隊",
     "金華分隊",
-    "雙園分隊",
     "龍山分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.470098213383492,
-   "p90_min": 5.5008188883463545,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 95.62578512763483
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 3.3582624753155845,
+   "p90_min": 5.26302744547526,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 97.2633460755286
   },
   {
    "k": 20,
@@ -493,28 +495,63 @@
     "八德分隊",
     "劍潭分隊",
     "南港分隊",
-    "古亭分隊",
+    "圓山分隊",
+    "城中分隊",
+    "安和分隊",
+    "延平分隊",
+    "建成分隊",
+    "松江分隊",
+    "民權分隊",
+    "泉州分隊",
+    "社子分隊",
+    "福國分隊",
+    "興隆分隊",
+    "華山分隊",
+    "金華分隊",
+    "龍山分隊"
+   ],
+   "coverage_kept": true,
+   "pop_lost_coverage": 0.0,
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 3.607407911022703,
+   "p90_min": 5.7051539103190105,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 96.00259324541392
+  },
+  {
+   "k": 22,
+   "status": "Optimal",
+   "closed": [
+    "中崙分隊",
+    "信義分隊",
+    "內湖分隊",
+    "八德分隊",
+    "劍潭分隊",
+    "南港分隊",
     "圓山分隊",
     "城中分隊",
     "大同分隊",
     "安和分隊",
     "延平分隊",
     "建成分隊",
+    "復興分隊",
     "松江分隊",
     "民權分隊",
+    "泉州分隊",
+    "社子分隊",
     "福國分隊",
+    "興隆分隊",
     "華山分隊",
     "金華分隊",
-    "雙園分隊",
-    "龍山分隊"
+    "雙園分隊"
    ],
    "coverage_kept": true,
    "pop_lost_coverage": 0.0,
-   "pop_within_10min_pct": 99.24649277419888,
-   "mean_min": 3.716600146731806,
-   "p90_min": 5.76898193359375,
-   "max_min_covered_pop": 9.99894307454427,
-   "pop_double_covered_pct": 95.32029566117396
+   "pop_within_10min_pct": 99.24318082099005,
+   "mean_min": 3.986061954321478,
+   "p90_min": 6.1563268025716145,
+   "max_min_covered_pop": 9.999524943033855,
+   "pop_double_covered_pct": 95.91120295264956
   }
  ]
 }

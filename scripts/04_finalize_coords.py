@@ -1,4 +1,9 @@
-"""Final station coordinates, chosen by hand from data/raw/geocode_candidates.json.
+"""Final station coordinates.
+
+Primary: the fire department's official station locations (data.taipei 「臺北市政府消防局各分隊駐地位置」,
+TWD97 TM2, file data/raw/official/tfd_station_locations_20261013.csv).
+FINAL below is the earlier hand-checked geocoding (official page embeds, OSM, Overture); it is kept as
+a fallback and as an independent check (median 20 m from the official points).
 Each entry: (lat, lon, primary source, corroboration)."""
 import os
 import pandas as pd
@@ -52,11 +57,30 @@ FINAL = {
     "秀山分隊": (25.145663, 121.493115, "osm", ""),
     "福國分隊": (25.101642, 121.510918, "官網內嵌地圖", "osm 福國路街道"),
 }
+from pyproj import Transformer
+import numpy as np
+
 st = pd.read_csv(f"{ROOT}/data/stations.csv")
-assert set(st.name) == set(FINAL), set(st.name) ^ set(FINAL)
-st["lat"] = st.name.map(lambda n: FINAL[n][0])
-st["lon"] = st.name.map(lambda n: FINAL[n][1])
-st["coord_source"] = st.name.map(lambda n: FINAL[n][2])
-st["coord_check"] = st.name.map(lambda n: FINAL[n][3])
+off = pd.read_csv(f"{ROOT}/data/raw/official/tfd_station_locations_20261013.csv")
+off["lon"], off["lat"] = Transformer.from_crs(3826, 4326, always_xy=True).transform(off["經度"].values, off["緯度"].values)
+off = off.set_index("分隊名稱")
+missing = [n for n in st.name if n not in off.index and n not in FINAL]
+assert not missing, missing
+
+def pick(n):
+    if n in off.index:
+        o = off.loc[n]
+        chk = ""
+        if n in FINAL:
+            d = np.hypot((FINAL[n][0] - o.lat) * 111000, (FINAL[n][1] - o.lon) * 111000 * np.cos(np.radians(25)))
+            chk = f"與先前地理編碼相距 {d:.0f} m"
+        return (round(o.lat, 6), round(o.lon, 6), f"官方駐地座標（{o['地址']}）", chk)
+    return FINAL[n]
+
+rows = {n: pick(n) for n in st.name}
+st["lat"] = st.name.map(lambda n: rows[n][0])
+st["lon"] = st.name.map(lambda n: rows[n][1])
+st["coord_source"] = st.name.map(lambda n: rows[n][2])
+st["coord_check"] = st.name.map(lambda n: rows[n][3])
 st.to_csv(f"{ROOT}/data/stations_geocoded.csv", index=False)
-print(len(st), "stations written")
+print(len(st), "stations written;", sum(n in off.index for n in st.name), "from official locations")

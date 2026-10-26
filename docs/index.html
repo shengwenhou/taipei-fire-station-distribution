@@ -257,7 +257,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   <header>
     <div class="eyebrow">臺北市 46 個消防分隊　·　救護車行車時間模型　·　2026 年 10 月</div>
     <h1>砍掉 10 個分隊，還守得住 10 分鐘嗎？</h1>
-    <p class="lead"><strong>守得住，但要挑對分隊。</strong>把「10 分鐘」算成<strong>出勤準備 2 分＋行車 8 分</strong>，慢速車流下最多只能裁撤 11 隊，砍 10 隊已接近極限；照下方建議的 10 隊裁撤，三種車速下現況達標的居民仍全部達標，平均行車只多約 <span class="num">13</span> 秒。若只算行車 10 分鐘，空間更寬，最多可裁撤 16 到 23 隊。</p>
+    <p class="lead"><strong>守得住，但要挑對分隊。</strong>把「10 分鐘」算成<strong>出勤準備 2 分＋行車 8 分</strong>，慢速車流下最多剛好可以裁撤 10 隊，砍 10 隊已經是極限；照下方建議的 10 隊裁撤，三種車速下現況達標的居民仍全部達標，平均行車只多約 <span class="num">16</span> 秒。若只算行車 10 分鐘，空間更寬，最多可裁撤 16 到 23 隊。</p>
   </header>
 
   <section class="why" aria-labelledby="h-why">
@@ -419,7 +419,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
       <div>
         <h3>方法</h3>
         <ul>
-          <li><strong>分隊：</strong>消防局官網列出的 45 個分隊，加上 2026 年 9 月新增的福國分隊；古亭分隊用臨時駐地。座標由官網地圖、OpenStreetMap、Overture Maps 交叉比對。</li>
+          <li><strong>分隊：</strong>消防局官網列出的 45 個分隊，加上 2026 年 9 月新增的福國分隊；古亭分隊 2026 年 10 月遷至文山區興隆路並改名興隆分隊，共 46 隊。座標採消防局公布的各分隊駐地位置（臺北市資料大平臺，2026-10-13 版），並與官網地圖、OpenStreetMap、Overture Maps 的地理編碼交叉比對（中位差距 20 公尺）。</li>
           <li><strong>路網：</strong>Overture Maps 道路（以 OSM 為基礎），遵守單行道。車速依道路等級：國道 60、快速道路 50、主要道路 35、次要道路 30、三級道路 25、巷道 20、服務道路 15 km/h。</li>
           <li><strong>人口：</strong>內政部 2026 年 9 月各里人口（456 里、241.9 萬人），依建物面積分配到 96,129 個建物點。</li>
           <li><strong>覆蓋規則：</strong>現況達標的每一個點，裁撤後仍須達標；現況就不達標的點不列入限制。兩種判定標準：「出勤 2 分＋行車 8 分」（行車上限 8 分鐘）與「行車 10 分」。</li>
@@ -432,7 +432,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
           <li><strong>出勤準備固定 2 分鐘：</strong>實際受理派遣與著裝出勤時間因時段與案件而異，模型以固定值處理。</li>
           <li><strong>不考慮同時出勤：</strong>分隊變少後每隊出勤量增加，「最近分隊沒車」的機率會上升。</li>
           <li><strong>以救護車為準：</strong>消防車較慢、車體較大，狹小巷道實際更久。</li>
-          <li><strong>車速未經實測校正：</strong>模型中華山到信義（直線 4.9 km）為 9.1 分鐘，接近鳴笛行駛；建議以慢速情境為準。</li>
+          <li><strong>車速未經實測校正：</strong>模型中華山到信義（直線 4.9 km）為 9.3 分鐘，接近鳴笛行駛；建議以慢速情境為準。</li>
           <li><strong>出勤量是估計值：</strong>各區 2025 年救護出勤次數是實際統計，但區內依居住人口分配，且假設每件都由最近分隊出勤；實務上最近分隊沒車時會由他隊支援。裁撤分隊的人車會移防到留下的分隊，出勤量集中是預期中的結果。</li>
           <li><strong>只看居住人口：</strong>覆蓋判定以居住人口為準，白天人口（商辦區）、道路與河濱事故未加權。</li>
           <li><strong>本頁的平均、90%、雙重覆蓋</strong>以 150 m 網格計算，與精確模型差距約 0.02 分；「失去覆蓋」與精確模型完全一致。</li>
@@ -947,11 +947,12 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   // ---------- charts ----------
   function lineChart(id, pts, yLab, fmtY, yMin, yMax, mark) {
     const svg = document.getElementById(id), w = 520, h = 260, m = { l: 46, r: 14, t: 14, b: 34 };
-    const x = k => m.l + k / 20 * (w - m.l - m.r), y = v => m.t + (1 - (v - yMin) / (yMax - yMin)) * (h - m.t - m.b);
+    const KX = Math.max(20, Math.ceil(pts[pts.length - 1].k / 2) * 2);
+    const x = k => m.l + k / KX * (w - m.l - m.r), y = v => m.t + (1 - (v - yMin) / (yMax - yMin)) * (h - m.t - m.b);
     const ticks = []; const step = (yMax - yMin) / 4; for (let i = 0; i <= 4; i++) ticks.push(yMin + i * step);
     let s = ticks.map(t => `<line x1="${m.l}" x2="${w - m.r}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)" stroke-width="1"/><text x="${m.l - 8}" y="${y(t) + 4}" text-anchor="end" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${fmtY(t)}</text>`).join("");
     s += `<line x1="${m.l}" x2="${w - m.r}" y1="${h - m.b}" y2="${h - m.b}" stroke="var(--line-strong)"/>`;
-    for (let k = 0; k <= 20; k += 4) s += `<text x="${x(k)}" y="${h - m.b + 18}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${k}</text>`;
+    for (let k = 0; k <= KX; k += 4) s += `<text x="${x(k)}" y="${h - m.b + 18}" text-anchor="middle" font-size="11" fill="var(--muted)" font-family="var(--font-num)">${k}</text>`;
     s += `<rect x="${x(mark[0])}" y="${m.t}" width="${x(mark[1]) - x(mark[0])}" height="${h - m.t - m.b}" fill="var(--closed)" opacity="0.08"/>`;
     s += `<text x="${x(mark[0]) - 4}" y="${m.t + 12}" text-anchor="end" font-size="11" fill="var(--ink-2)">超過 ${mark[0]} 隊後明顯變差</text>`;
     s += `<polyline fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" points="${pts.map(p => `${x(p.k)},${y(p.v)}`).join(" ")}"/>`;
@@ -1035,7 +1036,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
   }
 
   // knee of each curve: where the mean-time step first exceeds 0.15 min
-  const KNEE = { d10: [16, 20], d8: [14, 16] };
+  const KNEE = { d10: [18, 22], d8: [12, 14] };
   function renderStatic() {
     const r = res(), sc = r.scenarios, rb = r.robust10;
     document.getElementById("vMax").innerHTML = `${sc.slow.max}–${sc.base.max}<small>隊</small>`;
