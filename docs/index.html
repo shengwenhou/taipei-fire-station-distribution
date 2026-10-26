@@ -83,6 +83,17 @@ header { display: grid; gap: 14px; }
 .lead { font-size: 17px; color: var(--ink-2); }
 .lead strong { color: var(--ink); }
 
+/* repo bar */
+.repo-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line-strong); border-radius: 6px; }
+.repo-text { display: grid; gap: 4px; min-width: 0; flex: 1 1 420px; color: var(--ink-2); font-size: 14.5px; }
+.repo-text strong { color: var(--ink); }
+.repo-url { font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
+.repo-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { display: inline-block; padding: 9px 14px; border-radius: 5px; border: 1px solid var(--line-strong); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
+.btn:hover { background: var(--chip); }
+.btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn.primary:hover { opacity: 0.88; background: var(--ink); }
+
 /* why section */
 .why { display: grid; gap: 18px; padding-block: 22px 24px; border-top: 1px solid var(--line-strong); }
 .why-lead { color: var(--ink-2); font-size: 15.5px; }
@@ -258,6 +269,16 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     <div class="eyebrow">臺北市 46 個消防分隊　·　救護車行車時間模型　·　2026 年 10 月</div>
     <h1>砍掉 10 個分隊，還守得住 10 分鐘嗎？</h1>
     <p class="lead"><strong>守得住，但要挑對分隊。</strong>把「10 分鐘」算成<strong>出勤準備 2 分＋行車 8 分</strong>，慢速車流下最多剛好可以裁撤 10 隊，砍 10 隊已經是極限；照下方建議的 10 隊裁撤，三種車速下現況達標的居民仍全部達標，平均行車只多約 <span class="num">16</span> 秒。若只算行車 10 分鐘，空間更寬，最多可裁撤 16 到 23 隊。</p>
+    <div class="repo-bar">
+      <div class="repo-text">
+        <strong>原始碼完全公開，歡迎 Fork。</strong>所有程式、資料與分析步驟都在 GitHub 上，以 MIT 授權釋出；可以改用自己的車速、門檻或分隊名單重跑。
+        <span class="repo-url num">github.com/shengwenhou/taipei-fire-station-distribution</span>
+      </div>
+      <div class="repo-actions">
+        <a class="btn primary" href="https://github.com/shengwenhou/taipei-fire-station-distribution/fork" target="_blank" rel="noopener">Fork 這個專案</a>
+        <a class="btn" href="https://github.com/shengwenhou/taipei-fire-station-distribution" target="_blank" rel="noopener">在 GitHub 查看原始碼</a>
+      </div>
+    </div>
   </header>
 
   <section class="why" aria-labelledby="h-why">
@@ -443,7 +464,7 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
 
   <footer>
     <span>資料來源：臺北市政府消防局官網（分隊名單與地址）；內政部國土測繪中心 臺灣通用電子地圖（街道底圖）；114 年臺北市消防統計年報 表 6-1（各區救護出勤次數）；© OpenStreetMap contributors；Overture Maps Foundation（道路、地點、建物、村里界）；內政部戶政司 村里人口（ODRP014，民國 115 年 9 月）。</span>
-    <span>程式與完整資料：<a href="https://github.com/shengwenhou/taipei-fire-station-distribution" target="_blank" rel="noopener">github.com/shengwenhou/taipei-fire-station-distribution</a></span>
+    <span>程式與完整資料：<a href="https://github.com/shengwenhou/taipei-fire-station-distribution" target="_blank" rel="noopener">github.com/shengwenhou/taipei-fire-station-distribution</a>（MIT 授權；第三方資料依各自授權條款）</span>
   </footer>
 </div>
 

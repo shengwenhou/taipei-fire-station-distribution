@@ -4,6 +4,8 @@
 
 **互動網頁：** https://shengwenhou.github.io/taipei-fire-station-distribution/
 
+**原始碼：** https://github.com/shengwenhou/taipei-fire-station-distribution ，以 [MIT 授權](LICENSE)釋出，歡迎 Fork 後改用自己的假設重跑（步驟見下方「重現步驟」）。
+
 ## 為何要裁撤分隊？
 
 臺北市的分隊是跟著救護量一路上升而陸續開設的。這些分隊的位置都很好，彼此也能互相支援；但每多一個分隊，就多一組不能省的基本值班，人力被分散到每一個據點。
@@ -193,3 +195,14 @@ python scripts/14_workload.py         # 分隊出勤負擔 → output/station_wo
 - 內政部戶政司 村里戶數、單一年齡人口（ODRP014）
 - 內政部國土測繪中心 臺灣通用電子地圖 WMTS（`EMAP6_OPENDATA`，網頁街道底圖）
 - 臺北市政府消防局 114 年臺北市消防統計年報 表 6-1（各區救護出勤次數，原始 PDF 存於 `data/raw/ems/`）
+
+## 授權
+
+本專案的程式碼、網頁與分析結果以 [MIT 授權](LICENSE)釋出。
+
+`data/raw/` 中的第三方原始資料仍依各自的授權條款使用：
+
+- OpenStreetMap 資料：© OpenStreetMap contributors，[ODbL](https://www.openstreetmap.org/copyright)
+- Overture Maps 資料：依 [Overture Maps 各主題授權](https://docs.overturemaps.org/attribution/)（含 ODbL、CDLA Permissive 2.0）
+- 臺北市政府消防局、內政部戶政司等政府資料：[政府資料開放授權條款](https://data.gov.tw/license)
+- 網頁街道底圖：內政部國土測繪中心 臺灣通用電子地圖
